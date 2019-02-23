@@ -45,7 +45,7 @@ ggplot(iris) +
   labs(caption = sprintf('sourced from: %s',whereami()))
 ```
 
-![](man/figures/README-plot1.png)
+![](man/figures/README-plot-1.png)
 
 ### Shiny
 

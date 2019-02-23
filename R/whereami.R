@@ -15,22 +15,22 @@
 #'  \code{\link[rstudioapi]{rstudio-editors}}
 #' @rdname whereami
 #' @export
-#' @importFrom rstudioapi getActiveDocumentContext
+#' @importFrom rstudioapi getActiveDocumentContext isAvailable
 #' @importFrom utils getSrcDirectory getSrcFilename
 whereami <- function(path_expand = FALSE){
 
+  if(!rstudioapi::isAvailable())
+    return('rstudio not available')
+
   src <- 'Untitled'
 
-  if(interactive()){
+  adc <- rstudioapi::getActiveDocumentContext()
 
-    adc <- rstudioapi::getActiveDocumentContext()
+  if(adc$id=='#console')
+    src <- 'Console'
 
-    if(adc$id=='#console')
-      src <- 'Console'
-
-    if(nchar(adc$path)>0)
-      src <- path.expand(adc$path)
-  }
+  if(nchar(adc$path)>0)
+    src <- path.expand(adc$path)
 
   if(length(getSrcFilename(sys.call(sys.nframe()-1)))>0){
 
