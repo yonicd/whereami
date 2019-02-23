@@ -1,6 +1,6 @@
 Package: whereami
 Type: Package
-Title: Reliably return location where command is called from.
+Title: Reliably return location where command is called from
 Version: 0.1.0
 Authors@R: person(given  = "Jonathan",
                  family  = "Sidi",
@@ -10,6 +10,8 @@ Authors@R: person(given  = "Jonathan",
 Description: Return where command is run or sourced from and place place tracebacks
   in files to print to console.
 License: MIT + file LICENSE
+Depends: R (>= 3.2.0)
+Imports: rstudioapi, utils
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1

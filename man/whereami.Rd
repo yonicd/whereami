@@ -2,26 +2,28 @@
 % Please edit documentation in R/whereami.R
 \name{whereami}
 \alias{whereami}
-\title{FUNCTION_TITLE}
+\title{Return where the script is run from}
 \usage{
 whereami(path_expand = FALSE)
 }
 \arguments{
-\item{path_expand}{PARAM_DESCRIPTION, Default: FALSE}
+\item{path_expand}{logical, expand relational path, Default: FALSE}
 }
 \value{
-OUTPUT_DESCRIPTION
+character
 }
 \description{
-FUNCTION_DESCRIPTION
+Returns the file that a command is run from. If traceback is available
+  then the line that it was run from is also returned.
 }
 \details{
-DETAILS
+does not work currently on rmd render
 }
 \examples{
 \dontrun{
 if(interactive()){
- #EXAMPLE1
+ whereami()
+ whereami(path_expand = TRUE)
  }
 }
 }

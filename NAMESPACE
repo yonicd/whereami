@@ -2,3 +2,5 @@
 
 export(whereami)
 importFrom(rstudioapi,getActiveDocumentContext)
+importFrom(utils,getSrcDirectory)
+importFrom(utils,getSrcFilename)
