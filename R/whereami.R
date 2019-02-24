@@ -17,14 +17,49 @@
 #' @export
 #' @importFrom rstudioapi getActiveDocumentContext isAvailable
 #' @importFrom utils getSrcDirectory getSrcFilename
+#' @importFrom rprojroot thisfile
 whereami <- function(path_expand = FALSE){
 
   tf <- tempfile()
   on.exit(unlink(tf),add = TRUE)
 
-  if(!rstudioapi::isAvailable()){
+  cmd <- commandArgs(trailingOnly = FALSE)
 
-    src <- crumb()
+  if(any('RStudio'%in%cmd)){
+
+    src <- 'Untitled'
+
+    adc <- rstudioapi::getActiveDocumentContext()
+
+    if(adc$id=='#console')
+      src <- 'Console'
+
+    if(nchar(adc$path)>0)
+      src <- path.expand(adc$path)
+
+    if(length(getSrcFilename(sys.call(sys.nframe()-1)))>0){
+
+      src <- file.path(
+        utils::getSrcDirectory(sys.call(sys.nframe()-1)),
+        utils::getSrcFilename(sys.call(sys.nframe()-1))
+      )
+
+      src <- gsub('^\\.',getwd(),src)
+    }
+
+    if(!path_expand)
+      src <- gsub(getwd(),'.',src)
+
+    cat(src,file = tf,sep='\n')
+
+    refloc <- crumb()
+
+    if(!is.null(refloc))
+      cat(refloc,file = tf,sep='\n',append = TRUE)
+
+  }else{
+
+    src <- normalizePath(rprojroot::thisfile())
 
     if(!path_expand)
       src <- gsub(getwd(),'.',src)
@@ -33,41 +68,7 @@ whereami <- function(path_expand = FALSE){
       cat(src,file = tf,sep='\n',append = TRUE)
 
     return(readLines(tf))
-
   }
-
-
-  src <- 'Untitled'
-
-  adc <- rstudioapi::getActiveDocumentContext()
-
-  if(adc$id=='#console')
-    src <- 'Console'
-
-  if(nchar(adc$path)>0)
-    src <- path.expand(adc$path)
-
-  if(length(getSrcFilename(sys.call(sys.nframe()-1)))>0){
-
-    src <- file.path(
-      utils::getSrcDirectory(sys.call(sys.nframe()-1)),
-      utils::getSrcFilename(sys.call(sys.nframe()-1))
-    )
-
-    src <- gsub('^\\.',getwd(),src)
-  }
-
-  if(!path_expand)
-    src <- gsub(getwd(),'.',src)
-
-
-
-  cat(src,file = tf,sep='\n')
-
-  refloc <- crumb()
-
-  if(!is.null(refloc))
-    cat(refloc,file = tf,sep='\n',append = TRUE)
 
   readLines(tf)
 
