@@ -19,8 +19,23 @@
 #' @importFrom utils getSrcDirectory getSrcFilename
 whereami <- function(path_expand = FALSE){
 
-  if(!rstudioapi::isAvailable())
-    return('rstudio not available')
+  tf <- tempfile()
+  on.exit(unlink(tf),add = TRUE)
+
+  if(!rstudioapi::isAvailable()){
+
+    src <- crumb()
+
+    if(!path_expand)
+      src <- gsub(getwd(),'.',src)
+
+    if(!is.null(src))
+      cat(src,file = tf,sep='\n',append = TRUE)
+
+    return(readLines(tf))
+
+  }
+
 
   src <- 'Untitled'
 
@@ -45,8 +60,7 @@ whereami <- function(path_expand = FALSE){
   if(!path_expand)
     src <- gsub(getwd(),'.',src)
 
-  tf <- tempfile()
-  on.exit(unlink(tf),add = TRUE)
+
 
   cat(src,file = tf,sep='\n')
 

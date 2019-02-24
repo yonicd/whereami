@@ -2,6 +2,14 @@ crumb <- function () {
 
   x <- .traceback(1)
 
+  if(any(grepl('^rmarkdown',x[[length(x)]]))){
+
+    srloc <- gsub('^(.*?)\\(|\\,(.*?)$|["]','',x[[length(x)]][1])
+
+    return(srloc)
+
+  }
+
   idx <- which(sapply(x,function(xx) all(grepl(pattern = 'whereami',xx))))
 
   idx <- idx[length(idx)]

@@ -36,26 +36,20 @@ library(ggplot2)
 
 ### Interactive Rmd
 
-```{r,eval = FALSE}
+```{r basic}
 whereami()
 ```
 
-```r
-[1] "./README.Rmd"
-```
-
-__note__: Currently the full render of rmarkdown doesnt not work (since `whereami()`) depends on `rstudioapi` and rmarkdowns are rendered in a non-interactive environment.
-
 ### Plots
 
-```{r plot,eval = FALSE}
+```{r plot}
+
 ggplot(iris) + 
   aes(x=Sepal.Length,y=Sepal.Width) + 
   geom_point() + 
   labs(caption = sprintf('sourced from: %s',whereami()))
-```
 
-![](man/figures/README-plot-1.png)
+```
 
 ### Shiny
 
