@@ -39,12 +39,16 @@ whereami <- function(path_expand = FALSE){
 
     if(length(getSrcFilename(sys.call(sys.nframe()-1)))>0){
 
-      src <- file.path(
-        utils::getSrcDirectory(sys.call(sys.nframe()-1)),
-        utils::getSrcFilename(sys.call(sys.nframe()-1))
-      )
+        if(nchar(getSrcFilename(sys.call(sys.nframe()-1)))>0){
 
-      src <- gsub('^\\.',getwd(),src)
+          src <- file.path(
+            utils::getSrcDirectory(sys.call(sys.nframe()-1)),
+            utils::getSrcFilename(sys.call(sys.nframe()-1))
+          )
+
+          src <- gsub('^\\.',getwd(),src)
+        }
+
     }
 
     if(!path_expand)
