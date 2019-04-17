@@ -4,10 +4,13 @@
 \alias{whereami}
 \title{Return where the script is run from}
 \usage{
-whereami(path_expand = FALSE)
+whereami(path_expand = FALSE, counter = FALSE)
 }
 \arguments{
 \item{path_expand}{logical, expand relational path, Default: FALSE}
+
+\item{counter}{logical, remember where whereami last ran and increase the
+internal counter by 1, Default: FALSE}
 }
 \value{
 character

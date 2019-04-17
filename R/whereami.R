@@ -2,6 +2,8 @@
 #' @description Returns the file that a command is run from. If traceback is available
 #'   then the line that it was run from is also returned.
 #' @param path_expand logical, expand relational path, Default: FALSE
+#' @param counter logical, remember where whereami last ran and increase the
+#'   internal counter by 1, Default: FALSE
 #' @return character
 #' @details does not work currently on rmd render
 #' @examples
@@ -18,10 +20,20 @@
 #' @importFrom rstudioapi getActiveDocumentContext isAvailable
 #' @importFrom utils getSrcDirectory getSrcFilename
 #' @importFrom rprojroot thisfile
-whereami <- function(path_expand = FALSE){
+whereami <- function(path_expand = FALSE,counter = FALSE){
+
+  if(!counter){
+    reset_counter()
+  }
 
   tf <- tempfile()
-  on.exit(unlink(tf),add = TRUE)
+
+  on.exit({
+    if(counter){
+      bump(ret)
+    }
+    unlink(tf)
+    },add = TRUE)
 
   cmd <- commandArgs(trailingOnly = FALSE)
 
@@ -78,4 +90,31 @@ whereami <- function(path_expand = FALSE){
 
   structure(ret,class = c('whereami'))
 
+}
+
+wenv <- new.env()
+
+
+#' @title Reset the internal counter
+#' @description Reset the internal counter for whereami to an empty list
+#' @return NULL
+#' @rdname reset_counter
+#' @export
+reset_counter <- function(){
+  assign(x = 'counter',value = list(),envir = wenv)
+}
+
+#' @importFrom digest digest
+bump <- function(obj){
+
+  this <- digest::digest(as.character(obj))
+
+  if(!exists('counter',envir = wenv))
+    wenv$counter <- list()
+
+  if(!this %in% names(wenv$counter)){
+    wenv$counter[[this]] <- 0
+  }
+
+  wenv$counter[[this]] <- wenv$counter[[this]] + 1
 }
