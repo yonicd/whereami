@@ -2,4 +2,4 @@
 ^LICENSE\.md$
 ^.*\.Rproj$
 ^\.Rproj\.user$
-misc
+test1.R

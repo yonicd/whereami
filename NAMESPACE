@@ -3,6 +3,7 @@
 S3method(print,whereami)
 export(cat_where)
 export(whereami)
+importFrom(cli,cat_rule)
 importFrom(rprojroot,thisfile)
 importFrom(rstudioapi,getActiveDocumentContext)
 importFrom(rstudioapi,isAvailable)
