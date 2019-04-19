@@ -1,7 +1,7 @@
 Package: whereami
 Type: Package
 Title: Reliably return location where command is called from
-Version: 0.1.1
+Version: 0.1.4
 Authors@R: person(given  = "Jonathan",
                  family  = "Sidi",
                  email   = "yonicd@gmail.com",
@@ -11,7 +11,7 @@ Description: Return where command is run or sourced from and place place traceba
   in files to print to console.
 License: MIT + file LICENSE
 Depends: R (>= 3.2.0)
-Imports: rstudioapi, utils, rprojroot
+Imports: rstudioapi, utils, rprojroot, cli, digest
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
