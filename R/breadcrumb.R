@@ -15,10 +15,20 @@ crumb <- function () {
   idx <- idx[length(idx)]
 
   srcloc <- if (!is.null(srcref <- attr(x[[idx]], "srcref"))) {
+
     srcfile <- attr(srcref, "srcfile")
-    sprintf('%s#%s',srcfile$filename,srcref[1L])
+    srcfile_name <- srcfile$filename
+
+    if(!nzchar(srcfile_name)){
+      return(NULL)
+    }
+
+    sprintf('%s#%s',srcfile_name,srcref[1L])
+
   }else{
+
     NULL
+
   }
 
   return(srcloc)
