@@ -2,6 +2,7 @@
 
 S3method(print,whereami)
 export(cat_where)
+export(counter_names)
 export(counter_reset)
 export(counter_state)
 export(whereami)

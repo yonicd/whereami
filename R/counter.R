@@ -2,40 +2,67 @@ wenv <- new.env()
 
 #' @title whereami counter
 #' @description Interact with internal whereami counter
+#' @param item character, name of the counter to access, Default: NULL
 #' @details
-#' counter_state returns current hit count for each stored counter,
-#' arranged in order of counter initialization.
 #'
-#' counter_reset will remove all stored counters.
+#' counter_names returns names of the active stored counters.
+#'
+#' counter_state returns current hit count for item, if NULL then all counters
+#'  are returned.
+#'
+#' counter_reset will remove counter of item, if item is NULL then all counters
+#'  are reset.
 #'
 #' @rdname counter
 #' @export
-counter_state <- function(){
+counter_state <- function(item = NULL){
 
-  empty_msg <- 'No active counters'
+  if(!counter_check())
+    return('No active counters')
 
-  e <- wenv
+  ret <- wenv$counter
 
-  if(!hasName(x = e,'counter'))
-    return(empty_msg)
+  if(!is.null(item))
+    ret <- ret[[item]]
 
-  if(!length(e$counter))
-    return(empty_msg)
-
-  as.numeric(e$counter)
+  ret
 
 }
 
 #' @rdname counter
 #' @export
-counter_reset <- function(){
-  assign(x = 'counter',value = list(),envir = wenv)
+counter_reset <- function(item = NULL){
+  if(is.null(item)){
+    assign(x = 'counter',value = list(),envir = wenv)
+  }else{
+    wenv[['counter']][[item]] <- NULL
+  }
+}
+
+#' @rdname counter
+#' @export
+counter_names <- function(){
+  if(!counter_check())
+    return('No active counters')
+
+  names(wenv$counter)
+}
+
+counter_check <- function(){
+
+  if(!hasName(x = wenv,'counter'))
+    return(FALSE)
+
+  if(!length(wenv$counter))
+    return(FALSE)
+
+  TRUE
 }
 
 #' @importFrom digest digest
 bump <- function(obj){
 
-  this <- digest::digest(as.character(obj))
+  this <- as.character(obj)[length(obj)] #digest::digest(as.character(obj))
 
   if(!exists('counter',envir = wenv))
     wenv$counter <- list()

@@ -3,18 +3,27 @@
 \name{counter_state}
 \alias{counter_state}
 \alias{counter_reset}
+\alias{counter_names}
 \title{whereami counter}
 \usage{
-counter_state()
+counter_state(item = NULL)
 
-counter_reset()
+counter_reset(item = NULL)
+
+counter_names()
+}
+\arguments{
+\item{item}{character, name of the counter to access, Default: NULL}
 }
 \description{
 Interact with internal whereami counter
 }
 \details{
-counter_state returns current hit count for each stored counter,
-arranged in order of counter initialization.
+counter_names returns names of the active stored counters.
 
-counter_reset will remove all stored counters.
+counter_state returns current hit count for item, if NULL then all counters
+ are returned.
+
+counter_reset will remove counter of item, if item is NULL then all counters
+ are reset.
 }
