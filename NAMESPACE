@@ -2,7 +2,8 @@
 
 S3method(print,whereami)
 export(cat_where)
-export(reset_whereami)
+export(counter_reset)
+export(counter_state)
 export(whereami)
 importFrom(cli,cat_rule)
 importFrom(digest,digest)
