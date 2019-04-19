@@ -48,9 +48,10 @@ counter_names <- function(){
   names(wenv$counter)
 }
 
+#'@importFrom utils hasName
 counter_check <- function(){
 
-  if(!hasName(x = wenv,'counter'))
+  if(!utils::hasName(x = wenv,'counter'))
     return(FALSE)
 
   if(!length(wenv$counter))
@@ -59,10 +60,9 @@ counter_check <- function(){
   TRUE
 }
 
-#' @importFrom digest digest
 bump <- function(obj){
 
-  this <- as.character(obj)[length(obj)] #digest::digest(as.character(obj))
+  this <- as.character(obj)[length(obj)]
 
   if(!exists('counter',envir = wenv))
     wenv$counter <- list()
