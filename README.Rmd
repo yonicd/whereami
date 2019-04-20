@@ -13,6 +13,8 @@ knitr::opts_chunk$set(
 )
 ```
 
+[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_04_20-brightgreen.svg)](http://tinyurl.com/y5c5voy3)
+
 # whereami
 
 The goal of whereami is to reliably find where command is run from.
@@ -32,7 +34,7 @@ library(ggplot2)
 
 ### General 
 
-![](https://github.com/yonicd/whereami/blob/misc/misc/base_example.gif?raw=true)
+<!-- ![](https://github.com/yonicd/whereami/blob/misc/misc/base_example.gif?raw=true) -->
 
 ### Interactive Rmd
 
@@ -51,9 +53,9 @@ ggplot(iris) +
 
 ```
 
-### Shiny
+<!-- ### Shiny -->
 
-![](https://github.com/yonicd/whereami/blob/misc/misc/shiny_example.gif?raw=true)
+<!-- ![](https://github.com/yonicd/whereami/blob/misc/misc/shiny_example.gif?raw=true) -->
 
 ## Non RStudio session
 
