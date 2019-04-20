@@ -5,7 +5,6 @@
 #' @rdname cat_where
 #' @export
 #' @importFrom cli cat_rule
-#' @importFrom digest digest
 cat_where <- function(where){
   if(length(where)==1)
     return(where)
@@ -13,7 +12,7 @@ cat_where <- function(where){
   place <- basename(where[length(where)])
   fun <- deparse(sys.calls()[[sys.nframe() - 1]])
 
-  this <- digest::digest(as.character(where))
+  this <- where[length(where)]
 
   if(this%in%names(wenv$counter)){
     cli::cat_rule(sprintf("Running %s at %s (%s)",fun,place,wenv$counter[[this]]))
@@ -27,7 +26,6 @@ cat_where <- function(where){
 
 
 #' @export
-#' @importFrom digest digest
 print.whereami <- function(x,...){
   if(length(x)==1)
     return(cli::cat_rule(sprintf("Running From: %s",x)))
@@ -35,7 +33,7 @@ print.whereami <- function(x,...){
   place <- basename(x[length(x)])
   fun   <- deparse(sys.calls()[[sys.nframe() - 1]])
 
-  this <- digest::digest(as.character(x))
+  this <- x[length(x)]
 
   if(this%in%names(wenv$counter)){
     cli::cat_rule(sprintf("Running %s at %s (%s)",fun,place,wenv$counter[[this]]))

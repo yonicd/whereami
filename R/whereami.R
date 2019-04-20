@@ -23,7 +23,10 @@ whereami <- function(path_expand = FALSE){
   tf <- tempfile()
 
   on.exit({
-    bump(ret)
+
+    if(length(ret)>1)
+      bump(ret)
+
     unlink(tf)
     },add = TRUE)
 
