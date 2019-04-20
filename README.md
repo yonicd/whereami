@@ -1,6 +1,11 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+[![Travis build
+status](https://travis-ci.org/yonicd/whereami.svg?branch=master)](https://travis-ci.org/yonicd/whereami)[![Coverage
+status](https://codecov.io/gh/yonicd/whereami/branch/master/graph/badge.svg)](https://codecov.io/github/yonicd/whereami?branch=master)[![Covrpage
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_04_20-brightgreen.svg)](http://tinyurl.com/y5c5voy3)
+
 # whereami
 
 The goal of whereami is to reliably find where command is run from.
@@ -20,13 +25,13 @@ library(ggplot2)
 
 ### General
 
-![](https://github.com/yonicd/whereami/blob/misc/misc/base_example.gif?raw=true)
+<!-- ![](https://github.com/yonicd/whereami/blob/misc/misc/base_example.gif?raw=true) -->
 
 ### Interactive Rmd
 
 ``` r
 whereami()
-#> [1] "./README.Rmd"
+#> ── Running From: ./README.Rmd ────────────────────────────────────────────────────────────────────────────
 ```
 
 ### Plots
@@ -41,9 +46,9 @@ ggplot(iris) +
 
 <img src="man/figures/README-plot-1.png" width="100%" />
 
-### Shiny
+<!-- ### Shiny -->
 
-![](https://github.com/yonicd/whereami/blob/misc/misc/shiny_example.gif?raw=true)
+<!-- ![](https://github.com/yonicd/whereami/blob/misc/misc/shiny_example.gif?raw=true) -->
 
 ## Non RStudio session
 

@@ -78,7 +78,6 @@ whereami <- function(path_expand = FALSE){
     if(!is.null(src))
       cat(src,file = tf,sep='\n',append = TRUE)
 
-    return(readLines(tf))
   }
 
   ret <- readLines(tf)

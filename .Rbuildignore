@@ -4,3 +4,10 @@
 ^\.Rproj\.user$
 test1.R
 shinytest.R
+^doc$
+^Meta$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^\.travis\.yml$
+^codecov\.yml$
