@@ -1,8 +1,13 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+<!-- badges: start -->
+
+[![Travis build
+status](https://travis-ci.org/yonicd/whereami.svg?branch=master)](https://travis-ci.org/yonicd/whereami)
 [![Covrpage
 Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_04_20-brightgreen.svg)](http://tinyurl.com/y5c5voy3)
+<!-- badges: end -->
 
 # whereami
 
@@ -29,7 +34,7 @@ library(ggplot2)
 
 ``` r
 whereami()
-#> ── Running From: Console ──────────────────────────────────────────────────────────
+#> ── Running From: ./README.Rmd ─────────────────────────────────────────────────────
 ```
 
 ### Plots

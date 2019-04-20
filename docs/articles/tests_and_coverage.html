@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">whereami</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.4</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5</span>
       </span>
     </div>
 
@@ -46,20 +46,24 @@
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Articles
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="../articles/tests_and_coverage.html">Tests and Coverage</a>
-    </li>
-  </ul>
+  <a href="../articles/index.html">Articles</a>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right"></ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="https://github.com/yonicd/whereami">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://twitter.com/yoniceedee">
+    <span class="fa fa-lg fa-twitter"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
 <!--/.nav-collapse -->
   </div>
@@ -73,9 +77,9 @@
     <div class="page-header toc-ignore">
       <h1>Tests and Coverage</h1>
             
-            <h4 class="date">20 April, 2019 11:47:34</h4>
+            <h4 class="date">20 April, 2019 12:05:00</h4>
       
-      
+      <small class="dont-index">Source: <a href="https://github.com/yonicd/whereami/blob/master/vignettes/tests_and_coverage.Rmd"><code>vignettes/tests_and_coverage.Rmd</code></a></small>
       <div class="hidden name"><code>tests_and_coverage.Rmd</code></div>
 
     </div>
@@ -100,23 +104,23 @@
 <tbody>
 <tr class="odd">
 <td align="left">whereami</td>
-<td align="center">2.2</td>
+<td align="center">2.22</td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/yonicd/whereami/tree/master/R/breadcrumb.R">R/breadcrumb.R</a></td>
-<td align="center">0.0</td>
+<td align="center">0.00</td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/yonicd/whereami/tree/master/R/print.R">R/print.R</a></td>
-<td align="center">0.0</td>
+<td align="center">0.00</td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/yonicd/whereami/tree/master/R/whereami.R">R/whereami.R</a></td>
-<td align="center">0.0</td>
+<td align="center">0.00</td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/yonicd/whereami/tree/master/R/counter.R">R/counter.R</a></td>
-<td align="center">8.7</td>
+<td align="center">8.70</td>
 </tr>
 </tbody>
 </table>
@@ -139,7 +143,7 @@
 <tbody><tr class="odd">
 <td align="left"><a href="https://github.com/yonicd/whereami/tree/master/tests/testthat/test-whereami.R">test-whereami.R</a></td>
 <td align="right">7</td>
-<td align="right">0.049</td>
+<td align="right">0.122</td>
 <td align="right">0</td>
 <td align="right">0</td>
 <td align="right">0</td>
@@ -148,6 +152,14 @@
 </table>
 <details closed><p><summary> Show Detailed Test Results </summary></p>
 <table class="table">
+<colgroup>
+<col width="39%">
+<col width="17%">
+<col width="32%">
+<col width="5%">
+<col width="1%">
+<col width="4%">
+</colgroup>
 <thead><tr class="header">
 <th align="left">file</th>
 <th align="left">context</th>
@@ -158,60 +170,60 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/master/tests/testthat/test-whereami.R#L5">test-whereami.R</a></td>
-<td align="left">basic functionality</td>
-<td align="left">no counter exists</td>
+<td align="left"><a href="https://github.com/yonicd/whereami/tree/master/tests/testthat/test-whereami.R#L7">test-whereami.R</a></td>
+<td align="left">counter functionality</td>
+<td align="left">counter flow: no counter exists</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
-<td align="right">0.002</td>
+<td align="right">0.014</td>
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/master/tests/testthat/test-whereami.R#L12">test-whereami.R</a></td>
-<td align="left">basic functionality</td>
-<td align="left">inital</td>
+<td align="left"><a href="https://github.com/yonicd/whereami/tree/master/tests/testthat/test-whereami.R#L13">test-whereami.R</a></td>
+<td align="left">counter functionality</td>
+<td align="left">counter flow: initial</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
-<td align="right">0.019</td>
+<td align="right">0.024</td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/master/tests/testthat/test-whereami.R#L18">test-whereami.R</a></td>
-<td align="left">basic functionality</td>
-<td align="left">counter exists</td>
+<td align="left"><a href="https://github.com/yonicd/whereami/tree/master/tests/testthat/test-whereami.R#L17">test-whereami.R</a></td>
+<td align="left">counter functionality</td>
+<td align="left">counter flow: check counter was created</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
-<td align="right">0.002</td>
+<td align="right">0.059</td>
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/master/tests/testthat/test-whereami.R#L24">test-whereami.R</a></td>
-<td align="left">basic functionality</td>
-<td align="left">counter names</td>
+<td align="left"><a href="https://github.com/yonicd/whereami/tree/master/tests/testthat/test-whereami.R#L21">test-whereami.R</a></td>
+<td align="left">counter functionality</td>
+<td align="left">counter flow: counter name</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
 <td align="right">0.002</td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/master/tests/testthat/test-whereami.R#L30">test-whereami.R</a></td>
-<td align="left">basic functionality</td>
-<td align="left">counter</td>
+<td align="left"><a href="https://github.com/yonicd/whereami/tree/master/tests/testthat/test-whereami.R#L25">test-whereami.R</a></td>
+<td align="left">counter functionality</td>
+<td align="left">counter flow: counter bump</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
 <td align="right">0.020</td>
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/master/tests/testthat/test-whereami.R#L36">test-whereami.R</a></td>
-<td align="left">basic functionality</td>
-<td align="left">counter state</td>
+<td align="left"><a href="https://github.com/yonicd/whereami/tree/master/tests/testthat/test-whereami.R#L29">test-whereami.R</a></td>
+<td align="left">counter functionality</td>
+<td align="left">counter flow: counter state</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
 <td align="right">0.002</td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/master/tests/testthat/test-whereami.R#L44">test-whereami.R</a></td>
-<td align="left">basic functionality</td>
-<td align="left">counter reset</td>
+<td align="left"><a href="https://github.com/yonicd/whereami/tree/master/tests/testthat/test-whereami.R#L34">test-whereami.R</a></td>
+<td align="left">counter functionality</td>
+<td align="left">counter flow: reset</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
-<td align="right">0.002</td>
+<td align="right">0.001</td>
 </tr>
 </tbody>
 </table></details><details><p><summary> Session Info </summary></p>
