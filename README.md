@@ -1,13 +1,10 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-<!-- badges: start -->
-
 [![Travis build
-status](https://travis-ci.org/yonicd/whereami.svg?branch=master)](https://travis-ci.org/yonicd/whereami)
-[![Covrpage
+status](https://travis-ci.org/yonicd/whereami.svg?branch=master)](https://travis-ci.org/yonicd/whereami)[![Coverage
+status](https://codecov.io/gh/yonicd/whereami/branch/master/graph/badge.svg)](https://codecov.io/github/yonicd/whereami?branch=master)[![Covrpage
 Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_04_20-brightgreen.svg)](http://tinyurl.com/y5c5voy3)
-<!-- badges: end -->
 
 # whereami
 
@@ -34,7 +31,7 @@ library(ggplot2)
 
 ``` r
 whereami()
-#> ── Running From: ./README.Rmd ─────────────────────────────────────────────────────
+#> ── Running From: ./README.Rmd ────────────────────────────────────────────────────────────────────────────
 ```
 
 ### Plots
