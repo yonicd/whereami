@@ -1,6 +1,6 @@
 Tests and Coverage
 ================
-20 April, 2019 11:59:31
+21 April, 2019 08:43:33
 
   - [Coverage](#coverage)
   - [Unit Tests](#unit-tests)
@@ -29,24 +29,30 @@ Unit Test summary is created using the
 [testthat](https://github.com/r-lib/testthat)
 package.
 
-| file                                        | n |  time | error | failed | skipped | warning |
-| :------------------------------------------ | -: | ----: | ----: | -----: | ------: | ------: |
-| [test-whereami.R](testthat/test-whereami.R) | 7 | 0.122 |     0 |      0 |       0 |       0 |
+| file                                      |  n |  time | error | failed | skipped | warning |
+| :---------------------------------------- | -: | ----: | ----: | -----: | ------: | ------: |
+| [test-console.R](testthat/test-console.R) |  1 | 0.002 |     0 |      0 |       0 |       0 |
+| [test-counter.R](testthat/test-counter.R) | 11 | 0.096 |     0 |      0 |       0 |       0 |
 
 <details closed>
 
 <summary> Show Detailed Test Results
 </summary>
 
-| file                                            | context               | test                                    | status | n |  time |
-| :---------------------------------------------- | :-------------------- | :-------------------------------------- | :----- | -: | ----: |
-| [test-whereami.R](testthat/test-whereami.R#L7)  | counter functionality | counter flow: no counter exists         | PASS   | 1 | 0.014 |
-| [test-whereami.R](testthat/test-whereami.R#L13) | counter functionality | counter flow: initial                   | PASS   | 1 | 0.024 |
-| [test-whereami.R](testthat/test-whereami.R#L17) | counter functionality | counter flow: check counter was created | PASS   | 1 | 0.059 |
-| [test-whereami.R](testthat/test-whereami.R#L21) | counter functionality | counter flow: counter name              | PASS   | 1 | 0.002 |
-| [test-whereami.R](testthat/test-whereami.R#L25) | counter functionality | counter flow: counter bump              | PASS   | 1 | 0.020 |
-| [test-whereami.R](testthat/test-whereami.R#L29) | counter functionality | counter flow: counter state             | PASS   | 1 | 0.002 |
-| [test-whereami.R](testthat/test-whereami.R#L34) | counter functionality | counter flow: reset                     | PASS   | 1 | 0.001 |
+| file                                          | context               | test                                    | status | n |  time |
+| :-------------------------------------------- | :-------------------- | :-------------------------------------- | :----- | -: | ----: |
+| [test-console.R](testthat/test-console.R#L9)  | console functionality | counter calls: basic                    | PASS   | 1 | 0.002 |
+| [test-counter.R](testthat/test-counter.R#L7)  | counter functionality | counter flow: no counter exists         | PASS   | 1 | 0.001 |
+| [test-counter.R](testthat/test-counter.R#L13) | counter functionality | counter flow: initial                   | PASS   | 1 | 0.044 |
+| [test-counter.R](testthat/test-counter.R#L17) | counter functionality | counter flow: check counter was created | PASS   | 1 | 0.001 |
+| [test-counter.R](testthat/test-counter.R#L21) | counter functionality | counter flow: counter name              | PASS   | 1 | 0.002 |
+| [test-counter.R](testthat/test-counter.R#L25) | counter functionality | counter flow: counter bump              | PASS   | 1 | 0.023 |
+| [test-counter.R](testthat/test-counter.R#L29) | counter functionality | counter flow: counter state             | PASS   | 1 | 0.003 |
+| [test-counter.R](testthat/test-counter.R#L33) | counter functionality | counter flow: cat\_whereami             | PASS   | 1 | 0.018 |
+| [test-counter.R](testthat/test-counter.R#L37) | counter functionality | counter flow: multiple counter states   | PASS   | 1 | 0.001 |
+| [test-counter.R](testthat/test-counter.R#L41) | counter functionality | counter flow: multiple counter names    | PASS   | 1 | 0.001 |
+| [test-counter.R](testthat/test-counter.R#L46) | counter functionality | counter flow: reset item                | PASS   | 1 | 0.001 |
+| [test-counter.R](testthat/test-counter.R#L51) | counter functionality | counter flow: reset all                 | PASS   | 1 | 0.001 |
 
 </details>
 
