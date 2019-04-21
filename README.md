@@ -46,9 +46,9 @@ ggplot(iris) +
 
 <img src="man/figures/README-plot-1.png" width="100%" />
 
-<!-- ### Shiny -->
+### Shiny
 
-<!-- ![](https://github.com/yonicd/whereami/blob/misc/misc/shiny_example.gif?raw=true) -->
+![](https://github.com/yonicd/whereami/blob/gh-pages/media/whereami_shiny.gif?raw=true)
 
 ## Non RStudio session
 
