@@ -48,7 +48,7 @@ ggplot(iris) +
 
 ### Shiny
 
-![](https://github.com/yonicd/whereami/blob/gh-pages/media/whereami_shiny.gif?raw=true)
+![](https://github.com/yonicd/whereami/blob/media/whereami_shiny.gif?raw=true)
 
 ## Non RStudio session
 
