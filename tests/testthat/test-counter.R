@@ -1,5 +1,6 @@
 context("counter functionality")
 
+whereami::counter_reset()
 
 testthat::describe("counter flow", {
 

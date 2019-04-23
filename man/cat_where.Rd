@@ -15,3 +15,8 @@ character
 \description{
 cat function for whereami output
 }
+\examples{
+\dontrun{
+ cat_where(whereami())
+}
+}

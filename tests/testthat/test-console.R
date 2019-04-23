@@ -1,12 +1,16 @@
 context("console functionality")
 
+testthat::describe("console functionality", {
 
-testthat::describe("counter calls", {
+  skip_if_not_rstudio()
+  rstudioapi::sendToConsole('x <- whereami()')
 
-  it('basic',{
-    skip_if_not_rstudio()
-    rstudioapi::sendToConsole('x <- whereami()')
-    testthat::expect_equal(x,structure('Console',class='whereami'))
+  it('class',{
+    testthat::expect_true(inherits(x,'whereami'))
+  })
+
+  it('value',{
+    testthat::expect_equal(basename(x[1]),"Console")
   })
 
 })

@@ -2,6 +2,10 @@
 #' @description cat function for whereami output
 #' @param where whereami output
 #' @return character
+#' @examples
+#' \dontrun{
+#'  cat_where(whereami())
+#' }
 #' @rdname cat_where
 #' @export
 #' @importFrom cli cat_rule
