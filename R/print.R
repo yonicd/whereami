@@ -1,10 +1,10 @@
 #' @title cat function for whereami
 #' @description cat function for whereami output
 #' @param where whereami output
-#' @param type \code{cli} \code{cat_*} method. Can be \code{boxx}, \code{bullet}, \code{line}, \code{print}, \code{rule}.
-#'     Default is \code{rule}.
-#' @param color \code{cli} \code{col_*} method.
-#' @param ... further arguments passed to \code{cli::cat_*}.
+#' @param type `cli` `cat_*` method. Can be `boxx`, `bullet`, `line`, `print`, `rule`.
+#'     Default is `rule`.
+#' @param color `cli` `col_*` method.
+#' @param ... further arguments passed to `cli::cat_*`.
 #' @return character
 #' @examples
 #'  cat_where(whereami())
