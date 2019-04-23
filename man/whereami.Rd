@@ -13,20 +13,16 @@ whereami(path_expand = FALSE)
 character
 }
 \description{
-Returns the file that a command is run from. If traceback is available
-  then the line that it was run from is also returned.
+Returns the file that a command is run from.
+
+If traceback is available then the line that it was run from is also returned.
 }
 \details{
 does not work currently on rmd render
 }
 \examples{
 \dontrun{
-if(interactive()){
  whereami()
  whereami(path_expand = TRUE)
- }
 }
-}
-\seealso{
-\code{\link[rstudioapi]{rstudio-editors}}
 }

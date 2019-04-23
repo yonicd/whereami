@@ -4,7 +4,7 @@
 [![Travis build
 status](https://travis-ci.org/yonicd/whereami.svg?branch=master)](https://travis-ci.org/yonicd/whereami)[![Coverage
 status](https://codecov.io/gh/yonicd/whereami/branch/master/graph/badge.svg)](https://codecov.io/github/yonicd/whereami?branch=master)[![Covrpage
-Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_04_20-brightgreen.svg)](http://tinyurl.com/y5c5voy3)
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_04_22-brightgreen.svg)](http://tinyurl.com/y5c5voy3)
 
 # whereami
 
@@ -21,6 +21,8 @@ remotes::install_github("yonicd/whereami")
 ``` r
 library(whereami)
 library(ggplot2)
+#> Want to understand how all the pieces fit together? See the R for
+#> Data Science book: http://r4ds.had.co.nz/
 ```
 
 ### General
@@ -31,7 +33,7 @@ library(ggplot2)
 
 ``` r
 whereami()
-#> ── Running From: ./README.Rmd ────────────────────────────────────────────────────────────────────────────
+#> ── Running From: Console ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ```
 
 ### Plots

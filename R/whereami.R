@@ -1,18 +1,15 @@
 #' @title Return where the script is run from
-#' @description Returns the file that a command is run from. If traceback is available
-#'   then the line that it was run from is also returned.
+#' @description Returns the file that a command is run from.
+#'
+#' If traceback is available then the line that it was run from is also returned.
 #' @param path_expand logical, expand relational path, Default: FALSE
 #' @return character
 #' @details does not work currently on rmd render
 #' @examples
 #' \dontrun{
-#' if(interactive()){
 #'  whereami()
 #'  whereami(path_expand = TRUE)
-#'  }
 #' }
-#' @seealso
-#'  \code{\link[rstudioapi]{rstudio-editors}}
 #' @rdname whereami
 #' @export
 #' @importFrom rstudioapi getActiveDocumentContext isAvailable
