@@ -1,0 +1,41 @@
+---
+title: "Plots"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Plots}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(whereami)
+library(ggplot2)
+```
+
+## Rmarkdown Caption 
+
+```{r rmd caption,fig.cap=whereami(path_expand = TRUE),fig.width=7}
+
+ggplot(iris) + 
+  aes(x=Sepal.Length,y=Sepal.Width) + 
+  geom_point()
+
+```
+
+## ggplot2 Caption 
+
+```{r ggcaption,fig.width=7}
+
+ggplot(iris) + 
+  aes(x=Sepal.Length,y=Sepal.Width) + 
+  geom_point() + 
+  labs(caption = sprintf('sourced from: %s',whereami(path_expand = TRUE)))
+
+```

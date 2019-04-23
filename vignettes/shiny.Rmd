@@ -1,0 +1,52 @@
+---
+title: "Shiny"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Shiny}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(whereami)
+```
+
+Using `whereami` with shiny is simple. Place `cat_where(whereami())` anywhere in a shiny command and every time the rendering application hits the line it will print to console indicating which line has been hit accompanied by a counter.
+
+```
+── Running renderPlot(...) at shiny.R#15 (1) ───────────────────────────────────────────
+── Running renderPlot(...) at shiny.R#15 (2) ───────────────────────────────────────────
+```
+
+Here is an example of a simple app that uses `whereami` in the `renderPlot` chunk.
+
+```{r,eval = FALSE}
+# Global variables can go here
+n <- 200
+
+
+# Define the UI
+ui <- bootstrapPage(
+  numericInput('n', 'Number of obs', n),
+  plotOutput('plot')
+)
+
+
+# Define the server code
+server <- function(input, output) {
+  output$plot <- renderPlot({
+    cat_where(whereami())
+    hist(runif(input$n))
+  })
+}
+
+# Return a Shiny app object
+shinyApp(ui = ui, server = server)
+```

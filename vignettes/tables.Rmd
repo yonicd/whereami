@@ -1,0 +1,30 @@
+---
+title: "Tables"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Tables}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(whereami)
+library(magrittr)
+library(kableExtra)
+```
+
+## HTML footnote
+
+```{r}
+knitr::kable(head(iris,10), align = "c",format = 'html') %>%
+  kableExtra::footnote(
+    general_title = "Source: ",
+    general = as.character(whereami(path_expand = TRUE)))
+```

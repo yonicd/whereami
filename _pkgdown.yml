@@ -1,3 +1,4 @@
+destination: docs
 navbar:
   structure:
     left:  [home, reference, articleindex, news]
@@ -20,4 +21,12 @@ reference:
   - title: "Counter"
     contents:
       - has_concept("counter")
-destination: docs
+articles:
+  - title: "Usage"
+    contents:
+      - plots
+      - tables
+      - shiny
+  - title: "Tests"
+    contents:
+      - tests_and_coverage

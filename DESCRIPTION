@@ -16,8 +16,12 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
 Suggests: 
+    magrittr,
+    ggplot2,
+    kableExtra,
     testthat,
+    covr,
+    pkgdown,
     knitr,
-    rmarkdown,
-    covr
+    rmarkdown
 VignetteBuilder: knitr
