@@ -1,0 +1,39 @@
+---
+title: "Using cat_where"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{cat_where}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "figures/"
+)
+```
+
+```{r setup}
+library(whereami)
+```
+
+## Customizing `cat_where()`
+
+`cat_where()` is built on top of the `{cli}` package, which mean you can use parameters from the `cli::cat_*` and `cli::col_*` functions in `cat_where()`. 
+
+`cat_where()` can invoke one of the 5 `cat_*` functions from `{cli}`. Use the `...` to pass parameters to these functions. You can also use one of the `col_*` functions from `{cli}` to define the color of the text. 
+
+Here are some examples:
+
+```{r,eval=FALSE}
+cat_where(whereami())
+cat_where(whereami(), type = "bullet", bullet = "tick")
+cat_where(whereami(), type = "boxx")
+cat_where(whereami(), type = "line", background_col = "red")
+cat_where(whereami(), color = "green")
+cat_where(whereami(), type = "line", color = "yellow")
+```
+
+![](cat_where.png)
