@@ -4,10 +4,19 @@
 \alias{cat_where}
 \title{cat function for whereami}
 \usage{
-cat_where(where)
+cat_where(where, type = c("rule", "boxx", "bullet", "line", "print"),
+  color = c("none", "black", "blue", "cyan", "green", "magenta", "red",
+  "white", "yellow", "grey", "silver"), ...)
 }
 \arguments{
 \item{where}{whereami output}
+
+\item{type}{`{cli}` `cat_*` method. Can be `boxx`, `bullet`, `line`, `print`, `rule`.
+Default is `rule`.}
+
+\item{color}{`{cli}` `col_*` method.}
+
+\item{...}{further arguments passed to `cli::cat_*`.}
 }
 \value{
 character
@@ -17,5 +26,7 @@ cat function for whereami output
 }
 \examples{
  cat_where(whereami())
+ cat_where(whereami(), type = "bullet", bullet = "tick")
+ cat_where(whereami(), color = "green")
 }
 \concept{print}
