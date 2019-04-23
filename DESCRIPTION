@@ -19,8 +19,6 @@ Suggests:
     magrittr,
     ggplot2,
     kableExtra,
-    xtable,
-    texPreview,
     testthat,
     covr,
     pkgdown,

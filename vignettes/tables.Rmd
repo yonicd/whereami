@@ -16,20 +16,8 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(whereami)
-library(texPreview)
 library(magrittr)
-```
-
-```{r}
-tex_opts$set(returnType = 'html')
-```
-
-## LaTeX caption
-
-```{r}
-tab <- xtable::xtable(head(iris,10))
-xtable::caption(tab) <- paste0(xtable::sanitize(whereami()),collapse = ', ')
-texPreview::tex_preview(tab,fileDir = getwd())
+library(kableExtra)
 ```
 
 ## HTML footnote
