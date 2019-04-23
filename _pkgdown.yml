@@ -27,6 +27,7 @@ articles:
       - plots
       - tables
       - shiny
+      - cat_where
   - title: "Tests"
     contents:
       - tests_and_coverage

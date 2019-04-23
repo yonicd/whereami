@@ -10,7 +10,8 @@ vignette: >
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  fig.path = "figures/"
 )
 ```
 
@@ -26,7 +27,7 @@ library(whereami)
 
 Here are some examples:
 
-```{r eval = FALSE}
+```{r,eval=FALSE}
 cat_where(whereami())
 cat_where(whereami(), type = "bullet", bullet = "tick")
 cat_where(whereami(), type = "boxx")

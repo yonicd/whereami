@@ -28,52 +28,1028 @@ This output is created by
 Coverage summary is created using the
 [covr](https://github.com/r-lib/covr) package.
 
-| Object                              | Coverage (%) |
-| :---------------------------------- | :----------: |
-| whereami                            |    28.42     |
-| [R/breadcrumb.R](https://github.com/yonicd/whereami/tree/master/R/breadcrumb.R) |     0.00     |
-| [R/counter.R](https://github.com/yonicd/whereami/tree/master/R/counter.R)       |    21.74     |
-| [R/print.R](https://github.com/yonicd/whereami/tree/master/R/print.R)           |    25.00     |
-| [R/whereami.R](https://github.com/yonicd/whereami/tree/master/R/whereami.R)     |    43.24     |
-| [R/utils.R](https://github.com/yonicd/whereami/tree/master/R/utils.R)           |    100.00    |
+<table>
+
+<thead>
+
+<tr>
+
+<th style="text-align:left;">
+
+Object
+
+</th>
+
+<th style="text-align:center;">
+
+Coverage (%)
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td style="text-align:left;">
+
+whereami
+
+</td>
+
+<td style="text-align:center;">
+
+33.03
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+[R/breadcrumb.R](https://github.com/yonicd/whereami/tree/cli_methods/R/breadcrumb.R)
+
+</td>
+
+<td style="text-align:center;">
+
+0.00
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+[R/counter.R](https://github.com/yonicd/whereami/tree/cli_methods/R/counter.R)
+
+</td>
+
+<td style="text-align:center;">
+
+21.74
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+[R/print.R](https://github.com/yonicd/whereami/tree/cli_methods/R/print.R)
+
+</td>
+
+<td style="text-align:center;">
+
+41.38
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+[R/whereami.R](https://github.com/yonicd/whereami/tree/cli_methods/R/whereami.R)
+
+</td>
+
+<td style="text-align:center;">
+
+43.24
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+[R/utils.R](https://github.com/yonicd/whereami/tree/cli_methods/R/utils.R)
+
+</td>
+
+<td style="text-align:center;">
+
+100.00
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
 
 <br>
 
 ## Unit Tests
 
 Unit Test summary is created using the
-[testthat](https://github.com/r-lib/testthat)
-package.
+[testthat](https://github.com/r-lib/testthat) package.
 
-| file                                      |  n |  time | error | failed | skipped | warning |
-| :---------------------------------------- | -: | ----: | ----: | -----: | ------: | ------: |
-| [test-console.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-console.R) |  2 | 0.015 |     0 |      0 |       0 |       0 |
-| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R) | 11 | 0.065 |     0 |      0 |       0 |       0 |
-| [test-source.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-source.R)   |  3 | 0.047 |     0 |      0 |       0 |       0 |
+<table>
+
+<thead>
+
+<tr>
+
+<th style="text-align:left;">
+
+file
+
+</th>
+
+<th style="text-align:right;">
+
+n
+
+</th>
+
+<th style="text-align:right;">
+
+time
+
+</th>
+
+<th style="text-align:right;">
+
+error
+
+</th>
+
+<th style="text-align:right;">
+
+failed
+
+</th>
+
+<th style="text-align:right;">
+
+skipped
+
+</th>
+
+<th style="text-align:right;">
+
+warning
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td style="text-align:left;">
+
+[test-console.R](https://github.com/yonicd/whereami/tree/cli_methods/tests/testthat/test-console.R)
+
+</td>
+
+<td style="text-align:right;">
+
+2
+
+</td>
+
+<td style="text-align:right;">
+
+0.020
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+[test-counter.R](https://github.com/yonicd/whereami/tree/cli_methods/tests/testthat/test-counter.R)
+
+</td>
+
+<td style="text-align:right;">
+
+11
+
+</td>
+
+<td style="text-align:right;">
+
+0.110
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+[test-source.R](https://github.com/yonicd/whereami/tree/cli_methods/tests/testthat/test-source.R)
+
+</td>
+
+<td style="text-align:right;">
+
+3
+
+</td>
+
+<td style="text-align:right;">
+
+0.048
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
 
 <details closed>
 
-<summary> Show Detailed Test Results
-</summary>
+<summary> Show Detailed Test Results </summary>
 
-| file                                          | context               | test                                    | status | n |  time |
-| :-------------------------------------------- | :-------------------- | :-------------------------------------- | :----- | -: | ----: |
-| [test-console.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-console.R#L9)  | console functionality | console functionality: class            | PASS   | 1 | 0.013 |
-| [test-console.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-console.R#L13) | console functionality | console functionality: value            | PASS   | 1 | 0.002 |
-| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L8)  | counter functionality | counter flow: no counter exists         | PASS   | 1 | 0.001 |
-| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L14) | counter functionality | counter flow: initial                   | PASS   | 1 | 0.019 |
-| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L18) | counter functionality | counter flow: check counter was created | PASS   | 1 | 0.000 |
-| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L22) | counter functionality | counter flow: counter name              | PASS   | 1 | 0.001 |
-| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L26) | counter functionality | counter flow: counter bump              | PASS   | 1 | 0.018 |
-| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L30) | counter functionality | counter flow: counter state             | PASS   | 1 | 0.003 |
-| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L34) | counter functionality | counter flow: cat\_whereami             | PASS   | 1 | 0.017 |
-| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L38) | counter functionality | counter flow: multiple counter states   | PASS   | 1 | 0.002 |
-| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L42) | counter functionality | counter flow: multiple counter names    | PASS   | 1 | 0.001 |
-| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L47) | counter functionality | counter flow: reset item                | PASS   | 1 | 0.002 |
-| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L52) | counter functionality | counter flow: reset all                 | PASS   | 1 | 0.001 |
-| [test-source.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-source.R#L8)    | source functionality  | source calls: direct call               | PASS   | 1 | 0.015 |
-| [test-source.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-source.R#L12)   | source functionality  | source calls: path expand               | PASS   | 1 | 0.014 |
-| [test-source.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-source.R#L16)   | source functionality  | source calls: print                     | PASS   | 1 | 0.018 |
+<table>
+
+<thead>
+
+<tr>
+
+<th style="text-align:left;">
+
+file
+
+</th>
+
+<th style="text-align:left;">
+
+context
+
+</th>
+
+<th style="text-align:left;">
+
+test
+
+</th>
+
+<th style="text-align:left;">
+
+status
+
+</th>
+
+<th style="text-align:right;">
+
+n
+
+</th>
+
+<th style="text-align:right;">
+
+time
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td style="text-align:left;">
+
+[test-console.R](https://github.com/yonicd/whereami/tree/cli_methods/tests/testthat/test-console.R#L9)
+
+</td>
+
+<td style="text-align:left;">
+
+console functionality
+
+</td>
+
+<td style="text-align:left;">
+
+console functionality: class
+
+</td>
+
+<td style="text-align:left;">
+
+PASS
+
+</td>
+
+<td style="text-align:right;">
+
+1
+
+</td>
+
+<td style="text-align:right;">
+
+0.018
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+[test-console.R](https://github.com/yonicd/whereami/tree/cli_methods/tests/testthat/test-console.R#L13)
+
+</td>
+
+<td style="text-align:left;">
+
+console functionality
+
+</td>
+
+<td style="text-align:left;">
+
+console functionality: value
+
+</td>
+
+<td style="text-align:left;">
+
+PASS
+
+</td>
+
+<td style="text-align:right;">
+
+1
+
+</td>
+
+<td style="text-align:right;">
+
+0.002
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+[test-counter.R](https://github.com/yonicd/whereami/tree/cli_methods/tests/testthat/test-counter.R#L8)
+
+</td>
+
+<td style="text-align:left;">
+
+counter functionality
+
+</td>
+
+<td style="text-align:left;">
+
+counter flow: no counter exists
+
+</td>
+
+<td style="text-align:left;">
+
+PASS
+
+</td>
+
+<td style="text-align:right;">
+
+1
+
+</td>
+
+<td style="text-align:right;">
+
+0.001
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+[test-counter.R](https://github.com/yonicd/whereami/tree/cli_methods/tests/testthat/test-counter.R#L14)
+
+</td>
+
+<td style="text-align:left;">
+
+counter functionality
+
+</td>
+
+<td style="text-align:left;">
+
+counter flow: initial
+
+</td>
+
+<td style="text-align:left;">
+
+PASS
+
+</td>
+
+<td style="text-align:right;">
+
+1
+
+</td>
+
+<td style="text-align:right;">
+
+0.036
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+[test-counter.R](https://github.com/yonicd/whereami/tree/cli_methods/tests/testthat/test-counter.R#L18)
+
+</td>
+
+<td style="text-align:left;">
+
+counter functionality
+
+</td>
+
+<td style="text-align:left;">
+
+counter flow: check counter was created
+
+</td>
+
+<td style="text-align:left;">
+
+PASS
+
+</td>
+
+<td style="text-align:right;">
+
+1
+
+</td>
+
+<td style="text-align:right;">
+
+0.001
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+[test-counter.R](https://github.com/yonicd/whereami/tree/cli_methods/tests/testthat/test-counter.R#L22)
+
+</td>
+
+<td style="text-align:left;">
+
+counter functionality
+
+</td>
+
+<td style="text-align:left;">
+
+counter flow: counter name
+
+</td>
+
+<td style="text-align:left;">
+
+PASS
+
+</td>
+
+<td style="text-align:right;">
+
+1
+
+</td>
+
+<td style="text-align:right;">
+
+0.002
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+[test-counter.R](https://github.com/yonicd/whereami/tree/cli_methods/tests/testthat/test-counter.R#L26)
+
+</td>
+
+<td style="text-align:left;">
+
+counter functionality
+
+</td>
+
+<td style="text-align:left;">
+
+counter flow: counter bump
+
+</td>
+
+<td style="text-align:left;">
+
+PASS
+
+</td>
+
+<td style="text-align:right;">
+
+1
+
+</td>
+
+<td style="text-align:right;">
+
+0.020
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+[test-counter.R](https://github.com/yonicd/whereami/tree/cli_methods/tests/testthat/test-counter.R#L30)
+
+</td>
+
+<td style="text-align:left;">
+
+counter functionality
+
+</td>
+
+<td style="text-align:left;">
+
+counter flow: counter state
+
+</td>
+
+<td style="text-align:left;">
+
+PASS
+
+</td>
+
+<td style="text-align:right;">
+
+1
+
+</td>
+
+<td style="text-align:right;">
+
+0.003
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+[test-counter.R](https://github.com/yonicd/whereami/tree/cli_methods/tests/testthat/test-counter.R#L34)
+
+</td>
+
+<td style="text-align:left;">
+
+counter functionality
+
+</td>
+
+<td style="text-align:left;">
+
+counter flow: cat\_whereami
+
+</td>
+
+<td style="text-align:left;">
+
+PASS
+
+</td>
+
+<td style="text-align:right;">
+
+1
+
+</td>
+
+<td style="text-align:right;">
+
+0.042
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+[test-counter.R](https://github.com/yonicd/whereami/tree/cli_methods/tests/testthat/test-counter.R#L38)
+
+</td>
+
+<td style="text-align:left;">
+
+counter functionality
+
+</td>
+
+<td style="text-align:left;">
+
+counter flow: multiple counter states
+
+</td>
+
+<td style="text-align:left;">
+
+PASS
+
+</td>
+
+<td style="text-align:right;">
+
+1
+
+</td>
+
+<td style="text-align:right;">
+
+0.001
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+[test-counter.R](https://github.com/yonicd/whereami/tree/cli_methods/tests/testthat/test-counter.R#L42)
+
+</td>
+
+<td style="text-align:left;">
+
+counter functionality
+
+</td>
+
+<td style="text-align:left;">
+
+counter flow: multiple counter names
+
+</td>
+
+<td style="text-align:left;">
+
+PASS
+
+</td>
+
+<td style="text-align:right;">
+
+1
+
+</td>
+
+<td style="text-align:right;">
+
+0.001
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+[test-counter.R](https://github.com/yonicd/whereami/tree/cli_methods/tests/testthat/test-counter.R#L47)
+
+</td>
+
+<td style="text-align:left;">
+
+counter functionality
+
+</td>
+
+<td style="text-align:left;">
+
+counter flow: reset item
+
+</td>
+
+<td style="text-align:left;">
+
+PASS
+
+</td>
+
+<td style="text-align:right;">
+
+1
+
+</td>
+
+<td style="text-align:right;">
+
+0.001
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+[test-counter.R](https://github.com/yonicd/whereami/tree/cli_methods/tests/testthat/test-counter.R#L52)
+
+</td>
+
+<td style="text-align:left;">
+
+counter functionality
+
+</td>
+
+<td style="text-align:left;">
+
+counter flow: reset all
+
+</td>
+
+<td style="text-align:left;">
+
+PASS
+
+</td>
+
+<td style="text-align:right;">
+
+1
+
+</td>
+
+<td style="text-align:right;">
+
+0.002
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+[test-source.R](https://github.com/yonicd/whereami/tree/cli_methods/tests/testthat/test-source.R#L8)
+
+</td>
+
+<td style="text-align:left;">
+
+source functionality
+
+</td>
+
+<td style="text-align:left;">
+
+source calls: direct call
+
+</td>
+
+<td style="text-align:left;">
+
+PASS
+
+</td>
+
+<td style="text-align:right;">
+
+1
+
+</td>
+
+<td style="text-align:right;">
+
+0.015
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+[test-source.R](https://github.com/yonicd/whereami/tree/cli_methods/tests/testthat/test-source.R#L12)
+
+</td>
+
+<td style="text-align:left;">
+
+source functionality
+
+</td>
+
+<td style="text-align:left;">
+
+source calls: path expand
+
+</td>
+
+<td style="text-align:left;">
+
+PASS
+
+</td>
+
+<td style="text-align:right;">
+
+1
+
+</td>
+
+<td style="text-align:right;">
+
+0.015
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+[test-source.R](https://github.com/yonicd/whereami/tree/cli_methods/tests/testthat/test-source.R#L16)
+
+</td>
+
+<td style="text-align:left;">
+
+source functionality
+
+</td>
+
+<td style="text-align:left;">
+
+source calls: print
+
+</td>
+
+<td style="text-align:left;">
+
+PASS
+
+</td>
+
+<td style="text-align:right;">
+
+1
+
+</td>
+
+<td style="text-align:right;">
+
+0.018
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
 
 </details>
 
@@ -81,19 +1057,189 @@ package.
 
 <summary> Session Info </summary>
 
-| Field    | Value                               |
-| :------- | :---------------------------------- |
-| Version  | R version 3.5.1 (2018-07-02)        |
-| Platform | x86\_64-apple-darwin15.6.0 (64-bit) |
-| Running  | macOS 10.14.4                       |
-| Language | en\_US                              |
-| Timezone | America/New\_York                   |
+<table>
 
-| Package  | Version |
-| :------- | :------ |
-| testthat | 2.0.1   |
-| covr     | 3.2.1   |
-| covrpage | 0.0.70  |
+<thead>
+
+<tr>
+
+<th style="text-align:left;">
+
+Field
+
+</th>
+
+<th style="text-align:left;">
+
+Value
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td style="text-align:left;">
+
+Version
+
+</td>
+
+<td style="text-align:left;">
+
+R version 3.5.1 (2018-07-02)
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Platform
+
+</td>
+
+<td style="text-align:left;">
+
+x86\_64-apple-darwin15.6.0 (64-bit)
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Running
+
+</td>
+
+<td style="text-align:left;">
+
+macOS 10.14.4
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Language
+
+</td>
+
+<td style="text-align:left;">
+
+en\_US
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Timezone
+
+</td>
+
+<td style="text-align:left;">
+
+America/New\_York
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th style="text-align:left;">
+
+Package
+
+</th>
+
+<th style="text-align:left;">
+
+Version
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td style="text-align:left;">
+
+testthat
+
+</td>
+
+<td style="text-align:left;">
+
+2.0.1
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+covr
+
+</td>
+
+<td style="text-align:left;">
+
+3.2.1
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+covrpage
+
+</td>
+
+<td style="text-align:left;">
+
+0.0.70
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
 
 </details>
 
