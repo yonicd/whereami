@@ -3,9 +3,7 @@
 #' @param where whereami output
 #' @return character
 #' @examples
-#' \dontrun{
 #'  cat_where(whereami())
-#' }
 #' @rdname cat_where
 #' @family print
 #' @export

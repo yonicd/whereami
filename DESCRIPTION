@@ -1,7 +1,7 @@
 Package: whereami
 Type: Package
 Title: Reliably return location where command is called from
-Version: 0.1.5
+Version: 0.1.6
 Authors@R: person(given = "Jonathan", family = "Sidi", email =
         "yonicd@gmail.com", role = c("aut", "cre"), comment = c(ORCID =
         "0000-0002-4222-1819"))

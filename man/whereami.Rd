@@ -17,13 +17,8 @@ Returns the file that a command is run from.
 
 If traceback is available then the line that it was run from is also returned.
 }
-\details{
-does not work currently on rmd render
-}
 \examples{
-\dontrun{
  whereami()
  whereami(path_expand = TRUE)
-}
 }
 \concept{main}
