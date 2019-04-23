@@ -1,9 +1,9 @@
 #' @title cat function for whereami
 #' @description cat function for whereami output
 #' @param where whereami output
-#' @param type `{cli}` `cat_*` method. Can be `boxx`, `bullet`, `line`, `print`, `rule`.
+#' @param type `cli` `cat_*` method. Can be `boxx`, `bullet`, `line`, `print`, `rule`.
 #'     Default is `rule`.
-#' @param color `{cli}` `col_*` method.
+#' @param color `cli` `col_*` method.
 #' @param ... further arguments passed to `cli::cat_*`.
 #' @return character
 #' @examples

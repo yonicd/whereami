@@ -22,9 +22,9 @@ Interact with internal whereami counter
 counter_names returns names of the active stored counters.
 
 counter_state returns current hit count for item, if NULL then all counters
- are returned.
+are returned.
 
 counter_reset will remove counter of item, if item is NULL then all counters
- are reset.
+are reset.
 }
 \concept{counter}

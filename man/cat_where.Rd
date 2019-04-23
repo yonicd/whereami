@@ -11,12 +11,12 @@ cat_where(where, type = c("rule", "boxx", "bullet", "line", "print"),
 \arguments{
 \item{where}{whereami output}
 
-\item{type}{`{cli}` `cat_*` method. Can be `boxx`, `bullet`, `line`, `print`, `rule`.
-Default is `rule`.}
+\item{type}{\code{cli} \code{cat_*} method. Can be \code{boxx}, \code{bullet}, \code{line}, \code{print}, \code{rule}.
+Default is \code{rule}.}
 
-\item{color}{`{cli}` `col_*` method.}
+\item{color}{\code{cli} \code{col_*} method.}
 
-\item{...}{further arguments passed to `cli::cat_*`.}
+\item{...}{further arguments passed to \code{cli::cat_*}.}
 }
 \value{
 character
