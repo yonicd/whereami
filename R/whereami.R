@@ -12,6 +12,7 @@
 #' }
 #' @rdname whereami
 #' @export
+#' @family main
 #' @importFrom rstudioapi getActiveDocumentContext isAvailable
 #' @importFrom utils getSrcDirectory getSrcFilename
 #' @importFrom rprojroot thisfile

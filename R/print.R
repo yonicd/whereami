@@ -7,6 +7,7 @@
 #'  cat_where(whereami())
 #' }
 #' @rdname cat_where
+#' @family print
 #' @export
 #' @importFrom cli cat_rule
 cat_where <- function(where){

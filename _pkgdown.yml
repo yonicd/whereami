@@ -10,4 +10,14 @@ navbar:
     twitter:
       icon: fa-lg fa-twitter
       href: http://twitter.com/yoniceedee
+reference:
+  - title: "Main"
+    contents:
+      - has_concept("main")
+  - title: "Print"
+    contents:
+      - has_concept("print")
+  - title: "Counter"
+    contents:
+      - has_concept("counter")
 destination: docs

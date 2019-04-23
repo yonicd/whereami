@@ -14,6 +14,7 @@ wenv <- new.env()
 #'  are reset.
 #'
 #' @rdname counter
+#' @family invoke
 #' @export
 counter_state <- function(item = NULL){
 
