@@ -1,0 +1,42 @@
+---
+title: "Tables"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Tables}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(whereami)
+library(texPreview)
+library(magrittr)
+```
+
+```{r}
+tex_opts$set(returnType = 'html')
+```
+
+## LaTeX caption
+
+```{r}
+tab <- xtable::xtable(head(iris,10))
+xtable::caption(tab) <- paste0(xtable::sanitize(whereami()),collapse = ', ')
+texPreview::tex_preview(tab,fileDir = getwd())
+```
+
+## HTML footnote
+
+```{r}
+knitr::kable(head(iris,10), align = "c",format = 'html') %>%
+  kableExtra::footnote(
+    general_title = "Source: ",
+    general = as.character(whereami(path_expand = TRUE)))
+```
