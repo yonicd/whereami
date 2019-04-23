@@ -21,19 +21,13 @@ remotes::install_github("yonicd/whereami")
 ``` r
 library(whereami)
 library(ggplot2)
-#> Want to understand how all the pieces fit together? See the R for
-#> Data Science book: http://r4ds.had.co.nz/
 ```
 
 ### General
 
-<!-- ![](https://github.com/yonicd/whereami/blob/misc/misc/base_example.gif?raw=true) -->
-
-### Interactive Rmd
-
 ``` r
 whereami()
-#> ── Running From: Console ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+#> ── Running From: ./README.Rmd ──────────────────────────────────────────────────────────
 ```
 
 ### Plots

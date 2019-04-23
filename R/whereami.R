@@ -4,12 +4,9 @@
 #' If traceback is available then the line that it was run from is also returned.
 #' @param path_expand logical, expand relational path, Default: FALSE
 #' @return character
-#' @details does not work currently on rmd render
 #' @examples
-#' \dontrun{
 #'  whereami()
 #'  whereami(path_expand = TRUE)
-#' }
 #' @rdname whereami
 #' @export
 #' @family main
@@ -56,8 +53,9 @@ whereami <- function(path_expand = FALSE){
 
     }
 
-    if(!path_expand)
-      src <- gsub(getwd(),'.',src)
+    if(!path_expand){
+      src <- path_reduce(src)
+    }
 
     cat(src,file = tf,sep='\n')
 
@@ -68,10 +66,21 @@ whereami <- function(path_expand = FALSE){
 
   }else{
 
-    src <- normalizePath(rprojroot::thisfile())
+    src <- rprojroot::thisfile()
 
-    if(!path_expand)
-      src <- gsub(getwd(),'.',src)
+    if(!is.null(src)){
+
+      src <- normalizePath(src)
+
+      if(!path_expand){
+        src <- path_reduce(src)
+      }
+
+    }else{
+
+      cat('',file = tf,sep='\n',append = TRUE)
+
+    }
 
     if(!is.null(src))
       cat(src,file = tf,sep='\n',append = TRUE)
