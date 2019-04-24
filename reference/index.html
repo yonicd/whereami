@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Authors • whereami</title>
+<title>Function reference • whereami</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -25,12 +25,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
-<link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script>
+<link href="../pkgdown.css" rel="stylesheet">
+<script src="../pkgdown.js"></script>
 
 
 
-<meta property="og:title" content="Authors" />
+<meta property="og:title" content="Function reference" />
 
 
 
@@ -47,7 +47,7 @@
   </head>
 
   <body>
-    <div class="container template-authors">
+    <div class="container template-reference-index">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -59,7 +59,7 @@
         <span class="icon-bar"></span>
       </button>
       <span class="navbar-brand">
-        <a class="navbar-link" href="index.html">whereami</a>
+        <a class="navbar-link" href="../index.html">whereami</a>
         <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.7</span>
       </span>
     </div>
@@ -67,16 +67,16 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">
+  <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
 </li>
 <li>
-  <a href="reference/index.html">Reference</a>
+  <a href="../reference/index.html">Reference</a>
 </li>
 <li>
-  <a href="articles/index.html">Articles</a>
+  <a href="../articles/index.html">Articles</a>
 </li>
       </ul>
       
@@ -105,28 +105,87 @@
 <div class="row">
   <div class="contents col-md-9">
     <div class="page-header">
-      <h1>Authors</h1>
+      <h1>Reference</h1>
     </div>
 
-    <ul class="list-unstyled">
-      <li>
-        <p><strong>Jonathan Sidi</strong>. Author, maintainer. <a href='https://orcid.org/0000-0002-4222-1819' target='orcid.widget'><img src='https://members.orcid.org/sites/default/files/vector_iD_icon.svg' class='orcid' alt='ORCID' height='16'></a>
-        </p>
-      </li>
-      <li>
-        <p><strong>Colin Fay</strong>. Contributor. <a href='https://orcid.org/0000-0001-7343-1846' target='orcid.widget'><img src='https://members.orcid.org/sites/default/files/vector_iD_icon.svg' class='orcid' alt='ORCID' height='16'></a>
-        </p>
-      </li>
-      <li>
-        <p><strong>Kirill Müller</strong>. Author. <a href='https://orcid.org/0000-0002-1416-3412' target='orcid.widget'><img src='https://members.orcid.org/sites/default/files/vector_iD_icon.svg' class='orcid' alt='ORCID' height='16'></a>
-        </p>
-      </li>
-    </ul>
+    <table class="ref-index">
 
+    <colgroup>
+      
+      <col class="alias" />
+      <col class="title" />
+    </colgroup>
+
+    <tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-main" class="hasAnchor"><a href="#section-main" class="anchor"></a>Main</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="whereami.html">whereami()</a></code> </p>
+        </td>
+        <td><p>Return where the script is run from</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-print" class="hasAnchor"><a href="#section-print" class="anchor"></a>Print</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="cat_where.html">cat_where()</a></code> </p>
+        </td>
+        <td><p>cat function for whereami</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-counter" class="hasAnchor"><a href="#section-counter" class="anchor"></a>Counter</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="counter.html">counter_state()</a></code> <code><a href="counter.html">counter_reset()</a></code> <code><a href="counter.html">counter_names()</a></code> </p>
+        </td>
+        <td><p>whereami counter</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-thisfile" class="hasAnchor"><a href="#section-thisfile" class="anchor"></a>Thisfile</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="thisfile.html">thisfile()</a></code> <code><a href="thisfile.html">thisfile_source()</a></code> <code><a href="thisfile.html">thisfile_r()</a></code> <code><a href="thisfile.html">thisfile_rscript()</a></code> <code><a href="thisfile.html">thisfile_knit()</a></code> </p>
+        </td>
+        <td><p>Determines the path of the currently running script in terminal</p></td>
+      </tr>
+    </tbody>
+    </table>
   </div>
 
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#section-main">Main</a></li>
+      <li><a href="#section-print">Print</a></li>
+      <li><a href="#section-counter">Counter</a></li>
+      <li><a href="#section-thisfile">Thisfile</a></li>
+    </ul>
+  </div>
 </div>
-
 
       <footer>
       <div class="copyright">
