@@ -28,7 +28,7 @@ image_write(waldo,path = 'waldo.png')
 image_write(logo,path = 'logoR.png')
 
 waldoR%>%
-  sticker(
+  hexSticker::sticker(
     package = 'whereami',
     s_x=1,
     s_y=.75,
@@ -37,8 +37,10 @@ waldoR%>%
     h_fill='white',
     p_family = "gochi",
     p_color = "#870C0E",
-    h_color = "#870C0E"
+    h_color = "#870C0E",
+    filename = 'hex/whereami.png'
 )
 
-magick::image_read('whereami.png')%>%
-  image_write(path = 'whereami_small.png')
+image_read('hex/whereami.png')%>%
+  image_scale('x200')%>%
+  image_write(path = 'hex/whereami_small.png')
