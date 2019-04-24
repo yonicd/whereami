@@ -29,7 +29,6 @@ Suggests:
     kableExtra,
     testthat,
     covr,
-    pkgdown,
     knitr,
     rmarkdown
 VignetteBuilder: knitr
