@@ -1,5 +1,7 @@
 language: r
 cache: packages
+r_packages:
+- devtools
 r_github_packages:
 - metrumresearchgroup/covrpage
 after_success:
