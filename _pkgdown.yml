@@ -1,6 +1,6 @@
 destination: docs
 hexURL:
-  https://github.com/yonicd/whereami/blob/master/inst/whereami.png?raw=true
+  https://github.com/yonicd/whereami/blob/media/hex/whereami.png?raw=true
 navbar:
   structure:
     left:  [home, reference, articleindex, news]

@@ -48,10 +48,10 @@ package.
 
 | file                                        |  n |  time | error | failed | skipped | warning | icon |
 | :------------------------------------------ | -: | ----: | ----: | -----: | ------: | ------: | :--- |
-| [test-console.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-console.R)   |  2 | 0.044 |     0 |      0 |       0 |       0 |      |
-| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R)   | 11 | 0.074 |     0 |      0 |       0 |       0 |      |
-| [test-source.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-source.R)     |  3 | 0.061 |     0 |      0 |       0 |       0 |      |
-| [test-thisfile.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-thisfile.R) |  4 | 0.025 |     0 |      0 |       3 |       0 | 🔶    |
+| [test-console.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-console.R)   |  2 | 0.017 |     0 |      0 |       0 |       0 |      |
+| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R)   | 11 | 0.089 |     0 |      0 |       0 |       0 |      |
+| [test-source.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-source.R)     |  3 | 0.047 |     0 |      0 |       0 |       0 |      |
+| [test-thisfile.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-thisfile.R) |  4 | 0.023 |     0 |      0 |       3 |       0 | 🔶    |
 
 <details open>
 
@@ -60,26 +60,26 @@ package.
 
 | file                                                | context               | test                                    | status  | n |  time | icon |
 | :-------------------------------------------------- | :-------------------- | :-------------------------------------- | :------ | -: | ----: | :--- |
-| [test-console.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-console.R#L9)        | console functionality | console functionality: class            | PASS    | 1 | 0.041 |      |
-| [test-console.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-console.R#L13)       | console functionality | console functionality: value            | PASS    | 1 | 0.003 |      |
+| [test-console.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-console.R#L9)        | console functionality | console functionality: class            | PASS    | 1 | 0.015 |      |
+| [test-console.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-console.R#L13)       | console functionality | console functionality: value            | PASS    | 1 | 0.002 |      |
 | [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L8)        | counter functionality | counter flow: no counter exists         | PASS    | 1 | 0.001 |      |
-| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L14)       | counter functionality | counter flow: initial                   | PASS    | 1 | 0.024 |      |
+| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L14)       | counter functionality | counter flow: initial                   | PASS    | 1 | 0.029 |      |
 | [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L18)       | counter functionality | counter flow: check counter was created | PASS    | 1 | 0.001 |      |
-| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L22)       | counter functionality | counter flow: counter name              | PASS    | 1 | 0.001 |      |
-| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L26)       | counter functionality | counter flow: counter bump              | PASS    | 1 | 0.020 |      |
+| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L22)       | counter functionality | counter flow: counter name              | PASS    | 1 | 0.002 |      |
+| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L26)       | counter functionality | counter flow: counter bump              | PASS    | 1 | 0.022 |      |
 | [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L30)       | counter functionality | counter flow: counter state             | PASS    | 1 | 0.003 |      |
 | [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L34)       | counter functionality | counter flow: cat\_whereami             | PASS    | 1 | 0.018 |      |
-| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L38)       | counter functionality | counter flow: multiple counter states   | PASS    | 1 | 0.002 |      |
-| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L42)       | counter functionality | counter flow: multiple counter names    | PASS    | 1 | 0.002 |      |
-| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L47)       | counter functionality | counter flow: reset item                | PASS    | 1 | 0.001 |      |
+| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L38)       | counter functionality | counter flow: multiple counter states   | PASS    | 1 | 0.001 |      |
+| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L42)       | counter functionality | counter flow: multiple counter names    | PASS    | 1 | 0.001 |      |
+| [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L47)       | counter functionality | counter flow: reset item                | PASS    | 1 | 0.010 |      |
 | [test-counter.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-counter.R#L52)       | counter functionality | counter flow: reset all                 | PASS    | 1 | 0.001 |      |
-| [test-source.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-source.R#L8)          | source functionality  | source calls: direct call               | PASS    | 1 | 0.030 |      |
+| [test-source.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-source.R#L8)          | source functionality  | source calls: direct call               | PASS    | 1 | 0.016 |      |
 | [test-source.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-source.R#L12)         | source functionality  | source calls: path expand               | PASS    | 1 | 0.014 |      |
 | [test-source.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-source.R#L16)         | source functionality  | source calls: print                     | PASS    | 1 | 0.017 |      |
-| [test-thisfile.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-thisfile.R#L4)      | thisfile              | thisfile works with source              | SKIPPED | 1 | 0.002 | 🔶    |
-| [test-thisfile.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-thisfile.R#L10)     | thisfile              | thisfile works with Rscript             | SKIPPED | 1 | 0.001 | 🔶    |
-| [test-thisfile.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-thisfile.R#L18)     | thisfile              | thisfile works with R                   | SKIPPED | 1 | 0.000 | 🔶    |
-| [test-thisfile.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-thisfile.R#L28_L32) | thisfile              | thisfile works with knitr               | PASS    | 1 | 0.022 |      |
+| [test-thisfile.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-thisfile.R#L7)      | thisfile              | thisfile works with source              | SKIPPED | 1 | 0.001 | 🔶    |
+| [test-thisfile.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-thisfile.R#L13)     | thisfile              | thisfile works with Rscript             | SKIPPED | 1 | 0.001 | 🔶    |
+| [test-thisfile.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-thisfile.R#L21)     | thisfile              | thisfile works with R                   | SKIPPED | 1 | 0.001 | 🔶    |
+| [test-thisfile.R](https://github.com/yonicd/whereami/tree/master/tests/testthat/test-thisfile.R#L31_L35) | thisfile              | thisfile works with knitr               | PASS    | 1 | 0.020 |      |
 
 | Failed | Warning | Skipped |
 | :----- | :------ | :------ |
