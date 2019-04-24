@@ -27,4 +27,7 @@ are returned.
 counter_reset will remove counter of item, if item is NULL then all counters
 are reset.
 }
+\author{
+Jonathan Sidi
+}
 \concept{counter}

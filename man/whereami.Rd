@@ -21,4 +21,7 @@ If traceback is available then the line that it was run from is also returned.
  whereami()
  whereami(path_expand = TRUE)
 }
+\author{
+Jonathan Sidi
+}
 \concept{main}

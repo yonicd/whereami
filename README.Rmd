@@ -5,15 +5,18 @@ output: github_document
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r setup, include = FALSE}
+
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
+
+Sys.setenv(RSTUDIO_CONSOLE_WIDTH = 50)
 ```
 
-[![Travis build status](https://travis-ci.org/yonicd/whereami.svg?branch=master)](https://travis-ci.org/yonicd/whereami)[![Coverage status](https://codecov.io/gh/yonicd/whereami/branch/master/graph/badge.svg)](https://codecov.io/github/yonicd/whereami?branch=master)[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_04_23-brightgreen.svg)](http://tinyurl.com/y5c5voy3)
+[![Travis build status](https://travis-ci.org/yonicd/whereami.svg?branch=master)](https://travis-ci.org/yonicd/whereami)[![Coverage status](https://codecov.io/gh/yonicd/whereami/branch/master/graph/badge.svg)](https://codecov.io/github/yonicd/whereami?branch=master)[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_04_23-yellowgreen.svg)](http://tinyurl.com/y5c5voy3)
 
 # whereami
 
@@ -34,7 +37,7 @@ library(ggplot2)
 
 ### General
 
-```{r basic}
+```{r basic,R.options=list(width = 50)}
 whereami()
 ```
 

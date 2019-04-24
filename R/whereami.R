@@ -10,9 +10,9 @@
 #' @rdname whereami
 #' @export
 #' @family main
+#' @author Jonathan Sidi
 #' @importFrom rstudioapi getActiveDocumentContext isAvailable
 #' @importFrom utils getSrcDirectory getSrcFilename
-#' @importFrom rprojroot thisfile
 whereami <- function(path_expand = FALSE){
 
   tf <- tempfile()
@@ -66,7 +66,7 @@ whereami <- function(path_expand = FALSE){
 
   }else{
 
-    src <- rprojroot::thisfile()
+    src <- thisfile()
 
     if(!is.null(src)){
 
