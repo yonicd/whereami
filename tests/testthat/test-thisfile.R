@@ -1,5 +1,8 @@
 testthat::context("thisfile")
 
+f <- 'scripts/thisfile-cat.R'
+fcmd <- sprintf('"%s" --slave --vanilla --no-save -f %s',file.path(R.home(),'bin/R'),f)
+
 testthat::test_that("thisfile works with source", {
   testthat::skip_on_cran()
   res <- source("scripts/thisfile.R")
@@ -8,20 +11,18 @@ testthat::test_that("thisfile works with source", {
 
 testthat::test_that("thisfile works with Rscript", {
   testthat::skip_on_cran()
-  testthat::skip_on_travis()
-  p <- pipe("Rscript scripts/thisfile-cat.R")
+  p <- pipe(fcmd)
   on.exit(close(p))
   res <- readLines(p)
-  testthat::expect_equal("scripts/thisfile-cat.R", res[[length(res)]])
+  testthat::expect_equal(f, res[[length(res)]])
 })
 
 testthat::test_that("thisfile works with R", {
   testthat::skip_on_cran()
-  testthat::skip_on_travis()
-  p <- pipe("R --slave --vanilla --no-save -f scripts/thisfile-cat.R")
+  p <- pipe(fcmd)
   on.exit(close(p))
   res <- readLines(p)
-  testthat::expect_equal("scripts/thisfile-cat.R", res[[length(res)]])
+  testthat::expect_equal(f, res[[length(res)]])
 })
 
 testthat::test_that("thisfile works with knitr", {
