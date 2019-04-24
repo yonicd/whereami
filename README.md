@@ -49,7 +49,8 @@ ggplot(iris) +
 ## Non RStudio session
 
 If you are running a non RStudio script ie from terminal R/Rscript then
-the package falls back to
+the package falls back to `thisfile()`, which has been migrated from
 [rprojroot::thisfile()](https://rprojroot.r-lib.org/reference/thisfile.html).
-In this case the traceback functionality of `whereami` to return the
-line where `whereami()` was sourced is not enabled.
+
+In this case the traceback functionality of `whereami()` to return the
+line where the function was sourced is not enabled.
