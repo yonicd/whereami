@@ -8,6 +8,7 @@ testthat::test_that("thisfile works with source", {
 
 testthat::test_that("thisfile works with Rscript", {
   testthat::skip_on_cran()
+  testthat::skip_on_travis()
   p <- pipe("Rscript scripts/thisfile-cat.R")
   on.exit(close(p))
   res <- readLines(p)
@@ -16,6 +17,7 @@ testthat::test_that("thisfile works with Rscript", {
 
 testthat::test_that("thisfile works with R", {
   testthat::skip_on_cran()
+  testthat::skip_on_travis()
   p <- pipe("R --slave --vanilla --no-save -f scripts/thisfile-cat.R")
   on.exit(close(p))
   res <- readLines(p)
