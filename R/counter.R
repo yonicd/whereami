@@ -14,6 +14,7 @@ wenv <- new.env()
 #'  are reset.
 #'
 #' @rdname counter
+#' @author Jonathan Sidi
 #' @family counter
 #' @export
 counter_state <- function(item = NULL){

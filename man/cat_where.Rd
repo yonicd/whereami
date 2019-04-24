@@ -29,4 +29,7 @@ cat function for whereami output
  cat_where(whereami(), type = "bullet", bullet = "tick")
  cat_where(whereami(), color = "green")
 }
+\author{
+Colin Fay
+}
 \concept{print}

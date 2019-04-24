@@ -11,6 +11,7 @@
 #'  cat_where(whereami(), type = "bullet", bullet = "tick")
 #'  cat_where(whereami(), color = "green")
 #' @rdname cat_where
+#' @author Colin Fay
 #' @family print
 #' @export
 #' @importFrom cli cat_rule
