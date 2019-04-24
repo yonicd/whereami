@@ -1,5 +1,6 @@
 language: r
 cache: packages
+latex: false
 r_github_packages:
 - metrumresearchgroup/covrpage
 after_success:
