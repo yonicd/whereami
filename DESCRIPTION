@@ -1,6 +1,10 @@
 Package: whereami
 Type: Package
-Title: Reliably return location where command is called from
+Title: Reliably Return the Source and Call Location of a Command
+Description: Robust and reliable functions to return informative outputs to 
+        console with the run or source location of a command. This can be from
+        the  'RScript'/R terminal commands or 'RStudio' console, source editor, 
+        'Rmarkdown' document and a Shiny application.
 Version: 0.1.7
 Authors@R: c(
         person(given = "Jonathan", family = "Sidi", email =
@@ -12,8 +16,6 @@ Authors@R: c(
         email = "krlmlr+r@mailbox.org", 
         comment = c(ORCID = "0000-0002-1416-3412"))
         )
-Description: Return where command is run or sourced from and place place
-        tracebacks in files to print to console.
 License: MIT + file LICENSE
 Depends: R (>= 3.2.0)
 Imports: rstudioapi, utils, rprojroot, cli

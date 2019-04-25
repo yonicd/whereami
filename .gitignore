@@ -2,8 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-test1.R
-shinytest.R
 inst/doc
 doc
 Meta
