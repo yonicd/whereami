@@ -4,7 +4,7 @@
 [![Travis build
 status](https://travis-ci.org/yonicd/whereami.svg?branch=master)](https://travis-ci.org/yonicd/whereami)[![Coverage
 status](https://codecov.io/gh/yonicd/whereami/branch/master/graph/badge.svg)](https://codecov.io/github/yonicd/whereami?branch=master)[![Covrpage
-Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_04_24-yellowgreen.svg)](http://tinyurl.com/y5c5voy3)
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_04_25-yellowgreen.svg)](http://tinyurl.com/y5c5voy3)
 
 # whereami<img src="https://github.com/yonicd/whereami/raw/media/hex/whereami_small.png" align="right" />
 
@@ -21,6 +21,8 @@ remotes::install_github("yonicd/whereami")
 ``` r
 library(whereami)
 library(ggplot2)
+#> Need help? Try Stackoverflow:
+#> https://stackoverflow.com/tags/ggplot2.
 ```
 
 ### General

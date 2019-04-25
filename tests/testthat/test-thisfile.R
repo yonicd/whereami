@@ -1,7 +1,7 @@
 testthat::context("thisfile")
 
-f <- 'scripts/thisfile-cat.R'
-fcmd <- sprintf('"%s" --slave --vanilla --no-save -f %s',file.path(R.home(),'bin/R'),f)
+f <- "scripts/thisfile-cat.R"
+fcmd <- sprintf('"%s" --slave --vanilla --no-save -f %s', R.home("bin/R"), f)
 
 testthat::test_that("thisfile works with source", {
   testthat::skip_on_cran()

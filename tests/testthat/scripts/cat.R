@@ -1,5 +1,5 @@
 
-foo2 <- function(){
+foo2 <- function() {
   whereami::cat_where(whereami::whereami())
 }
 

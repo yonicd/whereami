@@ -12,3 +12,4 @@ shinytest.R
 ^\.travis\.yml$
 ^codecov\.yml$
 ^cran-comments\.md$
+^CRAN-RELEASE$
