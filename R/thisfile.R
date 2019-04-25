@@ -22,7 +22,34 @@
 #' @family this
 #' @rdname thisfile
 #' @examples
-#' \dontrun{thisfile()}
+#'
+#' if( !interactive() )
+#'   thisfile()
+#'
+#' # using in terminal ( with pipe() )
+#'
+#'   # open a temp file
+#'    tf <- tempfile(fileext = '.R')
+#'
+#'   # call to write to temp file
+#'    f <- 'cat(whereami::thisfile(), "\n", sep = "")'
+#'
+#'   # write to the file
+#'    cat(f,file = tf)
+#'
+#'   # create an R call to terminal
+#'    fcmd <- sprintf('"%s" --slave --vanilla --no-save -f %s',R.home('bin/R'),tf)
+#'
+#'   # run the call
+#'    p <- pipe(fcmd)
+#'
+#'   # read the output
+#'    readLines(p)
+#'
+#'   # cleanup
+#'    close(p)
+#'    unlink(tf)
+#'
 #' @export
 thisfile <- function() {
   if (!is.null(res <- thisfile_source())) {
@@ -67,7 +94,7 @@ thisfile_r <- function() {
   res <- gsub("^(?:|--file=)(.*)$", "\\1", cmd_args[file_idx])
 
   # If multiple --file arguments are given, R uses the last one
-  res <- tail(res[res != ""], 1)
+  res <- utils::tail(res[res != ""], 1)
   if (length(res) > 0) {
     return(res)
   }
@@ -91,7 +118,7 @@ thisfile_rscript <- function() {
   res <- gsub("^(?:--file=(.*)|.*)$", "\\1", cmd_args)
 
   # If multiple --file arguments are given, R uses the last one
-  res <- tail(res[res != ""], 1)
+  res <- utils::tail(res[res != ""], 1)
   if (length(res) > 0) {
     return(res)
   }

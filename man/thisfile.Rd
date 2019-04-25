@@ -43,7 +43,34 @@ These functions were migrated from
 \href{https://github.com/r-lib/rprojroot/tree/4e4f70c0794542a5cfa6c3f66635388365616881}{r-lib/rprojroot}.
 }
 \examples{
-\dontrun{thisfile()}
+
+if( !interactive() )
+  thisfile()
+
+# using in terminal ( with pipe() )
+
+  # open a temp file
+   tf <- tempfile(fileext = '.R')
+
+  # call to write to temp file
+   f <- 'cat(whereami::thisfile(), "\\n", sep = "")'
+
+  # write to the file
+   cat(f,file = tf)
+
+  # create an R call to terminal
+   fcmd <- sprintf('"\%s" --slave --vanilla --no-save -f \%s',R.home('bin/R'),tf)
+
+  # run the call
+   p <- pipe(fcmd)
+
+  # read the output
+   readLines(p)
+
+  # cleanup
+   close(p)
+   unlink(tf)
+
 }
 \references{
 \url{http://stackoverflow.com/q/1815606/946850}

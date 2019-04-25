@@ -27,6 +27,43 @@ are returned.
 counter_reset will remove counter of item, if item is NULL then all counters
 are reset.
 }
+\examples{
+
+if( interactive() ){
+
+tf <- tempfile(fileext = '.R')
+
+# call to write to temp file
+f <- 'whereami::cat_where(whereami::whereami())'
+
+# write to the file (call at line 3)
+cat('\\n\\n',f,sep='',file = tf)
+
+source(tf)
+
+counter_state()
+
+counter_names()
+
+# using counter_reset and counter_names in a loop
+
+for( i in 1:10 ){
+
+  source(tf)
+
+  if( counter_state(counter_names()[1]) > 5 )
+    counter_reset(counter_names()[1])
+}
+
+# clear all counters
+counter_reset()
+
+# cleanup
+unlink(tf)
+
+}
+
+}
 \author{
 Jonathan Sidi
 }
