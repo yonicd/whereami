@@ -172,7 +172,7 @@ of the parameter passed to <code>Rscript</code> is returned.</p>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='kw'>if</span>( !<span class='fu'>interactive</span>() )
-  <span class='fu'>thisfile</span>()</div><div class='output co'>#&gt; [1] "/tmp/RtmpeUnIqw/file35f04712a2b4"</div><div class='input'>
+  <span class='fu'>thisfile</span>()</div><div class='output co'>#&gt; [1] "/tmp/RtmpUlI22b/file35f573340dd0"</div><div class='input'>
 <span class='co'># using in terminal ( with pipe() )</span>
 
   <span class='co'># open a temp file</span>
@@ -191,7 +191,7 @@ of the parameter passed to <code>Rscript</code> is returned.</p>
    <span class='no'>p</span> <span class='kw'>&lt;-</span> <span class='fu'>pipe</span>(<span class='no'>fcmd</span>)
 
   <span class='co'># read the output</span>
-   <span class='fu'>readLines</span>(<span class='no'>p</span>)</div><div class='output co'>#&gt; [1] "/tmp/Rtmpvf8FP2/file35f86ab68ecf.R"</div><div class='input'>
+   <span class='fu'>readLines</span>(<span class='no'>p</span>)</div><div class='output co'>#&gt; [1] "/tmp/RtmpzcwutS/file35fd608729cb.R"</div><div class='input'>
   <span class='co'># cleanup</span>
    <span class='fu'>close</span>(<span class='no'>p</span>)
    <span class='fu'>unlink</span>(<span class='no'>tf</span>)</div></pre>
