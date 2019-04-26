@@ -27,7 +27,7 @@ testthat::test_that("thisfile works with R", {
 
 testthat::test_that("thisfile works with knitr", {
   testthat::skip_if_not_installed("knitr")
-  out <- tempfile(pattern = "rprojroot", fileext = ".md")
+  out <- tempfile(pattern = "whereami", fileext = ".md")
   testthat::expect_message(
     knitr::knit("scripts/thisfile.Rmd", output = out, quiet = TRUE),
     normalizePath("scripts/thisfile.Rmd"),
