@@ -5,7 +5,7 @@ testthat::describe("console functionality", {
   rstudioapi::sendToConsole("x <- whereami()")
 
   it("class", {
-    testthat::expect_true(inherits(x, "whereami"))
+    testthat::expect_true(inherits(x, c("whereami","character")))
   })
 
   it("value", {

@@ -1,6 +1,6 @@
 Tests and Coverage
 ================
-25 April, 2019 07:43:04
+26 April, 2019 08:00:36
 
   - [Coverage](#coverage)
   - [Unit Tests](#unit-tests)
@@ -33,10 +33,10 @@ package.
 
 | file                                        |  n |  time | error | failed | skipped | warning | icon |
 | :------------------------------------------ | -: | ----: | ----: | -----: | ------: | ------: | :--- |
-| [test-console.R](testthat/test-console.R)   |  2 | 0.013 |     0 |      0 |       0 |       0 |      |
-| [test-counter.R](testthat/test-counter.R)   | 11 | 0.070 |     0 |      0 |       0 |       0 |      |
-| [test-source.R](testthat/test-source.R)     |  3 | 0.051 |     0 |      0 |       0 |       0 |      |
-| [test-thisfile.R](testthat/test-thisfile.R) |  4 | 0.022 |     0 |      0 |       3 |       0 | 🔶    |
+| [test-console.R](testthat/test-console.R)   |  2 | 0.002 |     0 |      0 |       0 |       0 |      |
+| [test-counter.R](testthat/test-counter.R)   | 11 | 0.170 |     0 |      0 |       0 |       0 |      |
+| [test-source.R](testthat/test-source.R)     |  3 | 0.050 |     0 |      0 |       0 |       0 |      |
+| [test-thisfile.R](testthat/test-thisfile.R) |  4 | 0.015 |     0 |      0 |       3 |       0 | 🔶    |
 
 <details open>
 
@@ -45,26 +45,26 @@ package.
 
 | file                                                | context               | test                                    | status  | n |  time | icon |
 | :-------------------------------------------------- | :-------------------- | :-------------------------------------- | :------ | -: | ----: | :--- |
-| [test-console.R](testthat/test-console.R#L8)        | console functionality | console functionality: class            | PASS    | 1 | 0.012 |      |
+| [test-console.R](testthat/test-console.R#L8)        | console functionality | console functionality: class            | PASS    | 1 | 0.001 |      |
 | [test-console.R](testthat/test-console.R#L12)       | console functionality | console functionality: value            | PASS    | 1 | 0.001 |      |
 | [test-counter.R](testthat/test-counter.R#L7)        | counter functionality | counter flow: no counter exists         | PASS    | 1 | 0.001 |      |
-| [test-counter.R](testthat/test-counter.R#L13)       | counter functionality | counter flow: initial                   | PASS    | 1 | 0.022 |      |
-| [test-counter.R](testthat/test-counter.R#L17)       | counter functionality | counter flow: check counter was created | PASS    | 1 | 0.001 |      |
+| [test-counter.R](testthat/test-counter.R#L13)       | counter functionality | counter flow: initial                   | PASS    | 1 | 0.113 |      |
+| [test-counter.R](testthat/test-counter.R#L17)       | counter functionality | counter flow: check counter was created | PASS    | 1 | 0.002 |      |
 | [test-counter.R](testthat/test-counter.R#L21)       | counter functionality | counter flow: counter name              | PASS    | 1 | 0.002 |      |
-| [test-counter.R](testthat/test-counter.R#L25)       | counter functionality | counter flow: counter bump              | PASS    | 1 | 0.020 |      |
+| [test-counter.R](testthat/test-counter.R#L25)       | counter functionality | counter flow: counter bump              | PASS    | 1 | 0.022 |      |
 | [test-counter.R](testthat/test-counter.R#L29)       | counter functionality | counter flow: counter state             | PASS    | 1 | 0.002 |      |
-| [test-counter.R](testthat/test-counter.R#L33)       | counter functionality | counter flow: cat\_whereami             | PASS    | 1 | 0.018 |      |
+| [test-counter.R](testthat/test-counter.R#L33)       | counter functionality | counter flow: cat\_whereami             | PASS    | 1 | 0.022 |      |
 | [test-counter.R](testthat/test-counter.R#L37_L38)   | counter functionality | counter flow: multiple counter states   | PASS    | 1 | 0.002 |      |
-| [test-counter.R](testthat/test-counter.R#L42)       | counter functionality | counter flow: multiple counter names    | PASS    | 1 | 0.001 |      |
+| [test-counter.R](testthat/test-counter.R#L42)       | counter functionality | counter flow: multiple counter names    | PASS    | 1 | 0.002 |      |
 | [test-counter.R](testthat/test-counter.R#L47)       | counter functionality | counter flow: reset item                | PASS    | 1 | 0.001 |      |
-| [test-counter.R](testthat/test-counter.R#L52)       | counter functionality | counter flow: reset all                 | PASS    | 1 | 0.000 |      |
+| [test-counter.R](testthat/test-counter.R#L52)       | counter functionality | counter flow: reset all                 | PASS    | 1 | 0.001 |      |
 | [test-source.R](testthat/test-source.R#L7)          | source functionality  | source calls: direct call               | PASS    | 1 | 0.015 |      |
-| [test-source.R](testthat/test-source.R#L11)         | source functionality  | source calls: path expand               | PASS    | 1 | 0.014 |      |
-| [test-source.R](testthat/test-source.R#L15)         | source functionality  | source calls: print                     | PASS    | 1 | 0.022 |      |
+| [test-source.R](testthat/test-source.R#L11)         | source functionality  | source calls: path expand               | PASS    | 1 | 0.015 |      |
+| [test-source.R](testthat/test-source.R#L15)         | source functionality  | source calls: print                     | PASS    | 1 | 0.020 |      |
 | [test-thisfile.R](testthat/test-thisfile.R#L7)      | thisfile              | thisfile works with source              | SKIPPED | 1 | 0.001 | 🔶    |
-| [test-thisfile.R](testthat/test-thisfile.R#L13)     | thisfile              | thisfile works with Rscript             | SKIPPED | 1 | 0.000 | 🔶    |
-| [test-thisfile.R](testthat/test-thisfile.R#L21)     | thisfile              | thisfile works with R                   | SKIPPED | 1 | 0.000 | 🔶    |
-| [test-thisfile.R](testthat/test-thisfile.R#L31_L35) | thisfile              | thisfile works with knitr               | PASS    | 1 | 0.021 |      |
+| [test-thisfile.R](testthat/test-thisfile.R#L13)     | thisfile              | thisfile works with Rscript             | SKIPPED | 1 | 0.002 | 🔶    |
+| [test-thisfile.R](testthat/test-thisfile.R#L21)     | thisfile              | thisfile works with R                   | SKIPPED | 1 | 0.001 | 🔶    |
+| [test-thisfile.R](testthat/test-thisfile.R#L31_L35) | thisfile              | thisfile works with knitr               | PASS    | 1 | 0.011 |      |
 
 | Failed | Warning | Skipped |
 | :----- | :------ | :------ |
