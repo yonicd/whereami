@@ -81,5 +81,5 @@ whereami <- function(path_expand = FALSE) {
 
   ret <- readLines(tf)
 
-  structure(ret, class = c('whereami','character'))
+  structure(ret, class = c("whereami"))
 }
