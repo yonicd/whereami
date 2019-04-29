@@ -9,6 +9,8 @@ status](https://travis-ci.org/yonicd/whereami.svg?branch=master)](https://travis
 status](https://codecov.io/gh/yonicd/whereami/branch/master/graph/badge.svg)](https://codecov.io/github/yonicd/whereami?branch=master)
 [![Covrpage
 Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_04_26-yellowgreen.svg)](http://tinyurl.com/y5c5voy3)
+![](https://img.shields.io/badge/clones-103-9cf.svg)
+![](https://img.shields.io/badge/views-423-9cf.svg)
 
 # whereami<img src="https://github.com/yonicd/whereami/raw/media/hex/whereami_small.png" align="right" />
 
@@ -31,7 +33,7 @@ library(ggplot2)
 
 ``` r
 whereami()
-#> ── Running From: Console ─────────────────────────
+#> ── Running From: ./README.Rmd ────────────────────
 ```
 
 ### Plots
