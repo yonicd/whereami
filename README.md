@@ -9,8 +9,8 @@ status](https://travis-ci.org/yonicd/whereami.svg?branch=master)](https://travis
 status](https://codecov.io/gh/yonicd/whereami/branch/master/graph/badge.svg)](https://codecov.io/github/yonicd/whereami?branch=master)
 [![Covrpage
 Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_04_26-yellowgreen.svg)](http://tinyurl.com/y5c5voy3)
-[![Clones](https://ghtraffic.herokuapp.com/clones?owner=yonicd&repo=whereami&stat=count)](https://github.com/yonicd/whereami/graphs/traffic)
-[![Views](https://ghtraffic.herokuapp.com/views?owner=yonicd&repo=whereami&stat=count)](https://github.com/yonicd/whereami/graphs/traffic)
+[![Clones](http://ghtraffic.herokuapp.com/badge/clones?owner=yonicd&repo=whereami&stat=count)](https://github.com/yonicd/whereami/graphs/traffic)
+[![Views](http://ghtraffic.herokuapp.com/badge/views?owner=yonicd&repo=whereami&stat=count)](https://github.com/yonicd/whereami/graphs/traffic)
 
 # whereami<img src="https://github.com/yonicd/whereami/raw/media/hex/whereami_small.png" align="right" />
 
