@@ -20,11 +20,11 @@ Sys.setenv(RSTUDIO_CONSOLE_WIDTH = 50)
 [![](https://cranlogs.r-pkg.org/badges/whereami)](https://cran.r-project.org/package=whereami)
 [![Travis build status](https://travis-ci.org/yonicd/whereami.svg?branch=master)](https://travis-ci.org/yonicd/whereami)
 [![Coverage status](https://codecov.io/gh/yonicd/whereami/branch/master/graph/badge.svg)](https://codecov.io/github/yonicd/whereami?branch=master)
-[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_04_26-yellowgreen.svg)](http://tinyurl.com/y5c5voy3)
-[![Clones](http://ghtraffic.herokuapp.com/badge/clones?owner=yonicd&repo=whereami)](https://github.com/yonicd/whereami/graphs/traffic)
-[![Cloners](http://ghtraffic.herokuapp.com/badge/cloners?owner=yonicd&repo=whereami)](https://github.com/yonicd/whereami/graphs/traffic)
-[![Views](http://ghtraffic.herokuapp.com/badge/views?owner=yonicd&repo=whereami)](https://github.com/yonicd/whereami/graphs/traffic)
-[![Viewers](http://ghtraffic.herokuapp.com/badge/viewers?owner=yonicd&repo=whereami)](https://github.com/yonicd/whereami/graphs/traffic)
+[![Covrpage Summary](https://covrpage.herokuapp.com/badge/yonicd/whereami)](https://covrpage.herokuapp.com/url/yonicd/whereami)
+[![Views](http://ghtraffic.herokuapp.com/badge/yonicd/whereami/views)](https://github.com/yonicd/whereami/graphs/traffic)
+[![Clones](http://ghtraffic.herokuapp.com/badge/yonicd/whereami/clones)](https://github.com/yonicd/whereami/graphs/traffic)
+[![Viewers](http://ghtraffic.herokuapp.com/badge/yonicd/whereami/viewers)](https://github.com/yonicd/whereami/graphs/traffic)
+[![Cloners](http://ghtraffic.herokuapp.com/badge/yonicd/whereami/cloners)](https://github.com/yonicd/whereami/graphs/traffic)
 
 # whereami`r if(knitr::opts_knit$get('rmarkdown.pandoc.to')=='gfm-ascii_identifiers') '<img src="https://github.com/yonicd/whereami/raw/media/hex/whereami_small.png" align="right" />'`
 
