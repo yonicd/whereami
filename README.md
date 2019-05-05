@@ -8,11 +8,7 @@ status](https://travis-ci.org/yonicd/whereami.svg?branch=master)](https://travis
 [![Coverage
 status](https://codecov.io/gh/yonicd/whereami/branch/master/graph/badge.svg)](https://codecov.io/github/yonicd/whereami?branch=master)
 [![Covrpage
-Summary](https://covrpage.herokuapp.com/badge/yonicd/whereami)](https://covrpage.herokuapp.com/url/yonicd/whereami)
-[![Views](http://ghtraffic.herokuapp.com/badge/yonicd/whereami/views)](https://github.com/yonicd/whereami/graphs/traffic)
-[![Clones](http://ghtraffic.herokuapp.com/badge/yonicd/whereami/clones)](https://github.com/yonicd/whereami/graphs/traffic)
-[![Viewers](http://ghtraffic.herokuapp.com/badge/yonicd/whereami/viewers)](https://github.com/yonicd/whereami/graphs/traffic)
-[![Cloners](http://ghtraffic.herokuapp.com/badge/yonicd/whereami/cloners)](https://github.com/yonicd/whereami/graphs/traffic)
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_05_05-yellowgreen.svg)](http://tinyurl.com/y5c5voy3)
 
 # whereami<img src="https://github.com/yonicd/whereami/raw/media/hex/whereami_small.png" align="right" />
 
@@ -35,7 +31,7 @@ library(ggplot2)
 
 ``` r
 whereami()
-#> ── Running From: ./README.Rmd ────────────────────
+#> ── Running From: Console ─────────────────────────
 ```
 
 ### Plots

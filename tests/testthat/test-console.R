@@ -11,4 +11,6 @@ testthat::describe("console functionality", {
   it("value", {
     testthat::expect_equal(basename(x[1]), "Console")
   })
+
+  rstudioapi::sendToConsole("cat('\f')")
 })
