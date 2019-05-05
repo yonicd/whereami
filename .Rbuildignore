@@ -2,8 +2,6 @@
 ^LICENSE\.md$
 ^.*\.Rproj$
 ^\.Rproj\.user$
-test1.R
-shinytest.R
 ^doc$
 ^Meta$
 ^_pkgdown\.yml$
@@ -13,3 +11,4 @@ shinytest.R
 ^codecov\.yml$
 ^cran-comments\.md$
 ^CRAN-RELEASE$
+^revdep$
