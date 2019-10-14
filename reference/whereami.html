@@ -15,6 +15,7 @@
 <!-- Bootstrap -->
 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -32,11 +33,12 @@
 
 
 
-<meta property="og:title" content="Return where the script is run from — whereami" />
 
+<meta property="og:title" content="Return where the script is run from — whereami" />
 <meta property="og:description" content="Returns the file that a command is run from.
 If traceback is available then the line that it was run from is also returned." />
 <meta name="twitter:card" content="summary" />
+
 
 
 
@@ -87,7 +89,6 @@ If traceback is available then the line that it was run from is also returned." 
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/yonicd/whereami">
@@ -119,14 +120,12 @@ If traceback is available then the line that it was run from is also returned." 
     </div>
 
     <div class="ref-description">
-    
     <p>Returns the file that a command is run from.</p>
 <p>If traceback is available then the line that it was run from is also returned.</p>
-    
     </div>
 
     <pre class="usage"><span class='fu'>whereami</span>(<span class='kw'>path_expand</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
-    
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -135,22 +134,19 @@ If traceback is available then the line that it was run from is also returned." 
       <td><p>logical, expand relational path, Default: FALSE</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>character</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'> <span class='fu'>whereami</span>()</div><div class='output co'>#&gt; ── Running From: ./Rtmpddw57Q/file3a1a24301901 ─────────────────────────────────</div><div class='input'> <span class='fu'>whereami</span>(<span class='kw'>path_expand</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; ── Running From: /tmp/Rtmpddw57Q/file3a1a24301901 ──────────────────────────────</div></pre>
+    <pre class="examples"><div class='input'> <span class='fu'>whereami</span>()</div><div class='output co'>#&gt; ── Running From: ./RtmpVwHKgl/file230f7ffac553 ─────────────────────────────────</div><div class='input'> <span class='fu'>whereami</span>(<span class='kw'>path_expand</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; ── Running From: /tmp/RtmpVwHKgl/file230f7ffac553 ──────────────────────────────</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      
       <li><a href="#value">Value</a></li>
-      
       <li><a href="#examples">Examples</a></li>
     </ul>
 

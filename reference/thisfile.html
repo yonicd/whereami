@@ -15,6 +15,7 @@
 <!-- Bootstrap -->
 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -32,8 +33,8 @@
 
 
 
-<meta property="og:title" content="Determines the path of the currently running script in terminal — thisfile" />
 
+<meta property="og:title" content="Determines the path of the currently running script in terminal — thisfile" />
 <meta property="og:description" content="R does not store nor export the path of the currently running
 script.  This is an attempt to circumvent this limitation by applying
 heuristics (such as call stack and argument inspection) that work in many
@@ -42,6 +43,7 @@ CAVEAT: Use this function only if your workflow does not permit other
 solution: if a script needs to know its location, it should be set outside
 the context of the script if possible." />
 <meta name="twitter:card" content="summary" />
+
 
 
 
@@ -92,7 +94,6 @@ the context of the script if possible." />
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/yonicd/whereami">
@@ -124,7 +125,6 @@ the context of the script if possible." />
     </div>
 
     <div class="ref-description">
-    
     <p><span style="R">R</span> does not store nor export the path of the currently running
 script.  This is an attempt to circumvent this limitation by applying
 heuristics (such as call stack and argument inspection) that work in many
@@ -132,7 +132,6 @@ cases.
 <strong>CAVEAT</strong>: Use this function only if your workflow does not permit other
 solution: if a script needs to know its location, it should be set outside
 the context of the script if possible.</p>
-    
     </div>
 
     <pre class="usage"><span class='fu'>thisfile</span>()
@@ -144,12 +143,12 @@ the context of the script if possible.</p>
 <span class='fu'>thisfile_rscript</span>()
 
 <span class='fu'>thisfile_knit</span>()</pre>
-        
+
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>The path of the currently running script, NULL if it cannot be
 determined.</p>
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>This functions currently work only if the script was <code>source</code>d,
@@ -157,25 +156,21 @@ processed with <code>knitr</code>,
 or run with <code>Rscript</code> or using the <code>--file</code> parameter to the
 <code>R</code> executable.  For code run with <code>Rscript</code>, the exact value
 of the parameter passed to <code>Rscript</code> is returned.</p>
-    
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
     <p>These functions were migrated from
 <a href='https://github.com/r-lib/rprojroot/tree/4e4f70c0794542a5cfa6c3f66635388365616881'>r-lib/rprojroot</a>.</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p><a href='http://stackoverflow.com/q/1815606/946850'>http://stackoverflow.com/q/1815606/946850</a></p>
-    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><code><a href='http://www.rdocumentation.org/packages/base/topics/source'>base::source()</a></code>, <code><a href='http://www.rdocumentation.org/packages/utils/topics/Rscript'>utils::Rscript()</a></code>, <code><a href='http://www.rdocumentation.org/packages/base/topics/getwd'>base::getwd()</a></code></p></div>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='kw'>if</span>( !<span class='fu'>interactive</span>() )
-  <span class='fu'>thisfile</span>()</div><div class='output co'>#&gt; [1] "/tmp/Rtmpddw57Q/file3a1a24301901"</div><div class='input'>
+  <span class='fu'>thisfile</span>()</div><div class='output co'>#&gt; [1] "/tmp/RtmpVwHKgl/file230f7ffac553"</div><div class='input'>
 <span class='co'># using in terminal ( with pipe() )</span>
 
   <span class='co'># open a temp file</span>
@@ -194,7 +189,7 @@ of the parameter passed to <code>Rscript</code> is returned.</p>
    <span class='no'>p</span> <span class='kw'>&lt;-</span> <span class='fu'>pipe</span>(<span class='no'>fcmd</span>)
 
   <span class='co'># read the output</span>
-   <span class='fu'>readLines</span>(<span class='no'>p</span>)</div><div class='output co'>#&gt; [1] "/tmp/RtmpcHFZ4A/file3a2742d0c0b6.R"</div><div class='input'>
+   <span class='fu'>readLines</span>(<span class='no'>p</span>)</div><div class='output co'>#&gt; [1] "/tmp/RtmpgLp9LP/file231cbc8b069.R"</div><div class='input'>
   <span class='co'># cleanup</span>
    <span class='fu'>close</span>(<span class='no'>p</span>)
    <span class='fu'>unlink</span>(<span class='no'>tf</span>)</div></pre>
@@ -202,17 +197,11 @@ of the parameter passed to <code>Rscript</code> is returned.</p>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      
       <li><a href="#value">Value</a></li>
-
       <li><a href="#details">Details</a></li>
-
       <li><a href="#note">Note</a></li>
-
       <li><a href="#references">References</a></li>
-
       <li><a href="#see-also">See also</a></li>
-      
       <li><a href="#examples">Examples</a></li>
     </ul>
 
