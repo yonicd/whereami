@@ -1,18 +1,27 @@
 wenv <- new.env()
+wenv$archives <- data.frame(
+  where = character(0),
+  when = numeric(0),
+  count = numeric(0),
+  stringsAsFactors = FALSE
+)
 
 #' @title whereami counter
 #' @description Interact with internal whereami counter
 #' @param item character, name of the counter to access, Default: NULL
+#' @param counter For autoplot, the output of `counter_get()`
 #' @details
 #'
-#' counter_names returns names of the active stored counters.
+#' `counter_names()` returns names of the active stored counters.
 #'
-#' counter_state returns current hit count for item, if NULL then all counters
+#' `counter_state()` returns current hit count for item, if NULL then all counters
 #'  are returned.
 #'
-#' counter_reset will remove counter of item, if item is NULL then all counters
+#' `counter_reset()` will remove counter of item, if item is NULL then all counters
 #'  are reset.
 #'
+#'  `counter_get()` returns a table with all the counters. These can then
+#'  be plotted with the `autoplot()` method.
 #' @examples
 #'
 #' if( interactive() ){
@@ -112,4 +121,48 @@ bump <- function(obj) {
   }
 
   wenv$counter[[this]] <- wenv$counter[[this]] + 1
+
+  wenv$archives <- rbind(
+    wenv$archives,
+    data.frame(
+      where = basename(obj[2]),
+      when = as.character(Sys.time()),
+      count = wenv$counter[[this]],
+      stringsAsFactors = FALSE
+    )
+  )
 }
+
+#' @rdname counter
+#' @export
+counter_get <- function(){
+  res <- wenv$archives
+  class(res) <- c("whereamicounter", class(res))
+  return(res)
+}
+
+#' @rdname counter
+#' @export
+#' @importFrom stats setNames
+autoplot.whereamicounter <- function(counter){
+  if (!requireNamespace("ggplot2", quietly = TRUE)) {
+    stop("`autoplot()` requires {ggplot2}")
+  }
+  r <- setNames(
+    as.data.frame(
+      table(
+        counter$where
+      )
+    ),
+    c("where", "count")
+  )
+  r <- r[order(r$count), ]
+  r$where <- factor(r$where, levels = r$where)
+  ggplot2::ggplot(r, ggplot2::aes(where, count)) +
+    ggplot2::geom_col() +
+    ggplot2::coord_flip() +
+    ggplot2::theme_minimal()
+
+}
+
+utils::globalVariables(c("where", "count"))
