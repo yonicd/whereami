@@ -1,19 +1,24 @@
 Package: whereami
 Type: Package
-Title: Reliably return location where command is called from
-Version: 0.1.6
+Title: Reliably Return the Source and Call Location of a Command
+Description: Robust and reliable functions to return informative outputs to 
+        console with the run or source location of a command. This can be from
+        the  'RScript'/R terminal commands or 'RStudio' console, source editor, 
+        'Rmarkdown' document and a Shiny application.
+Version: 0.1.8.1
 Authors@R: c(
         person(given = "Jonathan", family = "Sidi", email =
         "yonicd@gmail.com", role = c("aut", "cre"), comment = c(ORCID =
         "0000-0002-4222-1819")), 
         person("Colin", "Fay", email = "contact@colinfay.me", 
-        role = c("ctb"), comment=c(ORCID="0000-0001-7343-1846"))
+        role = c("ctb"), comment=c(ORCID="0000-0001-7343-1846")),
+        person("Kirill", "M\u00fcller", role = c("aut"), 
+        email = "krlmlr+r@mailbox.org", 
+        comment = c(ORCID = "0000-0002-1416-3412"))
         )
-Description: Return where command is run or sourced from and place place
-        tracebacks in files to print to console.
 License: MIT + file LICENSE
 Depends: R (>= 3.2.0)
-Imports: rstudioapi, utils, rprojroot, cli
+Imports: utils,cli,rstudioapi
 URL: https://github.com/yonicd/whereami
 BugReports: https://github.com/yonicd/whereami/issues
 Encoding: UTF-8
@@ -26,7 +31,6 @@ Suggests:
     kableExtra,
     testthat,
     covr,
-    pkgdown,
     knitr,
     rmarkdown
 VignetteBuilder: knitr

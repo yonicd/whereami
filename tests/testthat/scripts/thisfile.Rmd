@@ -1,0 +1,3 @@
+```{r echo=FALSE, results='markup', comment="", message=FALSE}
+message(normalizePath(whereami::thisfile_knit()))
+```

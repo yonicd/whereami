@@ -11,21 +11,20 @@
 #'  cat_where(whereami(), type = "bullet", bullet = "tick")
 #'  cat_where(whereami(), color = "green")
 #' @rdname cat_where
+#' @author Colin Fay
 #' @family print
 #' @export
 #' @importFrom cli cat_rule
 #' @importFrom utils getFromNamespace
 cat_where <- function(
-  where,
-  type= c("rule", "boxx", "bullet", "line", "print"),
-  color = c("none", "black", "blue", "cyan", "green", "magenta", "red", "white", "yellow", "grey", "silver"),
-  ...
-){
-
+                      where,
+                      type = c("rule", "boxx", "bullet", "line", "print"),
+                      color = c("none", "black", "blue", "cyan", "green", "magenta", "red", "white", "yellow", "grey", "silver"),
+                      ...) {
   type <- match.arg(type)
   color <- match.arg(color)
 
-  if(length(where)==1) {
+  if (length(where) == 1) {
     res <- sprintf("Running From: %s", where)
   } else {
     place <- basename(where[length(where)])
@@ -33,10 +32,10 @@ cat_where <- function(
 
     this <- where[length(where)]
 
-    if(this%in%names(wenv$counter)){
-      res <- sprintf("Running %s at %s (%s)",fun,place,wenv$counter[[this]])
-    }else{
-      res <- sprintf("Running %s at %s",fun,place)
+    if (this %in% names(wenv$counter)) {
+      res <- sprintf("Running %s at %s (%s)", fun, place, wenv$counter[[this]])
+    } else {
+      res <- sprintf("Running %s at %s", fun, place)
     }
   }
 
@@ -45,7 +44,7 @@ cat_where <- function(
     "cli"
   )
 
-  if (color != "none"){
+  if (color != "none") {
     col_method <- getFromNamespace(
       sprintf("col_%s", color),
       "cli"
@@ -54,25 +53,23 @@ cat_where <- function(
   }
 
   cat_method(res, ...)
-
 }
 
 
 #' @export
-print.whereami <- function(x,...){
-  if(length(x)==1)
-    return(cli::cat_rule(sprintf("Running From: %s",x)))
+print.whereami <- function(x, ...) {
+  if (length(x) == 1) {
+    return(cli::cat_rule(sprintf("Running From: %s", x)))
+  }
 
   place <- basename(x[length(x)])
-  fun   <- deparse(sys.calls()[[sys.nframe() - 1]])
+  fun <- deparse(sys.calls()[[sys.nframe() - 1]])
 
   this <- x[length(x)]
 
-  if(this%in%names(wenv$counter)){
-    cli::cat_rule(sprintf("Running %s at %s (%s)",fun,place,wenv$counter[[this]]))
-  }else{
-    cli::cat_rule(sprintf("Running %s at %s",paste0(fun,collapse = ', '),place))
+  if (this %in% names(wenv$counter)) {
+    cli::cat_rule(sprintf("Running %s at %s (%s)", fun, place, wenv$counter[[this]]))
+  } else {
+    cli::cat_rule(sprintf("Running %s at %s", paste0(fun, collapse = ", "), place))
   }
-
 }
-

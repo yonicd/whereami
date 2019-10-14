@@ -1,0 +1,5 @@
+cat_where               cat function for whereami
+counter_state           whereami counter
+thisfile                Determines the path of the currently running
+                        script in terminal
+whereami                Return where the script is run from
