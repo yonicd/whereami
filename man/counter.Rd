@@ -4,6 +4,8 @@
 \alias{counter_state}
 \alias{counter_reset}
 \alias{counter_names}
+\alias{counter_get}
+\alias{autoplot.whereamicounter}
 \title{whereami counter}
 \usage{
 counter_state(item = NULL)
@@ -11,20 +13,29 @@ counter_state(item = NULL)
 counter_reset(item = NULL)
 
 counter_names()
+
+counter_get()
+
+autoplot.whereamicounter(counter)
 }
 \arguments{
 \item{item}{character, name of the counter to access, Default: NULL}
+
+\item{counter}{For autoplot, the output of \code{counter_get()}}
 }
 \description{
 Interact with internal whereami counter
 }
 \details{
-counter_names returns names of the active stored counters.
+\code{counter_names()} returns names of the active stored counters.
 
-counter_state returns current hit count for item, if NULL then all counters
+\code{counter_state()} returns current hit count for item, if NULL then all counters
 are returned.
 
-counter_reset will remove counter of item, if item is NULL then all counters
+\code{counter_reset()} will remove counter of item, if item is NULL then all counters
 are reset.
+
+\code{counter_get()} returns a table with all the counters. These can then
+be plotted with the \code{autoplot()} method.
 }
 \concept{counter}
