@@ -3,6 +3,7 @@
 #'
 #' If traceback is available then the line that it was run from is also returned.
 #' @param path_expand logical, expand relational path, Default: FALSE
+#' @param tag character, optional tag for the call, Default: NULL
 #' @return character
 #' @examples
 #'  whereami()
@@ -13,12 +14,12 @@
 #' @author Jonathan Sidi
 #' @importFrom rstudioapi getActiveDocumentContext isAvailable
 #' @importFrom utils getSrcDirectory getSrcFilename
-whereami <- function(path_expand = FALSE) {
+whereami <- function(path_expand = FALSE, tag = NULL) {
   tf <- tempfile()
 
   on.exit({
     if (length(ret) > 1) {
-      bump(ret)
+      bump(ret, tag)
     }
 
     unlink(tf)

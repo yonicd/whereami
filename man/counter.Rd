@@ -5,21 +5,21 @@
 \alias{counter_reset}
 \alias{counter_names}
 \alias{counter_get}
-\alias{autoplot.whereamicounter}
 \title{whereami counter}
 \usage{
-counter_state(item = NULL)
+counter_state(item = NULL, tag = NULL)
 
-counter_reset(item = NULL)
+counter_reset(item = NULL, tag = NULL)
 
 counter_names()
 
 counter_get()
-
-autoplot.whereamicounter(counter)
 }
 \arguments{
 \item{item}{character, name of the counter to access, Default: NULL}
+
+\item{tag}{character, tag of the counter to acces, if it was set at initial whereami call.
+This can be used instead of the item name, Default: NULL}
 
 \item{counter}{For autoplot, the output of \code{counter_get()}}
 }
@@ -45,7 +45,7 @@ if( interactive() ){
 tf <- tempfile(fileext = '.R')
 
 # call to write to temp file
-f <- 'whereami::cat_where(whereami::whereami())'
+f <- "whereami::cat_where(whereami::whereami(tag = 'my tag'))"
 
 # write to the file (call at line 3)
 cat('\\n\\n',f,sep='',file = tf)
@@ -53,6 +53,8 @@ cat('\\n\\n',f,sep='',file = tf)
 source(tf)
 
 counter_state()
+
+counter_state(tag = 'my tag')
 
 counter_names()
 
