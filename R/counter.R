@@ -212,6 +212,6 @@ tag_map <- function(tag){
 #' @rdname set_whereami_log
 set_whereami_log <- function(path = tempdir()){
 
-    wenv$log_dir <- normalizePath(path)
+    wenv$log_dir <- normalizePath(path,winslash = '/')
 
 }
