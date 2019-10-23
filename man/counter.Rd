@@ -20,8 +20,6 @@ counter_get()
 
 \item{tag}{character, tag of the counter to acces, if it was set at initial whereami call.
 This can be used instead of the item name, Default: NULL}
-
-\item{counter}{For autoplot, the output of \code{counter_get()}}
 }
 \description{
 Interact with internal whereami counter

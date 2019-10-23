@@ -11,7 +11,6 @@ wenv$archives <- data.frame(
 #' @param item character, name of the counter to access, Default: NULL
 #' @param tag character, tag of the counter to acces, if it was set at initial whereami call.
 #'  This can be used instead of the item name, Default: NULL
-#' @param counter For autoplot, the output of `counter_get()`
 #' @details
 #'
 #' `counter_names()` returns names of the active stored counters.
