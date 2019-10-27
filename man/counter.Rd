@@ -4,6 +4,7 @@
 \alias{counter_state}
 \alias{counter_reset}
 \alias{counter_names}
+\alias{counter_tags}
 \alias{counter_get}
 \title{whereami counter}
 \usage{
@@ -12,6 +13,8 @@ counter_state(item = NULL, tag = NULL)
 counter_reset(item = NULL, tag = NULL)
 
 counter_names()
+
+counter_tags()
 
 counter_get()
 }

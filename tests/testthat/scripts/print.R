@@ -1,6 +1,6 @@
 
 foo <- function() {
-  print(whereami::whereami())
+  print(whereami::whereami(tag = 'print test'))
 }
 
 foo()

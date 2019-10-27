@@ -109,6 +109,26 @@ counter_names <- function() {
   names(wenv$counter)
 }
 
+#' @rdname counter
+#' @export
+counter_tags <- function() {
+  if (!counter_check()) {
+    return("No active counters")
+  }
+
+  ret <- wenv$archives[,c('tag','path','where')]
+
+  ret <- unique(ret[nzchar(ret$tag),])
+
+  if(!nrow(ret))
+    return("No tags located")
+
+  res <- ret$tag
+  names(res) <- file.path(ret$path,ret$where)
+
+  res
+}
+
 #' @importFrom utils hasName
 counter_check <- function() {
   if (!utils::hasName(x = wenv, "counter")) {

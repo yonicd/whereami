@@ -12,7 +12,7 @@ status](https://ci.appveyor.com/api/projects/status/github/yonicd/whereami?branc
 [![Coverage
 status](https://codecov.io/gh/yonicd/whereami/branch/master/graph/badge.svg)](https://codecov.io/github/yonicd/whereami?branch=master)
 [![Covrpage
-Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_05_05-yellowgreen.svg)](http://tinyurl.com/y5c5voy3)
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_10_27-yellowgreen.svg)](http://tinyurl.com/y5c5voy3)
 <!-- badges: end -->
 
 # whereami<img src="https://github.com/yonicd/whereami/raw/media/hex/whereami_small.png" align="right" />
@@ -36,7 +36,7 @@ library(ggplot2)
 
 ``` r
 whereami()
-#> ── Running From: ./README.Rmd ────────────────────
+#> ── Running From: Console ─────────────────────────
 ```
 
 ### Plots
