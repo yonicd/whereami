@@ -15,6 +15,7 @@
 #' @importFrom rstudioapi getActiveDocumentContext isAvailable
 #' @importFrom utils getSrcDirectory getSrcFilename
 whereami <- function(path_expand = FALSE, tag = NULL) {
+
   tf <- tempfile()
 
   on.exit({
@@ -57,11 +58,6 @@ whereami <- function(path_expand = FALSE, tag = NULL) {
 
     cat(src, file = tf, sep = "\n")
 
-    refloc <- crumb()
-
-    if (!is.null(refloc)) {
-      cat(refloc, file = tf, sep = "\n", append = TRUE)
-    }
   } else {
     src <- thisfile()
 
@@ -78,6 +74,12 @@ whereami <- function(path_expand = FALSE, tag = NULL) {
     if (!is.null(src)) {
       cat(src, file = tf, sep = "\n", append = TRUE)
     }
+  }
+
+  refloc <- crumb()
+
+  if (!is.null(refloc)) {
+    cat(refloc, file = tf, sep = "\n", append = TRUE)
   }
 
   ret <- readLines(tf)
