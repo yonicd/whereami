@@ -122,15 +122,15 @@
     <p>Interact with internal whereami counter</p>
     </div>
 
-    <pre class="usage"><span class='fu'>counter_state</span>(<span class='kw'>item</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)
+    <pre class="usage"><span class='fu'>counter_state</span>(<span class='kw'>item</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>tag</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)
 
-<span class='fu'>counter_reset</span>(<span class='kw'>item</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)
+<span class='fu'>counter_reset</span>(<span class='kw'>item</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>tag</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)
 
 <span class='fu'>counter_names</span>()
 
-<span class='fu'>counter_get</span>()
+<span class='fu'>counter_tags</span>()
 
-<span class='fu'>autoplot.whereamicounter</span>(<span class='no'>counter</span>)</pre>
+<span class='fu'>counter_get</span>()</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -140,8 +140,9 @@
       <td><p>character, name of the counter to access, Default: NULL</p></td>
     </tr>
     <tr>
-      <th>counter</th>
-      <td><p>For autoplot, the output of <code>counter_get()</code></p></td>
+      <th>tag</th>
+      <td><p>character, tag of the counter to acces, if it was set at initial whereami call.
+This can be used instead of the item name, Default: NULL</p></td>
     </tr>
     </table>
 
@@ -162,7 +163,7 @@ be plotted with the <code>autoplot()</code> method.</p>
 <span class='no'>tf</span> <span class='kw'>&lt;-</span> <span class='fu'>tempfile</span>(<span class='kw'>fileext</span> <span class='kw'>=</span> <span class='st'>'.R'</span>)
 
 <span class='co'># call to write to temp file</span>
-<span class='no'>f</span> <span class='kw'>&lt;-</span> <span class='st'>'whereami::cat_where(whereami::whereami())'</span>
+<span class='no'>f</span> <span class='kw'>&lt;-</span> <span class='st'>"whereami::cat_where(whereami::whereami(tag = 'my tag'))"</span>
 
 <span class='co'># write to the file (call at line 3)</span>
 <span class='fu'>cat</span>(<span class='st'>'\n\n'</span>,<span class='no'>f</span>,<span class='kw'>sep</span><span class='kw'>=</span><span class='st'>''</span>,<span class='kw'>file</span> <span class='kw'>=</span> <span class='no'>tf</span>)
@@ -170,6 +171,8 @@ be plotted with the <code>autoplot()</code> method.</p>
 <span class='fu'>source</span>(<span class='no'>tf</span>)
 
 <span class='fu'>counter_state</span>()
+
+<span class='fu'>counter_state</span>(<span class='kw'>tag</span> <span class='kw'>=</span> <span class='st'>'my tag'</span>)
 
 <span class='fu'>counter_names</span>()
 

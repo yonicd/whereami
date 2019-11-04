@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Return where the script is run from — whereami • whereami</title>
+<title>Set Log Path — set_whereami_log • whereami</title>
 
 <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 
@@ -34,9 +34,8 @@
 
 
 
-<meta property="og:title" content="Return where the script is run from — whereami" />
-<meta property="og:description" content="Returns the file that a command is run from.
-If traceback is available then the line that it was run from is also returned." />
+<meta property="og:title" content="Set Log Path — set_whereami_log" />
+<meta property="og:description" content="Set the path to write the counter log as a json" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -114,49 +113,33 @@ If traceback is available then the line that it was run from is also returned." 
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Return where the script is run from</h1>
-    <small class="dont-index">Source: <a href='https://github.com/yonicd/whereami/blob/master/R/whereami.R'><code>R/whereami.R</code></a></small>
-    <div class="hidden name"><code>whereami.Rd</code></div>
+    <h1>Set Log Path</h1>
+    <small class="dont-index">Source: <a href='https://github.com/yonicd/whereami/blob/master/R/counter.R'><code>R/counter.R</code></a></small>
+    <div class="hidden name"><code>set_whereami_log.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Returns the file that a command is run from.</p>
-<p>If traceback is available then the line that it was run from is also returned.</p>
+    <p>Set the path to write the counter log as a json</p>
     </div>
 
-    <pre class="usage"><span class='fu'>whereami</span>(<span class='kw'>path_expand</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>tag</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>set_whereami_log</span>(<span class='kw'>path</span> <span class='kw'>=</span> <span class='fu'>tempdir</span>())</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>path_expand</th>
-      <td><p>logical, expand relational path, Default: FALSE</p></td>
-    </tr>
-    <tr>
-      <th>tag</th>
-      <td><p>character, optional tag for the call, Default: NULL</p></td>
+      <th>path</th>
+      <td><p>character, path to write to, Default: tempdir()</p></td>
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>character</p>
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'> <span class='fu'>whereami</span>()</div><div class='output co'>#&gt; ── Running From: ./RtmpYFjyCP/file33356e3eb782 ─────────────────────────────────</div><div class='input'> <span class='fu'>whereami</span>(<span class='kw'>path_expand</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; ── Running From: /tmp/RtmpYFjyCP/file33356e3eb782 ──────────────────────────────</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#examples">Examples</a></li>
     </ul>
-
-    <h2>Author</h2>
-    
-Jonathan Sidi
 
   </div>
 </div>
