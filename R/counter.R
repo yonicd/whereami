@@ -176,7 +176,10 @@ bump <- function(obj, tag) {
     set_whereami_log()
   }
 
-  jsonlite::write_json(wenv$archives,file.path(wenv$log_dir,'whereami.json'))
+  jsonlite::write_json(
+    wenv$archives,file.path(wenv$log_dir,'whereami.json'),
+    pretty = TRUE,
+    auto_unbox = TRUE)
 }
 
 #' @rdname counter
