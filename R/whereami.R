@@ -3,6 +3,7 @@
 #'
 #' If traceback is available then the line that it was run from is also returned.
 #' @param path_expand logical, expand relational path, Default: FALSE
+#' @param tag character, optional tag for the call, Default: NULL
 #' @return character
 #' @examples
 #'  whereami()
@@ -13,12 +14,13 @@
 #' @author Jonathan Sidi
 #' @importFrom rstudioapi getActiveDocumentContext isAvailable
 #' @importFrom utils getSrcDirectory getSrcFilename
-whereami <- function(path_expand = FALSE) {
+whereami <- function(path_expand = FALSE, tag = NULL) {
+
   tf <- tempfile()
 
   on.exit({
     if (length(ret) > 1) {
-      bump(ret)
+      bump(ret, tag)
     }
 
     unlink(tf)
@@ -56,16 +58,11 @@ whereami <- function(path_expand = FALSE) {
 
     cat(src, file = tf, sep = "\n")
 
-    refloc <- crumb()
-
-    if (!is.null(refloc)) {
-      cat(refloc, file = tf, sep = "\n", append = TRUE)
-    }
   } else {
     src <- thisfile()
 
     if (!is.null(src)) {
-      src <- normalizePath(src)
+      src <- normalizePath(src,winslash = '/')
 
       if (!path_expand) {
         src <- path_reduce(src)
@@ -77,6 +74,12 @@ whereami <- function(path_expand = FALSE) {
     if (!is.null(src)) {
       cat(src, file = tf, sep = "\n", append = TRUE)
     }
+  }
+
+  refloc <- crumb()
+
+  if (!is.null(refloc)) {
+    cat(refloc, file = tf, sep = "\n", append = TRUE)
   }
 
   ret <- readLines(tf)

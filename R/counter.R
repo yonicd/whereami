@@ -9,7 +9,8 @@ wenv$archives <- data.frame(
 #' @title whereami counter
 #' @description Interact with internal whereami counter
 #' @param item character, name of the counter to access, Default: NULL
-#' @param counter For autoplot, the output of `counter_get()`
+#' @param tag character, tag of the counter to acces, if it was set at initial whereami call.
+#'  This can be used instead of the item name, Default: NULL
 #' @details
 #'
 #' `counter_names()` returns names of the active stored counters.
@@ -29,7 +30,7 @@ wenv$archives <- data.frame(
 #' tf <- tempfile(fileext = '.R')
 #'
 #' # call to write to temp file
-#' f <- 'whereami::cat_where(whereami::whereami())'
+#' f <- "whereami::cat_where(whereami::whereami(tag = 'my tag'))"
 #'
 #' # write to the file (call at line 3)
 #' cat('\n\n',f,sep='',file = tf)
@@ -37,6 +38,8 @@ wenv$archives <- data.frame(
 #' source(tf)
 #'
 #' counter_state()
+#'
+#' counter_state(tag = 'my tag')
 #'
 #' counter_names()
 #'
@@ -62,12 +65,17 @@ wenv$archives <- data.frame(
 #' @author Jonathan Sidi
 #' @family counter
 #' @export
-counter_state <- function(item = NULL) {
+counter_state <- function(item = NULL, tag = NULL) {
+
   if (!counter_check()) {
     return("No active counters")
   }
 
   ret <- wenv$counter
+
+  if( !is.null(tag) & is.null(item) ){
+    item <- tag_map(tag)
+  }
 
   if (!is.null(item)) {
     ret <- ret[[item]]
@@ -78,7 +86,12 @@ counter_state <- function(item = NULL) {
 
 #' @rdname counter
 #' @export
-counter_reset <- function(item = NULL) {
+counter_reset <- function(item = NULL, tag = NULL) {
+
+  if( !is.null(tag) & is.null(item) ){
+    item <- tag_map(tag)
+  }
+
   if (is.null(item)) {
     assign(x = "counter", value = list(), envir = wenv)
   } else {
@@ -96,6 +109,26 @@ counter_names <- function() {
   names(wenv$counter)
 }
 
+#' @rdname counter
+#' @export
+counter_tags <- function() {
+  if (!counter_check()) {
+    return("No active counters")
+  }
+
+  ret <- wenv$archives[,c('tag','path','where')]
+
+  ret <- unique(ret[nzchar(ret$tag),])
+
+  if(!nrow(ret))
+    return("No tags located")
+
+  res <- ret$tag
+  names(res) <- file.path(ret$path,ret$where)
+
+  res
+}
+
 #' @importFrom utils hasName
 counter_check <- function() {
   if (!utils::hasName(x = wenv, "counter")) {
@@ -109,8 +142,13 @@ counter_check <- function() {
   TRUE
 }
 
-bump <- function(obj) {
+#' @importFrom jsonlite write_json
+bump <- function(obj, tag) {
+
   this <- as.character(obj)[length(obj)]
+
+  if(is.null(tag))
+    tag <- ''
 
   if (!exists("counter", envir = wenv)) {
     wenv$counter <- list()
@@ -125,12 +163,23 @@ bump <- function(obj) {
   wenv$archives <- rbind(
     wenv$archives,
     data.frame(
+      tag = tag,
       where = basename(obj[2]),
+      path  = dirname(obj[2]),
       when = as.character(Sys.time()),
       count = wenv$counter[[this]],
       stringsAsFactors = FALSE
     )
   )
+
+  if(!length(wenv$log_dir)){
+    set_whereami_log()
+  }
+
+  jsonlite::write_json(
+    wenv$archives,file.path(wenv$log_dir,'whereami.json'),
+    pretty = TRUE,
+    auto_unbox = TRUE)
 }
 
 #' @rdname counter
@@ -141,28 +190,51 @@ counter_get <- function(){
   return(res)
 }
 
-#' @rdname counter
 #' @export
-#' @importFrom stats setNames
-autoplot.whereamicounter <- function(counter){
-  if (!requireNamespace("ggplot2", quietly = TRUE)) {
-    stop("`autoplot()` requires {ggplot2}")
-  }
-  r <- setNames(
-    as.data.frame(
-      table(
-        counter$where
-      )
-    ),
-    c("where", "count")
-  )
+#' @importFrom stats aggregate
+#' @importFrom graphics barplot legend par
+#' @importFrom grDevices gray.colors
+plot.whereamicounter <- function(x, ...){
+
+  r <- stats::aggregate(count ~ where, max, data = x)
   r <- r[order(r$count), ]
-  r$where <- factor(r$where, levels = r$where)
-  ggplot2::ggplot(r, ggplot2::aes(where, count)) +
-    ggplot2::geom_col() +
-    ggplot2::coord_flip() +
-    ggplot2::theme_minimal()
+
+  r$line <- gsub('^(.*?)#','',r$where)
+  r$file <- gsub('#(.*?)$','',r$where)
+
+  r$line <- factor(r$line, levels = unique(r$line))
+  r$file <- factor(r$file, levels = unique(r$file))
+  r$where <- factor(r$where, levels = unique(r$where))
+
+  cols <- grDevices::gray.colors(20)[seq_along(levels(r$file))]
+
+  graphics::par(oma=c(0, 0, 0, 20))
+  graphics::barplot(count ~ file + line,horiz = TRUE, data =r, col = cols)
+  graphics::legend(graphics::par('usr')[2], graphics::par('usr')[4], bty='n',
+                   xpd=NA, levels(r$file), fill = cols)
 
 }
 
-utils::globalVariables(c("where", "count"))
+tag_map <- function(tag){
+
+  data <- wenv$archives
+
+  idx <- which(data$tag%in%tag)
+
+  if(!any(idx))
+    stop(sprintf('The tag name %s is not mapped to a counter', tag))
+
+  file.path(data$path[idx[1]],data$where[idx[1]])
+
+}
+
+#' @title Set Log Path
+#' @description Set the path to write the counter log as a json
+#' @param path character, path to write to, Default: tempdir()
+#' @export
+#' @rdname set_whereami_log
+set_whereami_log <- function(path = tempdir()){
+
+    wenv$log_dir <- normalizePath(path,winslash = '/')
+
+}

@@ -27,6 +27,7 @@ testthat::describe("counter flow", {
 
   it("counter state", {
     testthat::expect_equal(counter_state(), list("scripts/print.R#3" = 2))
+    testthat::expect_equal(counter_state(tag = 'print test'), 2)
   })
 
   it("cat_whereami", {

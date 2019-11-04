@@ -4,10 +4,12 @@
 \alias{whereami}
 \title{Return where the script is run from}
 \usage{
-whereami(path_expand = FALSE)
+whereami(path_expand = FALSE, tag = NULL)
 }
 \arguments{
 \item{path_expand}{logical, expand relational path, Default: FALSE}
+
+\item{tag}{character, optional tag for the call, Default: NULL}
 }
 \value{
 character

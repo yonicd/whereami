@@ -70,7 +70,7 @@ thisfile <- function() {
 thisfile_source <- function() {
   for (i in -(1:sys.nframe())) {
     if (identical(args(sys.function(i)), args(base::source))) {
-      return(normalizePath(sys.frame(i)$ofile))
+      return(normalizePath(sys.frame(i)$ofile,winslash = '/'))
     }
   }
 

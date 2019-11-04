@@ -18,7 +18,7 @@ Authors@R: c(
         )
 License: MIT + file LICENSE
 Depends: R (>= 3.2.0)
-Imports: utils,cli,rstudioapi
+Imports: utils, graphics, grDevices, stats, cli, rstudioapi, jsonlite
 URL: https://github.com/yonicd/whereami
 BugReports: https://github.com/yonicd/whereami/issues
 Encoding: UTF-8
