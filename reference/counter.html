@@ -159,7 +159,7 @@ be plotted with the with the plot method.</p>
 The path can be set using <a href='set_whereami_log.html'>set_whereami_log</a></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
+    <pre class="examples"><div class='input'><span class='kw'>if</span>(<span class='fu'>interactive</span>()){
 <span class='no'>tf</span> <span class='kw'>&lt;-</span> <span class='fu'>tempfile</span>(<span class='kw'>fileext</span> <span class='kw'>=</span> <span class='st'>'.R'</span>)
 
 <span class='co'># call to write to temp file</span>
@@ -169,24 +169,20 @@ The path can be set using <a href='set_whereami_log.html'>set_whereami_log</a></
 <span class='co'># write to the file (call at line 3)</span>
 <span class='fu'>cat</span>(<span class='st'>'\n\n'</span>,<span class='no'>f1</span>,<span class='st'>'\n\n'</span>,<span class='no'>f2</span>,<span class='kw'>sep</span><span class='kw'>=</span><span class='st'>''</span>,<span class='kw'>file</span> <span class='kw'>=</span> <span class='no'>tf</span>)
 
-<span class='fu'>source</span>(<span class='no'>tf</span>)</div><div class='output co'>#&gt; ── Running eval(ei, envir) at file316c44722ff9.R#3 (1) ─────────────────────────
-#&gt; ── Running eval(ei, envir) at file316c44722ff9.R#5 (1) ─────────────────────────</div><div class='input'>
-<span class='fu'>counter_state</span>()</div><div class='output co'>#&gt; $`/tmp/RtmpMR8TFT/file316c44722ff9.R#3`
-#&gt; [1] 1
-#&gt; 
-#&gt; $`/tmp/RtmpMR8TFT/file316c44722ff9.R#5`
-#&gt; [1] 1
-#&gt; </div><div class='input'>
-<span class='fu'>counter_state</span>(<span class='kw'>tag</span> <span class='kw'>=</span> <span class='st'>'tag1'</span>)</div><div class='output co'>#&gt; [1] 1</div><div class='input'>
-<span class='fu'>counter_names</span>()</div><div class='output co'>#&gt; [1] "/tmp/RtmpMR8TFT/file316c44722ff9.R#3"
-#&gt; [2] "/tmp/RtmpMR8TFT/file316c44722ff9.R#5"</div><div class='input'>
-<span class='fu'>counter_tags</span>()</div><div class='output co'>#&gt; /tmp/RtmpMR8TFT/file316c44722ff9.R#3 /tmp/RtmpMR8TFT/file316c44722ff9.R#5 
-#&gt;                               "tag1"                               "tag2" </div><div class='input'>
+<span class='fu'>source</span>(<span class='no'>tf</span>)
+
+<span class='fu'>counter_state</span>()
+
+<span class='fu'>counter_state</span>(<span class='kw'>tag</span> <span class='kw'>=</span> <span class='st'>'tag1'</span>)
+
+<span class='fu'>counter_names</span>()
+
+<span class='fu'>counter_tags</span>()
+
 <span class='no'>counters</span> <span class='kw'>&lt;-</span> <span class='fu'>counter_get</span>()
 
-<span class='no'>counters</span></div><div class='output co'>#&gt;    tag                where            path                when count
-#&gt; 1 tag1 file316c44722ff9.R#3 /tmp/RtmpMR8TFT 2019-11-05 00:18:29     1
-#&gt; 2 tag2 file316c44722ff9.R#5 /tmp/RtmpMR8TFT 2019-11-05 00:18:29     1</div><div class='input'>
+<span class='no'>counters</span>
+
 <span class='co'># using counter_reset and counter_names in a loop</span>
 
 <span class='kw'>for</span>( <span class='no'>i</span> <span class='kw'>in</span> <span class='fl'>1</span>:<span class='fl'>10</span> ){
@@ -195,60 +191,24 @@ The path can be set using <a href='set_whereami_log.html'>set_whereami_log</a></
 
   <span class='kw'>if</span>( <span class='fu'>counter_state</span>(<span class='kw'>tag</span> <span class='kw'>=</span> <span class='st'>'tag1'</span>) <span class='kw'>&gt;</span> <span class='fl'>5</span> )
     <span class='fu'>counter_reset</span>(<span class='kw'>tag</span> <span class='kw'>=</span> <span class='st'>'tag2'</span>)
-}</div><div class='output co'>#&gt; ── Running eval(ei, envir) at file316c44722ff9.R#3 (2) ─────────────────────────
-#&gt; ── Running eval(ei, envir) at file316c44722ff9.R#5 (2) ─────────────────────────
-#&gt; ── Running eval(ei, envir) at file316c44722ff9.R#3 (3) ─────────────────────────
-#&gt; ── Running eval(ei, envir) at file316c44722ff9.R#5 (3) ─────────────────────────
-#&gt; ── Running eval(ei, envir) at file316c44722ff9.R#3 (4) ─────────────────────────
-#&gt; ── Running eval(ei, envir) at file316c44722ff9.R#5 (4) ─────────────────────────
-#&gt; ── Running eval(ei, envir) at file316c44722ff9.R#3 (5) ─────────────────────────
-#&gt; ── Running eval(ei, envir) at file316c44722ff9.R#5 (5) ─────────────────────────
-#&gt; ── Running eval(ei, envir) at file316c44722ff9.R#3 (6) ─────────────────────────
-#&gt; ── Running eval(ei, envir) at file316c44722ff9.R#5 (6) ─────────────────────────
-#&gt; ── Running eval(ei, envir) at file316c44722ff9.R#3 (7) ─────────────────────────
-#&gt; ── Running eval(ei, envir) at file316c44722ff9.R#5 (1) ─────────────────────────
-#&gt; ── Running eval(ei, envir) at file316c44722ff9.R#3 (8) ─────────────────────────
-#&gt; ── Running eval(ei, envir) at file316c44722ff9.R#5 (1) ─────────────────────────
-#&gt; ── Running eval(ei, envir) at file316c44722ff9.R#3 (9) ─────────────────────────
-#&gt; ── Running eval(ei, envir) at file316c44722ff9.R#5 (1) ─────────────────────────
-#&gt; ── Running eval(ei, envir) at file316c44722ff9.R#3 (10) ────────────────────────
-#&gt; ── Running eval(ei, envir) at file316c44722ff9.R#5 (1) ─────────────────────────
-#&gt; ── Running eval(ei, envir) at file316c44722ff9.R#3 (11) ────────────────────────
-#&gt; ── Running eval(ei, envir) at file316c44722ff9.R#5 (1) ─────────────────────────</div><div class='input'>
-<span class='fu'>plot</span>(<span class='fu'>counter_get</span>())</div><div class='img'><img src='counter-1.png' alt='' width='700' height='433' /></div><div class='input'>
+}
+
+<span class='fu'>plot</span>(<span class='fu'>counter_get</span>())
+
 <span class='co'># read the json log</span>
 <span class='kw pkg'>jsonlite</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/jsonlite/topics/read_json'>read_json</a></span>(
 <span class='fu'>file.path</span>(<span class='fu'>tempdir</span>(),<span class='st'>'whereami.json'</span>),
-<span class='kw'>simplifyVector</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt;     tag                where            path                when count
-#&gt; 1  tag1 file316c44722ff9.R#3 /tmp/RtmpMR8TFT 2019-11-05 00:18:29     1
-#&gt; 2  tag2 file316c44722ff9.R#5 /tmp/RtmpMR8TFT 2019-11-05 00:18:29     1
-#&gt; 3  tag1 file316c44722ff9.R#3 /tmp/RtmpMR8TFT 2019-11-05 00:18:29     2
-#&gt; 4  tag2 file316c44722ff9.R#5 /tmp/RtmpMR8TFT 2019-11-05 00:18:29     2
-#&gt; 5  tag1 file316c44722ff9.R#3 /tmp/RtmpMR8TFT 2019-11-05 00:18:29     3
-#&gt; 6  tag2 file316c44722ff9.R#5 /tmp/RtmpMR8TFT 2019-11-05 00:18:29     3
-#&gt; 7  tag1 file316c44722ff9.R#3 /tmp/RtmpMR8TFT 2019-11-05 00:18:29     4
-#&gt; 8  tag2 file316c44722ff9.R#5 /tmp/RtmpMR8TFT 2019-11-05 00:18:29     4
-#&gt; 9  tag1 file316c44722ff9.R#3 /tmp/RtmpMR8TFT 2019-11-05 00:18:29     5
-#&gt; 10 tag2 file316c44722ff9.R#5 /tmp/RtmpMR8TFT 2019-11-05 00:18:29     5
-#&gt; 11 tag1 file316c44722ff9.R#3 /tmp/RtmpMR8TFT 2019-11-05 00:18:29     6
-#&gt; 12 tag2 file316c44722ff9.R#5 /tmp/RtmpMR8TFT 2019-11-05 00:18:29     6
-#&gt; 13 tag1 file316c44722ff9.R#3 /tmp/RtmpMR8TFT 2019-11-05 00:18:29     7
-#&gt; 14 tag2 file316c44722ff9.R#5 /tmp/RtmpMR8TFT 2019-11-05 00:18:29     1
-#&gt; 15 tag1 file316c44722ff9.R#3 /tmp/RtmpMR8TFT 2019-11-05 00:18:29     8
-#&gt; 16 tag2 file316c44722ff9.R#5 /tmp/RtmpMR8TFT 2019-11-05 00:18:29     1
-#&gt; 17 tag1 file316c44722ff9.R#3 /tmp/RtmpMR8TFT 2019-11-05 00:18:29     9
-#&gt; 18 tag2 file316c44722ff9.R#5 /tmp/RtmpMR8TFT 2019-11-05 00:18:29     1
-#&gt; 19 tag1 file316c44722ff9.R#3 /tmp/RtmpMR8TFT 2019-11-05 00:18:29    10
-#&gt; 20 tag2 file316c44722ff9.R#5 /tmp/RtmpMR8TFT 2019-11-05 00:18:29     1
-#&gt; 21 tag1 file316c44722ff9.R#3 /tmp/RtmpMR8TFT 2019-11-05 00:18:30    11
-#&gt; 22 tag2 file316c44722ff9.R#5 /tmp/RtmpMR8TFT 2019-11-05 00:18:30     1</div><div class='input'>
+<span class='kw'>simplifyVector</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
+
 <span class='co'># clear all counters</span>
 <span class='fu'>counter_reset</span>()
 
 <span class='co'>#verify that there are no active counters</span>
-<span class='fu'>counter_state</span>()</div><div class='output co'>#&gt; [1] "No active counters"</div><div class='input'>
+<span class='fu'>counter_state</span>()
+
 <span class='co'># cleanup</span>
-<span class='fu'>unlink</span>(<span class='no'>tf</span>)</div></pre>
+<span class='fu'>unlink</span>(<span class='no'>tf</span>)
+}</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
