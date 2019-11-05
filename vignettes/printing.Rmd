@@ -10,8 +10,7 @@ vignette: >
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>",
-  fig.path = "figures/"
+  comment = "#>"
 )
 ```
 
@@ -36,6 +35,12 @@ cat_where(whereami(), color = "green")
 cat_where(whereami(), type = "line", color = "yellow")
 ```
 
-```{r,echo=FALSE}
-knitr::include_graphics(system.file('printing.png',package = 'whereami'))
+```{r,echo = FALSE}
+if(file.exists('../reference/figures/printing.png')){
+  knitr::include_graphics('../reference/figures/printing.png')
+}else{
+  knitr::include_graphics('../man/figures/printing.png')
+}
+  
 ```
+
