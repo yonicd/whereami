@@ -1,5 +1,5 @@
 ---
-title: "cat_where"
+title: "Printing"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{cat_where}

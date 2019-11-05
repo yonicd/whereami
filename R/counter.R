@@ -22,26 +22,35 @@ wenv$archives <- data.frame(
 #'  are reset.
 #'
 #'  `counter_get()` returns a table with all the counters. These can then
-#'  be plotted with the `autoplot()` method.
-#' @examples
+#'  be plotted with the with the plot method.
 #'
-#' if( interactive() ){
+#'  A json log of the counter is written to file.path(tempdir(),'whereami.json') by default
+#'  The path can be set using [set_whereami_log][whereami::set_whereami_log]
+#'
+#' @examples
 #'
 #' tf <- tempfile(fileext = '.R')
 #'
 #' # call to write to temp file
-#' f <- "whereami::cat_where(whereami::whereami(tag = 'my tag'))"
+#' f1 <- "whereami::cat_where(whereami::whereami(tag = 'tag1'))"
+#' f2 <- "whereami::cat_where(whereami::whereami(tag = 'tag2'))"
 #'
 #' # write to the file (call at line 3)
-#' cat('\n\n',f,sep='',file = tf)
+#' cat('\n\n',f1,'\n\n',f2,sep='',file = tf)
 #'
 #' source(tf)
 #'
 #' counter_state()
 #'
-#' counter_state(tag = 'my tag')
+#' counter_state(tag = 'tag1')
 #'
 #' counter_names()
+#'
+#' counter_tags()
+#'
+#' counters <- counter_get()
+#'
+#' counters
 #'
 #' # using counter_reset and counter_names in a loop
 #'
@@ -49,17 +58,25 @@ wenv$archives <- data.frame(
 #'
 #'   source(tf)
 #'
-#'   if( counter_state(counter_names()[1]) > 5 )
-#'     counter_reset(counter_names()[1])
+#'   if( counter_state(tag = 'tag1') > 5 )
+#'     counter_reset(tag = 'tag2')
 #' }
+#'
+#' plot(counter_get())
+#'
+#' # read the json log
+#' jsonlite::read_json(
+#' file.path(tempdir(),'whereami.json'),
+#' simplifyVector = TRUE)
 #'
 #' # clear all counters
 #' counter_reset()
 #'
+#' #verify that there are no active counters
+#' counter_state()
+#'
 #' # cleanup
 #' unlink(tf)
-#'
-#' }
 #'
 #' @rdname counter
 #' @author Jonathan Sidi
