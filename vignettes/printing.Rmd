@@ -36,4 +36,4 @@ cat_where(whereami(), color = "green")
 cat_where(whereami(), type = "line", color = "yellow")
 ```
 
-![](cat_where.png)
+![](printing.png)

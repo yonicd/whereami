@@ -28,7 +28,7 @@ wenv$archives <- data.frame(
 #'  The path can be set using [set_whereami_log][whereami::set_whereami_log]
 #'
 #' @examples
-#'
+#' if(interactive()){
 #' tf <- tempfile(fileext = '.R')
 #'
 #' # call to write to temp file
@@ -77,7 +77,7 @@ wenv$archives <- data.frame(
 #'
 #' # cleanup
 #' unlink(tf)
-#'
+#' }
 #' @rdname counter
 #' @author Jonathan Sidi
 #' @family counter

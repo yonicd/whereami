@@ -1,0 +1,118 @@
+---
+title: "Counters"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Counters}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+`whereami` stores in counters when a `whereami` call was invoked in a script during a session. This information can be used in control reactivity in shiny app development and testing.
+
+Below shows the basics of accessing and controlling counters.
+
+```{r setup}
+library(whereami)
+```
+
+```{r}
+
+tf <- system.file('example.R',package = 'whereami')
+
+readLines(tf)
+
+```
+ 
+```{r}
+source(tf)
+
+```
+
+## Query Counter State
+ 
+```{r}
+
+# All counters
+counter_state()
+
+# A single counter
+counter_state(tag = 'tag1')
+
+```
+ 
+## Accessing Counters 
+ 
+```{r}
+
+# Counter names
+counter_names()
+
+# Counter tags
+counter_tags()
+
+```
+ 
+## Retrieve Counters 
+ 
+```{r}
+counters <- counter_get()
+
+counters
+
+```
+
+## Manipulating Counters
+
+Using `counter_reset` and `counter_state` in a loop
+ 
+```{r}
+
+for( i in 1:10 ){
+
+  source(tf)
+
+  if( counter_state(tag = 'tag1') > 5 )
+    counter_reset(tag = 'tag2')
+}
+
+```
+ 
+## Plot Method
+ 
+```{r,fig.width=7}
+plot(counter_get())
+
+```
+ 
+ 
+## json logs
+
+A json log of the counter is written to `file.path(tempdir(),'whereami.json')` by default. The path can be set using `set_whereami_log()`.
+
+```{r}
+jsonlite::read_json(
+file.path(tempdir(),'whereami.json'),
+simplifyVector = TRUE)
+
+```
+ 
+## Clear all counters
+ 
+```{r}
+counter_reset()
+
+```
+
+Verify that there are no active counters.
+ 
+```{r}
+counter_state()
+
+```

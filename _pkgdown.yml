@@ -29,10 +29,11 @@ reference:
 articles:
   - title: "Usage"
     contents:
+      - counters
       - plots
       - tables
       - shiny
-      - cat_where
+      - printing
   - title: "Tests"
     contents:
       - tests_and_coverage

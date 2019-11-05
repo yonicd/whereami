@@ -20,7 +20,7 @@ library(whereami)
 
 Using `whereami` with shiny is simple. Place `cat_where(whereami())` anywhere in a shiny command and every time the rendering application hits the line it will print to console indicating which line has been hit accompanied by a counter.
 
-```
+```r
 ── Running renderPlot(...) at shiny.R#15 (1) ───────────────────────────────────────────
 ── Running renderPlot(...) at shiny.R#15 (2) ───────────────────────────────────────────
 ```

@@ -43,7 +43,7 @@ A json log of the counter is written to file.path(tempdir(),'whereami.json') by 
 The path can be set using \link[whereami:set_whereami_log]{set_whereami_log}
 }
 \examples{
-
+if(interactive()){
 tf <- tempfile(fileext = '.R')
 
 # call to write to temp file
@@ -92,7 +92,7 @@ counter_state()
 
 # cleanup
 unlink(tf)
-
+}
 }
 \author{
 Jonathan Sidi
