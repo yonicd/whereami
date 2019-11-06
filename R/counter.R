@@ -28,15 +28,8 @@ wenv$archives <- data.frame(
 #'  The path can be set using [set_whereami_log][whereami::set_whereami_log]
 #'
 #' @examples
-#' if(interactive()){
-#' tf <- tempfile(fileext = '.R')
 #'
-#' # call to write to temp file
-#' f1 <- "whereami::cat_where(whereami::whereami(tag = 'tag1'))"
-#' f2 <- "whereami::cat_where(whereami::whereami(tag = 'tag2'))"
-#'
-#' # write to the file (call at line 3)
-#' cat('\n\n',f1,'\n\n',f2,sep='',file = tf)
+#' tf <- system.file('example.R',package = 'whereami')
 #'
 #' source(tf)
 #'
@@ -77,7 +70,7 @@ wenv$archives <- data.frame(
 #'
 #' # cleanup
 #' unlink(tf)
-#' }
+#'
 #' @rdname counter
 #' @author Jonathan Sidi
 #' @family counter
