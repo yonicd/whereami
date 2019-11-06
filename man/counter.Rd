@@ -44,6 +44,8 @@ The path can be set using \link[whereami:set_whereami_log]{set_whereami_log}
 }
 \examples{
 
+if(interactive()){
+
 txt <- "
 whereami::cat_where(whereami::whereami(tag = 'tag1'))
 "
@@ -81,6 +83,8 @@ counter_state()
 
 # cleanup
 unlink(tf)
+
+}
 
 }
 \author{

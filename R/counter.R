@@ -29,6 +29,8 @@ wenv$archives <- data.frame(
 #'
 #' @examples
 #'
+#' if(interactive()){
+#'
 #' txt <- "
 #' whereami::cat_where(whereami::whereami(tag = 'tag1'))
 #' "
@@ -66,6 +68,8 @@ wenv$archives <- data.frame(
 #'
 #' # cleanup
 #' unlink(tf)
+#'
+#' }
 #'
 #' @rdname counter
 #' @author Jonathan Sidi
