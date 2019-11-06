@@ -24,9 +24,15 @@ library(whereami)
 
 ```{r}
 
-tf <- system.file('example.R',package = 'whereami')
+txt <- "
+whereami::cat_where(whereami::whereami(tag = 'tag1'))
 
-readLines(tf)
+whereami::cat_where(whereami::whereami(tag = 'tag2'))
+"
+
+tf <- tempfile(fileext = '.R')
+
+cat(txt,file = tf)
 
 ```
  
