@@ -29,7 +29,13 @@ wenv$archives <- data.frame(
 #'
 #' @examples
 #'
-#' tf <- system.file('example.R',package = 'whereami')
+#' txt <- "
+#' whereami::cat_where(whereami::whereami(tag = 'tag1'))
+#' "
+#'
+#' tf <- tempfile(fileext = '.R')
+#'
+#' cat(txt,file = tf)
 #'
 #' source(tf)
 #'
@@ -44,16 +50,6 @@ wenv$archives <- data.frame(
 #' counters <- counter_get()
 #'
 #' counters
-#'
-#' # using counter_reset and counter_names in a loop
-#'
-#' for( i in 1:10 ){
-#'
-#'   source(tf)
-#'
-#'   if( counter_state(tag = 'tag1') > 5 )
-#'     counter_reset(tag = 'tag2')
-#' }
 #'
 #' plot(counter_get())
 #'

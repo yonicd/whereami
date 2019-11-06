@@ -44,7 +44,13 @@ The path can be set using \link[whereami:set_whereami_log]{set_whereami_log}
 }
 \examples{
 
-tf <- system.file('example.R',package = 'whereami')
+txt <- "
+whereami::cat_where(whereami::whereami(tag = 'tag1'))
+"
+
+tf <- tempfile(fileext = '.R')
+
+cat(txt,file = tf)
 
 source(tf)
 
@@ -59,16 +65,6 @@ counter_tags()
 counters <- counter_get()
 
 counters
-
-# using counter_reset and counter_names in a loop
-
-for( i in 1:10 ){
-
-  source(tf)
-
-  if( counter_state(tag = 'tag1') > 5 )
-    counter_reset(tag = 'tag2')
-}
 
 plot(counter_get())
 
