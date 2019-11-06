@@ -43,15 +43,16 @@ A json log of the counter is written to file.path(tempdir(),'whereami.json') by 
 The path can be set using \link[whereami:set_whereami_log]{set_whereami_log}
 }
 \examples{
+
 if(interactive()){
+
+txt <- "
+whereami::cat_where(whereami::whereami(tag = 'tag1'))
+"
+
 tf <- tempfile(fileext = '.R')
 
-# call to write to temp file
-f1 <- "whereami::cat_where(whereami::whereami(tag = 'tag1'))"
-f2 <- "whereami::cat_where(whereami::whereami(tag = 'tag2'))"
-
-# write to the file (call at line 3)
-cat('\\n\\n',f1,'\\n\\n',f2,sep='',file = tf)
+cat(txt,file = tf)
 
 source(tf)
 
@@ -66,16 +67,6 @@ counter_tags()
 counters <- counter_get()
 
 counters
-
-# using counter_reset and counter_names in a loop
-
-for( i in 1:10 ){
-
-  source(tf)
-
-  if( counter_state(tag = 'tag1') > 5 )
-    counter_reset(tag = 'tag2')
-}
 
 plot(counter_get())
 
@@ -92,7 +83,9 @@ counter_state()
 
 # cleanup
 unlink(tf)
+
 }
+
 }
 \author{
 Jonathan Sidi

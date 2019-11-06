@@ -10,7 +10,8 @@ vignette: >
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  eval = interactive() || identical(Sys.getenv("TRAVIS"), "true")
 )
 ```
 
@@ -24,15 +25,23 @@ library(whereami)
 
 ```{r}
 
-tf <- system.file('example.R',package = 'whereami')
+txt_1 <- "
+whereami::cat_where(whereami::whereami(tag = 'tag1'))
+"
 
-readLines(tf)
+txt_2 <- "whereami::cat_where(whereami::whereami(tag = 'tag2'))"
+
+tf_1 <- tempfile(fileext = '.R')
+tf_2 <- tempfile(fileext = '.R')
+
+cat(txt_1,file = tf_1)
+cat(txt_2,file = tf_2)
 
 ```
  
 ```{r}
-source(tf)
-
+source(tf_1)
+source(tf_2)
 ```
 
 ## Query Counter State
@@ -76,7 +85,8 @@ Using `counter_reset` and `counter_state` in a loop
 
 for( i in 1:10 ){
 
-  source(tf)
+  source(tf_1)
+  source(tf_2)
 
   if( counter_state(tag = 'tag1') > 5 )
     counter_reset(tag = 'tag2')
