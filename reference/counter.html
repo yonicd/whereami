@@ -159,15 +159,16 @@ be plotted with the with the plot method.</p>
 The path can be set using <a href='set_whereami_log.html'>set_whereami_log</a></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span>(<span class='fu'>interactive</span>()){
+    <pre class="examples"><div class='input'>
+<span class='kw'>if</span>(<span class='fu'>interactive</span>()){
+
+<span class='no'>txt</span> <span class='kw'>&lt;-</span> <span class='st'>"
+whereami::cat_where(whereami::whereami(tag = 'tag1'))
+"</span>
+
 <span class='no'>tf</span> <span class='kw'>&lt;-</span> <span class='fu'>tempfile</span>(<span class='kw'>fileext</span> <span class='kw'>=</span> <span class='st'>'.R'</span>)
 
-<span class='co'># call to write to temp file</span>
-<span class='no'>f1</span> <span class='kw'>&lt;-</span> <span class='st'>"whereami::cat_where(whereami::whereami(tag = 'tag1'))"</span>
-<span class='no'>f2</span> <span class='kw'>&lt;-</span> <span class='st'>"whereami::cat_where(whereami::whereami(tag = 'tag2'))"</span>
-
-<span class='co'># write to the file (call at line 3)</span>
-<span class='fu'>cat</span>(<span class='st'>'\n\n'</span>,<span class='no'>f1</span>,<span class='st'>'\n\n'</span>,<span class='no'>f2</span>,<span class='kw'>sep</span><span class='kw'>=</span><span class='st'>''</span>,<span class='kw'>file</span> <span class='kw'>=</span> <span class='no'>tf</span>)
+<span class='fu'>cat</span>(<span class='no'>txt</span>,<span class='kw'>file</span> <span class='kw'>=</span> <span class='no'>tf</span>)
 
 <span class='fu'>source</span>(<span class='no'>tf</span>)
 
@@ -182,16 +183,6 @@ The path can be set using <a href='set_whereami_log.html'>set_whereami_log</a></
 <span class='no'>counters</span> <span class='kw'>&lt;-</span> <span class='fu'>counter_get</span>()
 
 <span class='no'>counters</span>
-
-<span class='co'># using counter_reset and counter_names in a loop</span>
-
-<span class='kw'>for</span>( <span class='no'>i</span> <span class='kw'>in</span> <span class='fl'>1</span>:<span class='fl'>10</span> ){
-
-  <span class='fu'>source</span>(<span class='no'>tf</span>)
-
-  <span class='kw'>if</span>( <span class='fu'>counter_state</span>(<span class='kw'>tag</span> <span class='kw'>=</span> <span class='st'>'tag1'</span>) <span class='kw'>&gt;</span> <span class='fl'>5</span> )
-    <span class='fu'>counter_reset</span>(<span class='kw'>tag</span> <span class='kw'>=</span> <span class='st'>'tag2'</span>)
-}
 
 <span class='fu'>plot</span>(<span class='fu'>counter_get</span>())
 
@@ -208,6 +199,7 @@ The path can be set using <a href='set_whereami_log.html'>set_whereami_log</a></
 
 <span class='co'># cleanup</span>
 <span class='fu'>unlink</span>(<span class='no'>tf</span>)
+
 }</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
