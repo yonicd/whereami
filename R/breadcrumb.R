@@ -2,7 +2,7 @@ my_traceback <- function(x = NULL) {
     if(is.null(x) && !is.null(x <- get0(".Traceback", envir = baseenv())))
     {}
     else if (is.numeric(x))
-      x <- .Internal(traceback(x))
+      x <- traceback(x)
     x
   }
 
