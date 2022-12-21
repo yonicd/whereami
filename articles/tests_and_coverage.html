@@ -6,19 +6,21 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tests and Coverage • whereami</title>
-<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Font Awesome icons --><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><meta property="og:title" content="Tests and Coverage">
-<meta property="og:description" content="">
-<meta name="twitter:card" content="summary">
-<!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!--[if lt IE 9]>
+<meta property="og:description" content="whereami">
+<!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body>
+<body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,18 +33,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">whereami</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.9</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.9</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
@@ -55,13 +51,13 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/yonicd/whereami">
-    <span class="fa fa-github fa-lg"></span>
+  <a href="https://github.com/yonicd/whereami/" class="external-link">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
 <li>
-  <a href="http://twitter.com/yoniceedee">
+  <a href="http://twitter.com/yoniceedee" class="external-link">
     <span class="fa fa-lg fa-twitter"></span>
      
   </a>
@@ -75,14 +71,15 @@
 <!--/.navbar -->
 
       
-      </header><div class="row">
+
+      </header><script src="tests_and_coverage_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1>Tests and Coverage</h1>
+      <h1 data-toc-skip>Tests and Coverage</h1>
             
-            <h4 class="date">06 November, 2019 04:15:32</h4>
+            <h4 data-toc-skip class="date">21 December, 2022 18:25:54</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/yonicd/whereami/blob/master/vignettes/tests_and_coverage.Rmd"><code>vignettes/tests_and_coverage.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/yonicd/whereami/blob/HEAD/vignettes/tests_and_coverage.Rmd" class="external-link"><code>vignettes/tests_and_coverage.Rmd</code></a></small>
       <div class="hidden name"><code>tests_and_coverage.Rmd</code></div>
 
     </div>
@@ -90,264 +87,849 @@
     
     
 <!--- Placeholder for tests/README.md Do Not Edit--->
-<p>This output is created by <a href="https://github.com/metrumresearchgroup/covrpage">covrpage</a>.</p>
-<div id="coverage" class="section level2">
-<h2 class="hasAnchor">
-<a href="#coverage" class="anchor"></a>Coverage</h2>
-<p>Coverage summary is created using the <a href="https://github.com/r-lib/covr">covr</a> package.</p>
+<ul>
+<li><a href="#coverage" id="toc-coverage">Coverage</a></li>
+<li><a href="#unit-tests" id="toc-unit-tests">Unit Tests</a></li>
+</ul>
+<p>This output is created by <a href="https://github.com/yonicd/covrpage" class="external-link">covrpage</a>.</p>
+<div class="section level2">
+<h2 id="coverage">Coverage<a class="anchor" aria-label="anchor" href="#coverage"></a>
+</h2>
+<p>Coverage summary is created using the <a href="https://github.com/r-lib/covr" class="external-link">covr</a> package.</p>
+<pre><code><span><span class="co">## - Not All Tests Passed</span></span>
+<span><span class="co">##   Coverage statistics are approximations of the non-failing tests.</span></span>
+<span><span class="co">##   Use with caution</span></span>
+<span><span class="co">## </span></span>
+<span><span class="co">##  For further investigation check in testthat summary tables.</span></span></code></pre>
 <table class="table">
-<thead><tr class="header">
-<th align="left">Object</th>
-<th align="center">Coverage (%)</th>
+<thead><tr>
+<th style="text-align:left;">
+Object
+</th>
+<th style="text-align:center;">
+Coverage (%)
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="left">whereami</td>
-<td align="center">34.95</td>
+<tr>
+<td style="text-align:left;">
+whereami
+</td>
+<td style="text-align:center;">
+35.24
+</td>
 </tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/HEAD/R/counter.R">R/counter.R</a></td>
-<td align="center">7.89</td>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/R/counter.R" class="external-link">R/counter.R</a>
+</td>
+<td style="text-align:center;">
+7.89
+</td>
 </tr>
-<tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/HEAD/R/print.R">R/print.R</a></td>
-<td align="center">41.38</td>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/R/print.R" class="external-link">R/print.R</a>
+</td>
+<td style="text-align:center;">
+41.38
+</td>
 </tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/HEAD/R/whereami.R">R/whereami.R</a></td>
-<td align="center">50.00</td>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/R/thisfile.R" class="external-link">R/thisfile.R</a>
+</td>
+<td style="text-align:center;">
+46.34
+</td>
 </tr>
-<tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/HEAD/R/zzz.R">R/zzz.R</a></td>
-<td align="center">50.00</td>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/R/whereami.R" class="external-link">R/whereami.R</a>
+</td>
+<td style="text-align:center;">
+50.00
+</td>
 </tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/HEAD/R/thisfile.R">R/thisfile.R</a></td>
-<td align="center">51.22</td>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/R/zzz.R" class="external-link">R/zzz.R</a>
+</td>
+<td style="text-align:center;">
+50.00
+</td>
 </tr>
-<tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/HEAD/R/breadcrumb.R">R/breadcrumb.R</a></td>
-<td align="center">58.82</td>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/R/breadcrumb.R" class="external-link">R/breadcrumb.R</a>
+</td>
+<td style="text-align:center;">
+66.67
+</td>
 </tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/HEAD/R/utils.R">R/utils.R</a></td>
-<td align="center">100.00</td>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/R/utils.R" class="external-link">R/utils.R</a>
+</td>
+<td style="text-align:center;">
+100.00
+</td>
 </tr>
 </tbody>
 </table>
 <p><br></p>
 </div>
-<div id="unit-tests" class="section level2">
-<h2 class="hasAnchor">
-<a href="#unit-tests" class="anchor"></a>Unit Tests</h2>
-<p>Unit Test summary is created using the <a href="https://github.com/r-lib/testthat">testthat</a> package.</p>
+<div class="section level2">
+<h2 id="unit-tests">Unit Tests<a class="anchor" aria-label="anchor" href="#unit-tests"></a>
+</h2>
+<p>Unit Test summary is created using the <a href="https://github.com/r-lib/testthat" class="external-link">testthat</a> package.</p>
 <table class="table">
-<thead><tr class="header">
-<th align="left">file</th>
-<th align="right">n</th>
-<th align="right">time</th>
-<th align="right">error</th>
-<th align="right">failed</th>
-<th align="right">skipped</th>
-<th align="right">warning</th>
+<thead><tr>
+<th style="text-align:left;">
+file
+</th>
+<th style="text-align:right;">
+n
+</th>
+<th style="text-align:right;">
+time
+</th>
+<th style="text-align:right;">
+error
+</th>
+<th style="text-align:right;">
+failed
+</th>
+<th style="text-align:right;">
+skipped
+</th>
+<th style="text-align:right;">
+warning
+</th>
+<th style="text-align:left;">
+icon
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/HEAD/tests/testthat/test-counter.R">test-counter.R</a></td>
-<td align="right">1</td>
-<td align="right">0.002</td>
-<td align="right">0</td>
-<td align="right">0</td>
-<td align="right">0</td>
-<td align="right">0</td>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/tests/testthat/test-console.R" class="external-link">test-console.R</a>
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.06
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+</td>
 </tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/HEAD/tests/testthat/test-source.R">test-source.R</a></td>
-<td align="right">3</td>
-<td align="right">0.129</td>
-<td align="right">0</td>
-<td align="right">0</td>
-<td align="right">0</td>
-<td align="right">0</td>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/tests/testthat/test-counter.R" class="external-link">test-counter.R</a>
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+0.34
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+!
+</td>
 </tr>
-<tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/HEAD/tests/testthat/test-thisfile.R">test-thisfile.R</a></td>
-<td align="right">4</td>
-<td align="right">0.542</td>
-<td align="right">0</td>
-<td align="right">0</td>
-<td align="right">0</td>
-<td align="right">0</td>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/tests/testthat/test-source.R" class="external-link">test-source.R</a>
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+0.15
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/tests/testthat/test-thisfile.R" class="external-link">test-thisfile.R</a>
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+0.06
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+<ul><li></ul>
+</td>
 </tr>
 </tbody>
 </table>
-<details closed><p><summary> Show Detailed Test Results </summary></p>
-<table class="table">
-<colgroup>
-<col width="43%">
-<col width="18%">
-<col width="26%">
-<col width="5%">
-<col width="1%">
-<col width="4%">
-</colgroup>
-<thead><tr class="header">
-<th align="left">file</th>
-<th align="left">context</th>
-<th align="left">test</th>
-<th align="left">status</th>
-<th align="right">n</th>
-<th align="right">time</th>
+<details open><summary> Show Detailed Test Results </summary><table class="table">
+<thead><tr>
+<th style="text-align:left;">
+file
+</th>
+<th style="text-align:left;">
+context
+</th>
+<th style="text-align:left;">
+test
+</th>
+<th style="text-align:left;">
+status
+</th>
+<th style="text-align:right;">
+n
+</th>
+<th style="text-align:right;">
+time
+</th>
+<th style="text-align:left;">
+icon
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/HEAD/tests/testthat/test-counter.R#L7">test-counter.R</a></td>
-<td align="left">counter functionality</td>
-<td align="left">counter flow: no counter exists</td>
-<td align="left">PASS</td>
-<td align="right">1</td>
-<td align="right">0.002</td>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/tests/testthat/test-console.R#L8" class="external-link">test-console.R</a>
+</td>
+<td style="text-align:left;">
+console functionality
+</td>
+<td style="text-align:left;">
+console functionality: class
+</td>
+<td style="text-align:left;">
+PASS
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.04
+</td>
+<td style="text-align:left;">
+</td>
 </tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/HEAD/tests/testthat/test-source.R#L7">test-source.R</a></td>
-<td align="left">source functionality</td>
-<td align="left">source calls: direct call</td>
-<td align="left">PASS</td>
-<td align="right">1</td>
-<td align="right">0.007</td>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/tests/testthat/test-console.R#L12" class="external-link">test-console.R</a>
+</td>
+<td style="text-align:left;">
+console functionality
+</td>
+<td style="text-align:left;">
+console functionality: value
+</td>
+<td style="text-align:left;">
+PASS
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.02
+</td>
+<td style="text-align:left;">
+</td>
 </tr>
-<tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/HEAD/tests/testthat/test-source.R#L11">test-source.R</a></td>
-<td align="left">source functionality</td>
-<td align="left">source calls: path expand</td>
-<td align="left">PASS</td>
-<td align="right">1</td>
-<td align="right">0.112</td>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/tests/testthat/test-counter.R#L7" class="external-link">test-counter.R</a>
+</td>
+<td style="text-align:left;">
+counter functionality
+</td>
+<td style="text-align:left;">
+counter flow: no counter exists
+</td>
+<td style="text-align:left;">
+PASS
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+<td style="text-align:left;">
+</td>
 </tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/HEAD/tests/testthat/test-source.R#L15">test-source.R</a></td>
-<td align="left">source functionality</td>
-<td align="left">source calls: print</td>
-<td align="left">PASS</td>
-<td align="right">1</td>
-<td align="right">0.010</td>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/tests/testthat/test-counter.R#L13" class="external-link">test-counter.R</a>
+</td>
+<td style="text-align:left;">
+counter functionality
+</td>
+<td style="text-align:left;">
+counter flow: initial
+</td>
+<td style="text-align:left;">
+FAILED
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.11
+</td>
+<td style="text-align:left;">
+!
+</td>
 </tr>
-<tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/HEAD/tests/testthat/test-thisfile.R#L9">test-thisfile.R</a></td>
-<td align="left">thisfile</td>
-<td align="left">thisfile works with source</td>
-<td align="left">PASS</td>
-<td align="right">1</td>
-<td align="right">0.002</td>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/tests/testthat/test-counter.R#L17" class="external-link">test-counter.R</a>
+</td>
+<td style="text-align:left;">
+counter functionality
+</td>
+<td style="text-align:left;">
+counter flow: check counter was created
+</td>
+<td style="text-align:left;">
+PASS
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:left;">
+</td>
 </tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/HEAD/tests/testthat/test-thisfile.R#L17">test-thisfile.R</a></td>
-<td align="left">thisfile</td>
-<td align="left">thisfile works with Rscript</td>
-<td align="left">PASS</td>
-<td align="right">1</td>
-<td align="right">0.261</td>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/tests/testthat/test-counter.R#L21" class="external-link">test-counter.R</a>
+</td>
+<td style="text-align:left;">
+counter functionality
+</td>
+<td style="text-align:left;">
+counter flow: counter name
+</td>
+<td style="text-align:left;">
+FAILED
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+<td style="text-align:left;">
+!
+</td>
 </tr>
-<tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/HEAD/tests/testthat/test-thisfile.R#L25">test-thisfile.R</a></td>
-<td align="left">thisfile</td>
-<td align="left">thisfile works with R</td>
-<td align="left">PASS</td>
-<td align="right">1</td>
-<td align="right">0.266</td>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/tests/testthat/test-counter.R#L25" class="external-link">test-counter.R</a>
+</td>
+<td style="text-align:left;">
+counter functionality
+</td>
+<td style="text-align:left;">
+counter flow: counter bump
+</td>
+<td style="text-align:left;">
+FAILED
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.06
+</td>
+<td style="text-align:left;">
+!
+</td>
 </tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/yonicd/whereami/tree/HEAD/tests/testthat/test-thisfile.R#L31_L35">test-thisfile.R</a></td>
-<td align="left">thisfile</td>
-<td align="left">thisfile works with knitr</td>
-<td align="left">PASS</td>
-<td align="right">1</td>
-<td align="right">0.013</td>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/tests/testthat/test-counter.R#L29" class="external-link">test-counter.R</a>
+</td>
+<td style="text-align:left;">
+counter functionality
+</td>
+<td style="text-align:left;">
+counter flow: counter state
+</td>
+<td style="text-align:left;">
+FAILED
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.02
+</td>
+<td style="text-align:left;">
+!
+</td>
 </tr>
-</tbody>
-</table></details><details><p><summary> Session Info </summary></p>
-<table class="table">
-<thead><tr class="header">
-<th align="left">Field</th>
-<th align="left">Value</th>
-<th></th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td align="left">Version</td>
-<td align="left">R version 3.6.1 (2017-01-27)</td>
-<td></td>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/tests/testthat/test-counter.R#L34" class="external-link">test-counter.R</a>
+</td>
+<td style="text-align:left;">
+counter functionality
+</td>
+<td style="text-align:left;">
+counter flow: cat_whereami
+</td>
+<td style="text-align:left;">
+PASS
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.04
+</td>
+<td style="text-align:left;">
+</td>
 </tr>
-<tr class="even">
-<td align="left">Platform</td>
-<td align="left">x86_64-pc-linux-gnu (64-bit)</td>
-<td><a href="https://travis-ci.org/yonicd/whereami/jobs/607999035" target="_blank"><span title="Built on Travis"><img src="https://github.com/metrumresearchgroup/covrpage/blob/master/inst/logo/travis.png?raw=true"></span></a></td>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/tests/testthat/test-counter.R#L38_L39" class="external-link">test-counter.R</a>
+</td>
+<td style="text-align:left;">
+counter functionality
+</td>
+<td style="text-align:left;">
+counter flow: multiple counter states
+</td>
+<td style="text-align:left;">
+FAILED
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:left;">
+!
+</td>
 </tr>
-<tr class="odd">
-<td align="left">Running</td>
-<td align="left">Ubuntu 16.04.6 LTS</td>
-<td></td>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/tests/testthat/test-counter.R#L43" class="external-link">test-counter.R</a>
+</td>
+<td style="text-align:left;">
+counter functionality
+</td>
+<td style="text-align:left;">
+counter flow: multiple counter names
+</td>
+<td style="text-align:left;">
+FAILED
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.04
+</td>
+<td style="text-align:left;">
+!
+</td>
 </tr>
-<tr class="even">
-<td align="left">Language</td>
-<td align="left">en_US</td>
-<td></td>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/tests/testthat/test-counter.R#L48" class="external-link">test-counter.R</a>
+</td>
+<td style="text-align:left;">
+counter functionality
+</td>
+<td style="text-align:left;">
+counter flow: reset item
+</td>
+<td style="text-align:left;">
+PASS
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:left;">
+</td>
 </tr>
-<tr class="odd">
-<td align="left">Timezone</td>
-<td align="left">UTC</td>
-<td></td>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/tests/testthat/test-counter.R#L53" class="external-link">test-counter.R</a>
+</td>
+<td style="text-align:left;">
+counter functionality
+</td>
+<td style="text-align:left;">
+counter flow: reset all
+</td>
+<td style="text-align:left;">
+PASS
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.01
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/tests/testthat/test-source.R#L7" class="external-link">test-source.R</a>
+</td>
+<td style="text-align:left;">
+source functionality
+</td>
+<td style="text-align:left;">
+source calls: direct call
+</td>
+<td style="text-align:left;">
+PASS
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.06
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/tests/testthat/test-source.R#L11" class="external-link">test-source.R</a>
+</td>
+<td style="text-align:left;">
+source functionality
+</td>
+<td style="text-align:left;">
+source calls: path expand
+</td>
+<td style="text-align:left;">
+PASS
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.05
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/tests/testthat/test-source.R#L15" class="external-link">test-source.R</a>
+</td>
+<td style="text-align:left;">
+source functionality
+</td>
+<td style="text-align:left;">
+source calls: print
+</td>
+<td style="text-align:left;">
+PASS
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.04
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/tests/testthat/test-thisfile.R#L7" class="external-link">test-thisfile.R</a>
+</td>
+<td style="text-align:left;">
+thisfile
+</td>
+<td style="text-align:left;">
+thisfile works with source
+</td>
+<td style="text-align:left;">
+SKIPPED
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.01
+</td>
+<td style="text-align:left;">
+<ul><li></ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/tests/testthat/test-thisfile.R#L13" class="external-link">test-thisfile.R</a>
+</td>
+<td style="text-align:left;">
+thisfile
+</td>
+<td style="text-align:left;">
+thisfile works with Rscript
+</td>
+<td style="text-align:left;">
+SKIPPED
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:left;">
+<ul><li></ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/tests/testthat/test-thisfile.R#L21" class="external-link">test-thisfile.R</a>
+</td>
+<td style="text-align:left;">
+thisfile
+</td>
+<td style="text-align:left;">
+thisfile works with R
+</td>
+<td style="text-align:left;">
+SKIPPED
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:left;">
+<ul><li></ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/yonicd/whereami/blob/knitr_fix/tests/testthat/test-thisfile.R#L32_L36" class="external-link">test-thisfile.R</a>
+</td>
+<td style="text-align:left;">
+thisfile
+</td>
+<td style="text-align:left;">
+thisfile works with knitr
+</td>
+<td style="text-align:left;">
+PASS
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.05
+</td>
+<td style="text-align:left;">
+</td>
 </tr>
 </tbody>
 </table>
 <table class="table">
-<thead><tr class="header">
-<th align="left">Package</th>
-<th align="left">Version</th>
+<thead><tr>
+<th style="text-align:left;">
+Failed
+</th>
+<th style="text-align:left;">
+Warning
+</th>
+<th style="text-align:left;">
+Skipped
+</th>
+</tr></thead>
+<tbody><tr>
+<td style="text-align:left;">
+!
+</td>
+<td style="text-align:left;">
+<ul><li></ul>
+</td>
+<td style="text-align:left;">
+<ul><li></ul>
+</td>
+</tr></tbody>
+</table></details><details><summary> Session Info </summary><table class="table">
+<thead><tr>
+<th style="text-align:left;">
+Field
+</th>
+<th style="text-align:left;">
+Value
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="left">testthat</td>
-<td align="left">2.3.0</td>
+<tr>
+<td style="text-align:left;">
+Version
+</td>
+<td style="text-align:left;">
+R version 4.2.1 (2022-06-23 ucrt)
+</td>
 </tr>
-<tr class="even">
-<td align="left">covr</td>
-<td align="left">3.3.2</td>
+<tr>
+<td style="text-align:left;">
+Platform
+</td>
+<td style="text-align:left;">
+x86_64-w64-mingw32/x64 (64-bit)
+</td>
 </tr>
-<tr class="odd">
-<td align="left">covrpage</td>
-<td align="left">0.0.70</td>
+<tr>
+<td style="text-align:left;">
+Running
+</td>
+<td style="text-align:left;">
+Windows 10 x64 (build 19042)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Language
+</td>
+<td style="text-align:left;">
+English_United States
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Timezone
+</td>
+<td style="text-align:left;">
+America/New_York
+</td>
 </tr>
 </tbody>
-</table></details><!--- Final Status : pass --->
+</table>
+<table class="table">
+<thead><tr>
+<th style="text-align:left;">
+Package
+</th>
+<th style="text-align:left;">
+Version
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+testthat
+</td>
+<td style="text-align:left;">
+3.1.6
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+covr
+</td>
+<td style="text-align:left;">
+3.6.1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+covrpage
+</td>
+<td style="text-align:left;">
+0.0.71
+</td>
+</tr>
+</tbody>
+</table></details><!--- Final Status : error/failed --->
 </div>
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-        <div id="tocnav">
-      <h2 class="hasAnchor">
-<a href="#tocnav" class="anchor"></a>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-<li><a href="#coverage">Coverage</a></li>
-      <li><a href="#unit-tests">Unit Tests</a></li>
-      </ul>
+        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
+    </nav>
 </div>
-      </div>
 
 </div>
+
 
 
       <footer><div class="copyright">
-  <p>Developed by Jonathan Sidi, Kirill Müller.</p>
+  <p></p>
+<p>Developed by Jonathan Sidi, Kirill Müller.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="http://pkgdown.r-lib.org/">pkgdown</a>.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>
 </div>
+
+  
+
 
   
 

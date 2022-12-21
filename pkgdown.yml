@@ -1,6 +1,6 @@
-pandoc: '2.2'
-pkgdown: 1.1.0.9000
-pkgdown_sha: a5af998a70078bf67fc2da191d706582a6c24126
+pandoc: 2.9.2.1
+pkgdown: 2.0.7
+pkgdown_sha: ~
 articles:
   counters: counters.html
   plots: plots.html
@@ -8,4 +8,5 @@ articles:
   shiny: shiny.html
   tables: tables.html
   tests_and_coverage: tests_and_coverage.html
+last_built: 2022-12-21T18:25Z
 
