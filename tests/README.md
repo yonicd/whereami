@@ -1,95 +1,853 @@
 Tests and Coverage
 ================
-27 October, 2019 14:13:53
+21 December, 2022 09:27:16
 
-  - [Coverage](#coverage)
-  - [Unit Tests](#unit-tests)
+-   <a href="#coverage" id="toc-coverage">Coverage</a>
+-   <a href="#unit-tests" id="toc-unit-tests">Unit Tests</a>
 
 This output is created by
-[covrpage](https://github.com/metrumresearchgroup/covrpage).
+[covrpage](https://github.com/yonicd/covrpage).
 
 ## Coverage
 
 Coverage summary is created using the
 [covr](https://github.com/r-lib/covr) package.
 
-| Object                              | Coverage (%) |
-| :---------------------------------- | :----------: |
-| whereami                            |    28.36     |
-| [R/breadcrumb.R](../R/breadcrumb.R) |     0.00     |
-| [R/counter.R](../R/counter.R)       |     8.22     |
-| [R/print.R](../R/print.R)           |    41.38     |
-| [R/whereami.R](../R/whereami.R)     |    44.74     |
-| [R/thisfile.R](../R/thisfile.R)     |    46.34     |
-| [R/utils.R](../R/utils.R)           |    100.00    |
+    ## - Not All Tests Passed
+    ##   Coverage statistics are approximations of the non-failing tests.
+    ##   Use with caution
+    ## 
+    ##  For further investigation check in testthat summary tables.
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Object
+</th>
+<th style="text-align:center;">
+Coverage (%)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+whereami
+</td>
+<td style="text-align:center;">
+35.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[R/counter.R](../R/counter.R)
+</td>
+<td style="text-align:center;">
+7.89
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[R/print.R](../R/print.R)
+</td>
+<td style="text-align:center;">
+41.38
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[R/thisfile.R](../R/thisfile.R)
+</td>
+<td style="text-align:center;">
+46.34
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[R/whereami.R](../R/whereami.R)
+</td>
+<td style="text-align:center;">
+50.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[R/zzz.R](../R/zzz.R)
+</td>
+<td style="text-align:center;">
+50.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[R/breadcrumb.R](../R/breadcrumb.R)
+</td>
+<td style="text-align:center;">
+66.67
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[R/utils.R](../R/utils.R)
+</td>
+<td style="text-align:center;">
+100.00
+</td>
+</tr>
+</tbody>
+</table>
 
 <br>
 
 ## Unit Tests
 
 Unit Test summary is created using the
-[testthat](https://github.com/r-lib/testthat)
-package.
+[testthat](https://github.com/r-lib/testthat) package.
 
-| file                                        |  n |  time | error | failed | skipped | warning | icon |
-| :------------------------------------------ | -: | ----: | ----: | -----: | ------: | ------: | :--- |
-| [test-console.R](testthat/test-console.R)   |  2 | 0.005 |     0 |      0 |       0 |       0 |      |
-| [test-counter.R](testthat/test-counter.R)   | 12 | 0.074 |     0 |      0 |       0 |       0 |      |
-| [test-source.R](testthat/test-source.R)     |  3 | 0.061 |     0 |      0 |       0 |       0 |      |
-| [test-thisfile.R](testthat/test-thisfile.R) |  4 | 0.011 |     0 |      0 |       3 |       0 | 🔶    |
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+file
+</th>
+<th style="text-align:right;">
+n
+</th>
+<th style="text-align:right;">
+time
+</th>
+<th style="text-align:right;">
+error
+</th>
+<th style="text-align:right;">
+failed
+</th>
+<th style="text-align:right;">
+skipped
+</th>
+<th style="text-align:right;">
+warning
+</th>
+<th style="text-align:left;">
+icon
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+[test-console.R](testthat/test-console.R)
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.06
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[test-counter.R](testthat/test-counter.R)
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+0.34
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+!
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[test-source.R](testthat/test-source.R)
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+0.15
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[test-thisfile.R](testthat/test-thisfile.R)
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+0.06
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+
+-   </td>
+    </tr>
+    </tbody>
+    </table>
 
 <details open>
-
-<summary> Show Detailed Test Results
+<summary>
+Show Detailed Test Results
 </summary>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+file
+</th>
+<th style="text-align:left;">
+context
+</th>
+<th style="text-align:left;">
+test
+</th>
+<th style="text-align:left;">
+status
+</th>
+<th style="text-align:right;">
+n
+</th>
+<th style="text-align:right;">
+time
+</th>
+<th style="text-align:left;">
+icon
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+[test-console.R](testthat/test-console.R#L8)
+</td>
+<td style="text-align:left;">
+console functionality
+</td>
+<td style="text-align:left;">
+console functionality: class
+</td>
+<td style="text-align:left;">
+PASS
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.04
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[test-console.R](testthat/test-console.R#L12)
+</td>
+<td style="text-align:left;">
+console functionality
+</td>
+<td style="text-align:left;">
+console functionality: value
+</td>
+<td style="text-align:left;">
+PASS
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.02
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[test-counter.R](testthat/test-counter.R#L7)
+</td>
+<td style="text-align:left;">
+counter functionality
+</td>
+<td style="text-align:left;">
+counter flow: no counter exists
+</td>
+<td style="text-align:left;">
+PASS
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[test-counter.R](testthat/test-counter.R#L13)
+</td>
+<td style="text-align:left;">
+counter functionality
+</td>
+<td style="text-align:left;">
+counter flow: initial
+</td>
+<td style="text-align:left;">
+FAILED
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.11
+</td>
+<td style="text-align:left;">
+!
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[test-counter.R](testthat/test-counter.R#L17)
+</td>
+<td style="text-align:left;">
+counter functionality
+</td>
+<td style="text-align:left;">
+counter flow: check counter was created
+</td>
+<td style="text-align:left;">
+PASS
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[test-counter.R](testthat/test-counter.R#L21)
+</td>
+<td style="text-align:left;">
+counter functionality
+</td>
+<td style="text-align:left;">
+counter flow: counter name
+</td>
+<td style="text-align:left;">
+FAILED
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+<td style="text-align:left;">
+!
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[test-counter.R](testthat/test-counter.R#L25)
+</td>
+<td style="text-align:left;">
+counter functionality
+</td>
+<td style="text-align:left;">
+counter flow: counter bump
+</td>
+<td style="text-align:left;">
+FAILED
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.06
+</td>
+<td style="text-align:left;">
+!
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[test-counter.R](testthat/test-counter.R#L29)
+</td>
+<td style="text-align:left;">
+counter functionality
+</td>
+<td style="text-align:left;">
+counter flow: counter state
+</td>
+<td style="text-align:left;">
+FAILED
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.02
+</td>
+<td style="text-align:left;">
+!
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[test-counter.R](testthat/test-counter.R#L34)
+</td>
+<td style="text-align:left;">
+counter functionality
+</td>
+<td style="text-align:left;">
+counter flow: cat_whereami
+</td>
+<td style="text-align:left;">
+PASS
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.04
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[test-counter.R](testthat/test-counter.R#L38_L39)
+</td>
+<td style="text-align:left;">
+counter functionality
+</td>
+<td style="text-align:left;">
+counter flow: multiple counter states
+</td>
+<td style="text-align:left;">
+FAILED
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:left;">
+!
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[test-counter.R](testthat/test-counter.R#L43)
+</td>
+<td style="text-align:left;">
+counter functionality
+</td>
+<td style="text-align:left;">
+counter flow: multiple counter names
+</td>
+<td style="text-align:left;">
+FAILED
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.04
+</td>
+<td style="text-align:left;">
+!
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[test-counter.R](testthat/test-counter.R#L48)
+</td>
+<td style="text-align:left;">
+counter functionality
+</td>
+<td style="text-align:left;">
+counter flow: reset item
+</td>
+<td style="text-align:left;">
+PASS
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[test-counter.R](testthat/test-counter.R#L53)
+</td>
+<td style="text-align:left;">
+counter functionality
+</td>
+<td style="text-align:left;">
+counter flow: reset all
+</td>
+<td style="text-align:left;">
+PASS
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.01
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[test-source.R](testthat/test-source.R#L7)
+</td>
+<td style="text-align:left;">
+source functionality
+</td>
+<td style="text-align:left;">
+source calls: direct call
+</td>
+<td style="text-align:left;">
+PASS
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.06
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[test-source.R](testthat/test-source.R#L11)
+</td>
+<td style="text-align:left;">
+source functionality
+</td>
+<td style="text-align:left;">
+source calls: path expand
+</td>
+<td style="text-align:left;">
+PASS
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.05
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[test-source.R](testthat/test-source.R#L15)
+</td>
+<td style="text-align:left;">
+source functionality
+</td>
+<td style="text-align:left;">
+source calls: print
+</td>
+<td style="text-align:left;">
+PASS
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.04
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+[test-thisfile.R](testthat/test-thisfile.R#L7)
+</td>
+<td style="text-align:left;">
+thisfile
+</td>
+<td style="text-align:left;">
+thisfile works with source
+</td>
+<td style="text-align:left;">
+SKIPPED
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.01
+</td>
+<td style="text-align:left;">
 
-| file                                                | context               | test                                    | status  | n |  time | icon |
-| :-------------------------------------------------- | :-------------------- | :-------------------------------------- | :------ | -: | ----: | :--- |
-| [test-console.R](testthat/test-console.R#L8)        | console functionality | console functionality: class            | PASS    | 1 | 0.002 |      |
-| [test-console.R](testthat/test-console.R#L12)       | console functionality | console functionality: value            | PASS    | 1 | 0.003 |      |
-| [test-counter.R](testthat/test-counter.R#L7)        | counter functionality | counter flow: no counter exists         | PASS    | 1 | 0.000 |      |
-| [test-counter.R](testthat/test-counter.R#L13)       | counter functionality | counter flow: initial                   | PASS    | 1 | 0.030 |      |
-| [test-counter.R](testthat/test-counter.R#L17)       | counter functionality | counter flow: check counter was created | PASS    | 1 | 0.001 |      |
-| [test-counter.R](testthat/test-counter.R#L21)       | counter functionality | counter flow: counter name              | PASS    | 1 | 0.001 |      |
-| [test-counter.R](testthat/test-counter.R#L25)       | counter functionality | counter flow: counter bump              | PASS    | 1 | 0.020 |      |
-| [test-counter.R](testthat/test-counter.R#L29)       | counter functionality | counter flow: counter state             | PASS    | 2 | 0.002 |      |
-| [test-counter.R](testthat/test-counter.R#L34)       | counter functionality | counter flow: cat\_whereami             | PASS    | 1 | 0.018 |      |
-| [test-counter.R](testthat/test-counter.R#L38_L39)   | counter functionality | counter flow: multiple counter states   | PASS    | 1 | 0.001 |      |
-| [test-counter.R](testthat/test-counter.R#L43)       | counter functionality | counter flow: multiple counter names    | PASS    | 1 | 0.001 |      |
-| [test-counter.R](testthat/test-counter.R#L48)       | counter functionality | counter flow: reset item                | PASS    | 1 | 0.000 |      |
-| [test-counter.R](testthat/test-counter.R#L53)       | counter functionality | counter flow: reset all                 | PASS    | 1 | 0.000 |      |
-| [test-source.R](testthat/test-source.R#L7)          | source functionality  | source calls: direct call               | PASS    | 1 | 0.014 |      |
-| [test-source.R](testthat/test-source.R#L11)         | source functionality  | source calls: path expand               | PASS    | 1 | 0.015 |      |
-| [test-source.R](testthat/test-source.R#L15)         | source functionality  | source calls: print                     | PASS    | 1 | 0.032 |      |
-| [test-thisfile.R](testthat/test-thisfile.R#L7)      | thisfile              | thisfile works with source              | SKIPPED | 1 | 0.001 | 🔶    |
-| [test-thisfile.R](testthat/test-thisfile.R#L13)     | thisfile              | thisfile works with Rscript             | SKIPPED | 1 | 0.000 | 🔶    |
-| [test-thisfile.R](testthat/test-thisfile.R#L21)     | thisfile              | thisfile works with R                   | SKIPPED | 1 | 0.000 | 🔶    |
-| [test-thisfile.R](testthat/test-thisfile.R#L31_L35) | thisfile              | thisfile works with knitr               | PASS    | 1 | 0.010 |      |
+-   </td>
+    </tr>
+    <tr>
+    <td style="text-align:left;">
+    [test-thisfile.R](testthat/test-thisfile.R#L13)
+    </td>
+    <td style="text-align:left;">
+    thisfile
+    </td>
+    <td style="text-align:left;">
+    thisfile works with Rscript
+    </td>
+    <td style="text-align:left;">
+    SKIPPED
+    </td>
+    <td style="text-align:right;">
+    1
+    </td>
+    <td style="text-align:right;">
+    0.00
+    </td>
+    <td style="text-align:left;">
 
-| Failed | Warning | Skipped |
-| :----- | :------ | :------ |
-| 🛑      | ⚠️      | 🔶       |
+    -   </td>
+        </tr>
+        <tr>
+        <td style="text-align:left;">
+        [test-thisfile.R](testthat/test-thisfile.R#L21)
+        </td>
+        <td style="text-align:left;">
+        thisfile
+        </td>
+        <td style="text-align:left;">
+        thisfile works with R
+        </td>
+        <td style="text-align:left;">
+        SKIPPED
+        </td>
+        <td style="text-align:right;">
+        1
+        </td>
+        <td style="text-align:right;">
+        0.00
+        </td>
+        <td style="text-align:left;">
+
+        -   </td>
+            </tr>
+            <tr>
+            <td style="text-align:left;">
+            [test-thisfile.R](testthat/test-thisfile.R#L32_L36)
+            </td>
+            <td style="text-align:left;">
+            thisfile
+            </td>
+            <td style="text-align:left;">
+            thisfile works with knitr
+            </td>
+            <td style="text-align:left;">
+            PASS
+            </td>
+            <td style="text-align:right;">
+            1
+            </td>
+            <td style="text-align:right;">
+            0.05
+            </td>
+            <td style="text-align:left;">
+            </td>
+            </tr>
+            </tbody>
+            </table>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Failed
+</th>
+<th style="text-align:left;">
+Warning
+</th>
+<th style="text-align:left;">
+Skipped
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+!
+</td>
+<td style="text-align:left;">
+
+-   </td>
+    <td style="text-align:left;">
+
+    -   </td>
+        </tr>
+        </tbody>
+        </table>
 
 </details>
-
 <details>
-
-<summary> Session Info </summary>
-
-| Field    | Value                               |
-| :------- | :---------------------------------- |
-| Version  | R version 3.6.1 (2019-07-05)        |
-| Platform | x86\_64-apple-darwin15.6.0 (64-bit) |
-| Running  | macOS Mojave 10.14.5                |
-| Language | en\_US                              |
-| Timezone | America/New\_York                   |
-
-| Package  | Version |
-| :------- | :------ |
-| testthat | 2.2.1   |
-| covr     | 3.3.0   |
-| covrpage | 0.0.70  |
-
+<summary>
+Session Info
+</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Field
+</th>
+<th style="text-align:left;">
+Value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Version
+</td>
+<td style="text-align:left;">
+R version 4.2.1 (2022-06-23 ucrt)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Platform
+</td>
+<td style="text-align:left;">
+x86_64-w64-mingw32/x64 (64-bit)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Running
+</td>
+<td style="text-align:left;">
+Windows 10 x64 (build 19042)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Language
+</td>
+<td style="text-align:left;">
+English_United States
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Timezone
+</td>
+<td style="text-align:left;">
+America/New_York
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Package
+</th>
+<th style="text-align:left;">
+Version
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+testthat
+</td>
+<td style="text-align:left;">
+3.1.6
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+covr
+</td>
+<td style="text-align:left;">
+3.6.1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+covrpage
+</td>
+<td style="text-align:left;">
+0.0.71
+</td>
+</tr>
+</tbody>
+</table>
 </details>
-
-<!--- Final Status : skipped/warning --->
+<!--- Final Status : error/failed --->

@@ -62,7 +62,7 @@ whereami <- function(path_expand = FALSE, tag = NULL) {
     src <- thisfile()
 
     if (!is.null(src)) {
-      src <- normalizePath(src,winslash = '/')
+      src <- normalizePath(src,winslash = '/', mustWork = FALSE)
 
       if (!path_expand) {
         src <- path_reduce(src)

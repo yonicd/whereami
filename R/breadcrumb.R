@@ -1,5 +1,13 @@
+my_traceback <- function(x = NULL) {
+    if(is.null(x) && !is.null(x <- get0(".Traceback", envir = baseenv())))
+    {}
+    else if (is.numeric(x))
+      x <- .Internal(traceback(x))
+    x
+  }
+
 crumb <- function() {
-  x <- .traceback(1)
+  x <- my_traceback(1)
 
   if (any(grepl("^rmarkdown", x[[length(x)]]))) {
     srloc <- gsub('^(.*?)\\(|\\,(.*?)$|["]', "", x[[length(x)]][1])

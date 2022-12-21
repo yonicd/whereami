@@ -53,7 +53,7 @@ if( !interactive() )
    tf <- tempfile(fileext = '.R')
 
   # call to write to temp file
-   f <- 'cat(whereami::thisfile(), "\\n", sep = "")'
+   f <- 'cat(whereami::thisfile(), "\n", sep = "")'
 
   # write to the file
    cat(f,file = tf)
