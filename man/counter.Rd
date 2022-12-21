@@ -87,6 +87,10 @@ unlink(tf)
 }
 
 }
+\seealso{
+Other counter: 
+\code{\link{set_whereami_log}()}
+}
 \author{
 Jonathan Sidi
 }
