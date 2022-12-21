@@ -12,3 +12,8 @@ set_whereami_log(path = tempdir())
 \description{
 Set the path to write the counter log as a json
 }
+\seealso{
+Other counter: 
+\code{\link{counter_state}()}
+}
+\concept{counter}

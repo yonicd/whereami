@@ -11,7 +11,7 @@ vignette: >
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  eval = interactive() || identical(Sys.getenv("TRAVIS"), "true")
+  eval = interactive()
 )
 ```
 

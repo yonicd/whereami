@@ -242,6 +242,7 @@ tag_map <- function(tag){
 #' @description Set the path to write the counter log as a json
 #' @param path character, path to write to, Default: tempdir()
 #' @export
+#' @family counter
 #' @rdname set_whereami_log
 set_whereami_log <- function(path = tempdir()){
 

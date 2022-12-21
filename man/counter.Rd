@@ -40,7 +40,7 @@ are reset.
 be plotted with the with the plot method.
 
 A json log of the counter is written to file.path(tempdir(),'whereami.json') by default
-The path can be set using \link[whereami:set_whereami_log]{set_whereami_log}
+The path can be set using \link[=set_whereami_log]{set_whereami_log}
 }
 \examples{
 
@@ -86,6 +86,10 @@ unlink(tf)
 
 }
 
+}
+\seealso{
+Other counter: 
+\code{\link{set_whereami_log}()}
 }
 \author{
 Jonathan Sidi

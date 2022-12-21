@@ -1,21 +1,16 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
 <!-- badges: start -->
 
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/whereami)](https://cran.r-project.org/package=whereami)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/whereami)](https://cran.r-project.org/package=whereami)
 [![](https://cranlogs.r-pkg.org/badges/whereami)](https://cran.r-project.org/package=whereami)
-[![Travis build
-status](https://travis-ci.org/yonicd/whereami.svg?branch=master)](https://travis-ci.org/yonicd/whereami)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/yonicd/whereami?branch=master&svg=true)](https://ci.appveyor.com/project/yonicd/whereami)
 [![Coverage
 status](https://codecov.io/gh/yonicd/whereami/branch/master/graph/badge.svg)](https://codecov.io/github/yonicd/whereami?branch=master)
 [![Covrpage
-Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_10_27-yellowgreen.svg)](http://tinyurl.com/y5c5voy3)
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2022_12_21-red.svg)](http://tinyurl.com/y5c5voy3)
 <!-- badges: end -->
 
-# whereami<img src="https://github.com/yonicd/whereami/raw/media/hex/whereami_small.png" align="right" />
+# whereami
 
 The goal of whereami is to reliably find where command is run from.
 
@@ -30,13 +25,14 @@ remotes::install_github("yonicd/whereami")
 ``` r
 library(whereami)
 library(ggplot2)
+#> Warning: package 'ggplot2' was built under R version 4.2.2
 ```
 
 ### General
 
 ``` r
 whereami()
-#> ── Running From: Console ─────────────────────────
+#> ── Running print(x) at README.Rmd, encoding = UTF-
 ```
 
 ### Plots

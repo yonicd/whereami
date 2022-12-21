@@ -2,7 +2,7 @@
 title: "Printing"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{cat_where}
+  %\VignetteIndexEntry{Printing}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
