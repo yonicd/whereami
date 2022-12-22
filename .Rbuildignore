@@ -14,3 +14,4 @@
 ^revdep$
 ^appveyor\.yml$
 ^\.github$
+^CRAN-SUBMISSION$
