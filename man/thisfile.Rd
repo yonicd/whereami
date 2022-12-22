@@ -73,7 +73,7 @@ if( !interactive() )
 
 }
 \references{
-\url{http://stackoverflow.com/q/1815606/946850}
+\url{https://stackoverflow.com/q/1815606/946850}
 }
 \seealso{
 \code{\link[base:source]{base::source()}}, \code{\link[utils:Rscript]{utils::Rscript()}}, \code{\link[base:getwd]{base::getwd()}}

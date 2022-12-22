@@ -5,7 +5,7 @@ Description: Robust and reliable functions to return informative outputs to
         console with the run or source location of a command. This can be from
         the  'RScript'/R terminal commands or 'RStudio' console, source editor, 
         'Rmarkdown' document and a Shiny application.
-Version: 0.1.9
+Version: 0.2.0
 Authors@R: c(
         person(given = "Jonathan", family = "Sidi", email =
         "yonicd@gmail.com", role = c("aut", "cre"), comment = c(ORCID =

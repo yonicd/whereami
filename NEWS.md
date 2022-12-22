@@ -1,3 +1,7 @@
+# whereami 0.2.0
+
+* refactor usage of .Internal commands to comply with new CRAN rules
+
 # whereami 0.1.9
 
 * add plot method for counters

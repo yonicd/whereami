@@ -15,7 +15,7 @@
 #' @return The path of the currently running script, NULL if it cannot be
 #'   determined.
 #' @seealso [base::source()], [utils::Rscript()], [base::getwd()]
-#' @references [http://stackoverflow.com/q/1815606/946850]()
+#' @references [https://stackoverflow.com/q/1815606/946850]()
 #' @author Kirill Müller, Hadley Wickham, Michael R. Head
 #' @note These functions were migrated from
 #'  [r-lib/rprojroot](https://github.com/r-lib/rprojroot/tree/4e4f70c0794542a5cfa6c3f66635388365616881).
